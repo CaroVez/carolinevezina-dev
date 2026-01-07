@@ -1,15 +1,261 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-face {
+  font-family: "MuseoModerno";
+  src: url(./assets/fonts/MuseoModerno/MuseoModerno-Regular.ttf);
+}
+@font-face {
+  font-family: "MuseoModerno-Light";
+  src: url(./assets/fonts/MuseoModerno/MuseoModerno-Light.ttf);
+}
+@font-face {
+  font-family: "MuseoModerno-Black";
+  src: url(./assets/fonts/MuseoModerno/MuseoModerno-Black.ttf);
+}
+@font-feature-values 'MuseoModerno' {
+  @styleset {
+    alt: 1;
+  }
+}
+@font-feature-values 'MuseoModerno-Black' {
+  @styleset {
+    h3-alt: 1;
+  }
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+:root {
+  --bg-color-dark: #494949;
+  --bg-color-light: #f2f2f2;
+  --text-color-dark: rgb(240, 240, 240);
+  --text-color-light: rgb(10, 10, 10);
+  --transition-time: 0.4s;
+  --turquoise: #479796;
+  --gold: #ba7954;
+}
+/* Light mode */
+html.light {
+  color: var(--text-color-light);
+  transition:
+    background-color var(--transition-time) ease,
+    color var(--transition-time) ease;
+}
+/* Image en dark */
+html.dark.dark-bg {
+  background: var(--bg-color-dark) url("images/bandeau_moy_small.png") no-repeat
+    top center;
+  background-size: cover;
+  height: 100vh;
+}
+/* Image en light */
+html.light-bg {
+  background: var(--bg-color-light) url("images/bandeau_light_small.png")
+    no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+}
+/* Dark mode */
+html.dark {
+  color: var(--text-color-dark);
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+.dark .nav-scrolled {
+  background-color: rgba(
+    73,
+    73,
+    73,
+    0.9
+  ) !important; /* #494949 avec 90% opacité */
+}
+
+* {
+  font-family:
+    "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-padding-top: 80px; /* Adapte selon la hauteur de ta navbar */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.alt,
+.typewriter {
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+}
+.alt {
+  font-variant-alternates: styleset(alt);
+}
+
+/* ########### titre principal ########### */
+h1 {
+  font-size: 4rem;
+  color: var(--gold);
+  font-weight: bold;
+  margin: 8rem 0;
+}
+
+/* ########### je m'appelle Caroline. ########### */
+h2 {
+  font-size: 3rem;
+  z-index: 10;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* ########### brand navbar ########### */
+.navbar-brand {
+  color: var(--turquoise);
+}
+h3 {
+  font-family:
+    "MuseoModerno-black", "Century Gothic", "Segoe UI", Tahoma, Verdana,
+    sans-serif;
+  font-size: 2rem;
+}
+.h3-alt {
+  font-family:
+    "MuseoModerno-black", "Century Gothic", "Segoe UI", Tahoma, Verdana,
+    sans-serif;
+  font-variant-alternates: styleset(alt);
+}
+h4 {
+  font-size: 0.76rem;
+  margin-top: -0.76rem;
+}
+.navbar-brand:hover {
+  color: var(--gold);
+}
+
+/* ########### titre projets ########### */
+h5 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ########### navbar ########### */
+nav a {
+  color: var(--turquoise);
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+nav a:hover {
+  color: var(--gold);
+  transform: translateY(2px);
+}
+nav svg {
+  fill: var(--turquoise);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+nav svg:hover {
+  fill: var(--gold);
+  transform: translateY(2px);
+}
+
+/* ########### section presentation ########### */
+.presentation {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  margin: 0 auto;
+  margin-bottom: 4.5rem;
+}
+
+h1 span.code {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid var(--text-color-light); /* curseur */
+  white-space: nowrap;
+  animation:
+    typing 2s steps(20, end),
+    blink 1s step-end infinite;
+}
+/* effet d’écriture */
+@keyframes typing {
+  from {
+    width: 0;
   }
+  to {
+    width: 100%;
+  }
+}
+/* curseur clignotant */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.presentation p,
+.presentation p b {
+  font-family:
+    "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 2rem;
+}
+
+.image-profil,
+.image-profil-2,
+.image-profil-3,
+.image-profil-4,
+.image-profil-404 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  bottom: inherit;
+  right: 50%;
+  height: 20rem;
+  z-index: 5;
+}
+.image-profil {
+  transform: translate(calc(-50% + 700px), calc(-50% - 100px));
+}
+.image-profil-2 {
+  transform: translate(calc(-50% + 750px), calc(-50% - -300px));
+}
+.image-profil-3 {
+  transform: translate(calc(-50% + -150px), calc(-50% - -300px));
+}
+.image-profil-4,
+.image-profil-404 {
+  transform: translate(calc(-50% + 775px), calc(-50% - 150px));
+}
+
+.presentation .arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 4.5rem;
+  color: var(--gold);
+}
+@keyframes blinkArrow {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+}
+.animate-blink-arrow {
+  animation: blinkArrow 1.5s infinite;
 }

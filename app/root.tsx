@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -5,10 +6,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  NavLink,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import ThemeToggle from "./components/ThemeToggle";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,6 +27,18 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // On devient opaque après 50px de scroll
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -33,6 +48,46 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <nav
+          className={`
+        sticky top-0 z-50 w-full transition-all duration-300 px-6 flex
+        ${
+          isScrolled
+            ? "nav-scrolled bg-[#f2f2f2]/90 backdrop-blur-md shadow-md"
+            : "bg-transparent"
+        }
+      `}
+        >
+          <NavLink to="/" end>
+            <div className="navbar-brand">
+              <h3>
+                Caroli<span className="h3-alt">n</span>e Vé
+                <span className="h3-alt">z</span>i
+                <span className="h3-alt">n</span>a
+              </h3>
+              <h4>
+                développeur web fro<span className="alt">n</span>t-e
+                <span className="alt">n</span>d | desig
+                <span className="alt">n</span>er ui
+              </h4>
+            </div>
+          </NavLink>
+          <div className="flex items-center gap-8 ml-auto">
+            <NavLink to="/services">
+              <span className="alt">m</span>es services
+            </NavLink>
+            <NavLink to="/realisations">
+              <span className="alt">m</span>es réalisatio
+              <span className="alt">n</span>s
+            </NavLink>
+            <NavLink to="/qui-suis-je">qui suis-je ?</NavLink>
+            <NavLink to="/contact">
+              <span className="alt">m</span>e joi<span className="alt">n</span>
+              dre
+            </NavLink>
+            <ThemeToggle />
+          </div>
+        </nav>
         {children}
         <ScrollRestoration />
         <Scripts />
