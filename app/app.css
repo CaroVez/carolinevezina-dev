@@ -91,6 +91,46 @@ h5,
   font-variant-alternates: styleset(alt);
 }
 
+/* ########### buttons ########### */
+form button {
+  background-color: var(--turquoise);
+  color: var(--text-color-light);
+  border: var(--text-color-light) solid 1px;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+form button:disabled {
+  background-color: #9ca3af !important; /* Gris (équivalent gray-400) */
+  cursor: not-allowed;
+  transform: none; /* Empêche le bouton de bouger si on le survole pendant l'envoi */
+  box-shadow: none; /* Optionnel : retire l'ombre pour montrer qu'il est inactif */
+  opacity: 0.7;
+}
+form button:hover:not(:disabled) {
+  background-color: var(--gold);
+  transform: translateY(2px);
+}
+
+/* ########### hover ########### */
+.navbar-brand:hover,
+nav a:hover,
+nav svg:hover,
+.work-scope a:hover {
+  color: var(--gold);
+  fill: var(--gold);
+  transform: translateY(2px);
+}
+
 /* ########### titre principal ########### */
 h1 {
   font-size: 4rem;
@@ -116,6 +156,7 @@ h3 {
     "MuseoModerno-black", "Century Gothic", "Segoe UI", Tahoma, Verdana,
     sans-serif;
   font-size: 2rem;
+  margin-top: -0.5rem;
 }
 .h3-alt {
   font-family:
@@ -127,14 +168,16 @@ h4 {
   font-size: 0.76rem;
   margin-top: -0.76rem;
 }
-.navbar-brand:hover {
-  color: var(--gold);
-}
 
-/* ########### titre projets ########### */
+/* ########### titre projets & about & contact ########### */
 h5 {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+.about h5,
+.contact h5 {
+  color: var(--gold);
+  font-weight: bold;
 }
 
 /* ########### navbar ########### */
@@ -147,20 +190,12 @@ nav a {
     transform 0.2s ease,
     color 0.2s ease;
 }
-nav a:hover {
-  color: var(--gold);
-  transform: translateY(2px);
-}
 nav svg {
   fill: var(--turquoise);
   cursor: pointer;
   transition:
     transform 0.2s ease,
     color 0.2s ease;
-}
-nav svg:hover {
-  fill: var(--gold);
-  transform: translateY(2px);
 }
 
 /* ########### section presentation ########### */
@@ -207,6 +242,10 @@ h1 span.code {
   font-family:
     "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
+  font-size: 1.5rem;
+}
+.presentation .intro,
+.presentation .intro b {
   font-size: 2rem;
 }
 
@@ -237,6 +276,52 @@ h1 span.code {
   transform: translate(calc(-50% + 775px), calc(-50% - 150px));
 }
 
+.presentation .buttons {
+  padding-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.presentation .buttons .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--turquoise);
+  color: var(--text-color-light);
+  border: var(--text-color-light) solid 1px;
+  border-radius: 5px;
+  margin-top: 0rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+.presentation .buttons .button p {
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 1.25rem;
+}
+.presentation .buttons .button:hover {
+  background-color: var(--gold);
+  transform: translateY(2px);
+}
+.presentation .buttons svg:hover {
+  color: var(--text-color-light);
+  transform: none;
+}
+.presentation .buttons svg {
+  height: 20px;
+  width: 20px;
+}
+.btn-contact {
+  display: none;
+}
+
 .presentation .arrows {
   display: flex;
   flex-direction: column;
@@ -258,4 +343,99 @@ h1 span.code {
 }
 .animate-blink-arrow {
   animation: blinkArrow 1.5s infinite;
+}
+
+/* ########### section about ########### */
+.about {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  margin: 0 auto;
+  margin-bottom: 4.5rem;
+}
+.about p {
+  font-size: 1.5rem;
+}
+.about p b {
+  font-family:
+    "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 1.5rem;
+}
+.experience,
+.competences-techniques {
+  padding-top: 16vh;
+}
+.competences-techniques p {
+  margin-bottom: 5rem;
+}
+.icones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.icones img,
+.icones li {
+  width: 80px;
+  height: 80px;
+}
+
+/* ########### section contact ########### */
+.contact {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 4.5rem;
+  padding: 8rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+.contact-form {
+  width: 65%;
+  margin-bottom: 0;
+  order: 1;
+}
+.contact-info {
+  width: 35%;
+  margin-bottom: 0;
+  order: 2;
+}
+.contact-info a {
+  color: inherit;
+  font-family:
+    "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact-info .work-scope {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+.contact-info .work-scope a {
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+.contact-info .work-scope p {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.contact-info svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  color: var(--turquoise);
+}
+.contact-info .response-time {
+  color: var(--turquoise);
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 2rem 0 0 0;
 }

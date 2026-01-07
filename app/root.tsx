@@ -50,7 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <nav
           className={`
-        sticky top-0 z-50 w-full transition-all duration-300 px-6 flex
+        sticky top-0 z-50 w-full transition-all duration-300 px-4 py-1 flex
         ${
           isScrolled
             ? "nav-scrolled bg-[#f2f2f2]/90 backdrop-blur-md shadow-md"
@@ -72,7 +72,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </h4>
             </div>
           </NavLink>
-          <div className="flex items-center gap-8 ml-auto">
+          <div className="flex items-center gap-12 ml-auto">
             <NavLink to="/services">
               <span className="alt">m</span>es services
             </NavLink>
