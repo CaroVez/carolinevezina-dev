@@ -1,5 +1,7 @@
 import type { Route } from "./+types/qui-suis-je";
+import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil-gold.png";
+
 import iconFigma from "../assets/figma-original.svg";
 import iconWordpress from "../assets/wordpress-original.png";
 import iconHTML5 from "../assets/html5-original.svg";
@@ -12,7 +14,6 @@ import iconIllustrator from "../assets/illustrator-original.svg";
 import iconIndesign from "../assets/indesign-original.svg";
 import iconAftereffects from "../assets/aftereffects-original.svg";
 
-// C'est ici qu'on définit le titre de l'onglet dans le navigateur
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Caroline Vézina - qui suis-je ?" },
@@ -27,45 +28,23 @@ export function meta({}: Route.MetaArgs) {
 export default function About() {
   return (
     <main className="container mx-auto">
-      {/* Section Présentation (Inspirée de ton HTML) */}
-      <section className="presentation">
-        <img
-          src={photoProfil}
-          alt="Illustration de Caroline Vézina"
-          className="image-profil-4"
-        />
-        <h1>
-          <span className="typewriter">
-            <span className="code">&lt;h1&gt;</span>
-            qui suis-je ?<span className="code">&lt;/h1&gt;</span>
-          </span>
-        </h1>
-        <p>
-          Je suis <b>développeur web front-end</b> passionnée par la création
-          d'expériences numériques élégantes, intuitives et centrées sur
-          l'utilisateur. J'aime transformer des idées en interfaces claires et
-          harmonieuses, où design et fonctionnalité se rencontrent
-          naturellement.
-        </p>
-        <div className="arrows">
-          {[0, 1, 2].map((i) => (
-            <svg
-              key={i}
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              fill="currentColor"
-              className="animate-blink-arrow opacity-0"
-              style={{ animationDelay: `${i * 0.3}s` }} // Délai progressif dynamique
-              viewBox="0 0 16 16"
-            >
-              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-            </svg>
-          ))}
-        </div>
-      </section>
+      {/* Section Présentation */}
+      <Presentation
+        image={photoProfil}
+        imageClass="image-profil-about"
+        title="qui suis-je ?"
+        description={
+          <>
+            Je suis <b>développeur web front-end</b> passionnée par la création
+            d'expériences numériques élégantes, intuitives et centrées sur
+            l'utilisateur. J'aime transformer des idées en interfaces claires et
+            harmonieuses, où design et fonctionnalité se rencontrent
+            naturellement.
+          </>
+        }
+      />
 
-      <section className="about pt-[6vh] pb-[12vh] md:pt-[18vh]">
+      <section className="about pt-[26vh] pb-[12vh]">
         <div className="historique">
           <h5>
             <span className="alt">m</span>o<span className="alt">n</span>{" "}
@@ -80,6 +59,7 @@ export default function About() {
             projets concrets - des qualités que je mets aujourd'hui au service
             du web.
           </p>
+          <br />
           <p>
             Peu à peu, ma curiosité pour les outils numériques s'est transformée
             en une véritable passion. J'ai suivi une formation en{" "}

@@ -1,9 +1,10 @@
 import type { Route } from "./+types/contact";
+import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil1.png";
+
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-// C'est ici qu'on définit le titre de l'onglet dans le navigateur
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Caroline Vézina - me joindre" },
@@ -41,44 +42,21 @@ export default function Contact() {
 
   return (
     <main className="container mx-auto">
-      {/* Section Présentation (Inspirée de ton HTML) */}
-      <section className="presentation">
-        <img
-          src={photoProfil}
-          alt="Illustration de Caroline Vézina"
-          className="image-profil-2"
-        />
-        <h1>
-          <span className="typewriter">
-            <span className="code">&lt;h1&gt;</span>
-            <span className="alt">m</span>e joi<span className="alt">n</span>dre
-            <span className="code">&lt;/h1&gt;</span>
-          </span>
-        </h1>
-        <p>
-          Vous souhaitez discuter d'un projet ou simplement en savoir plus sur
-          mes services ? N'hésitez pas à me contacter !
-        </p>
-        <div className="arrows">
-          {[0, 1, 2].map((i) => (
-            <svg
-              key={i}
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              fill="currentColor"
-              className="animate-blink-arrow opacity-0"
-              style={{ animationDelay: `${i * 0.3}s` }} // Délai progressif dynamique
-              viewBox="0 0 16 16"
-            >
-              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-            </svg>
-          ))}
-        </div>
-      </section>
+      {/* Section Présentation */}
+      <Presentation
+        image={photoProfil}
+        imageClass="image-profil-contact"
+        title="me joindre"
+        description={
+          <>
+            Vous souhaitez discuter d'un projet ou simplement en savoir plus sur
+            mes services ? N'hésitez pas à me contacter !
+          </>
+        }
+      />
 
-      <section className="contact pt-[6vh] pb-[12vh] md:pt-[18vh]">
-        <div className="contact-info pt-[6vh] pb-[12vh] md:pt-[18vh]">
+      <section className="contact pt-[32vh] pb-[12vh]">
+        <div className="contact-info">
           <h5>
             coordo<span className="alt">nn</span>ées
           </h5>
@@ -132,7 +110,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="contact-form pt-[6vh] pb-[12vh] md:pt-[18vh]">
+        <div className="contact-form">
           <h5>formulaire de contact</h5>
 
           <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
@@ -182,7 +160,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="self-start tracking-widest"
+              className="self-center w-full md:self-start md:w-fit tracking-widest"
             >
               {status === "sending" ? "envoi en cours..." : "envoyer"}
             </button>
