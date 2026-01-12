@@ -27,7 +27,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Services() {
   return (
-    <main className="container mx-auto">
+    <main className="mx-auto">
       {/* Section Présentation */}
       <Presentation
         image={photoProfil}
@@ -40,10 +40,12 @@ export default function Services() {
             est pensé pour mettre en valeur votre marque.
           </>
         }
+        showArrows={true}
+        showButtons={false}
       />
 
       {/* Grille des Services */}
-      <div className="services flex flex-col items-center gap-[5vh] pt-[26vh] pb-[12vh]">
+      <div className="services flex flex-col items-center gap-[5vh] pb-[12vh] mx-auto">
         {SERVICES.map((service, index) => (
           <motion.div
             key={index}

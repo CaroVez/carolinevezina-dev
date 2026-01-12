@@ -2,11 +2,13 @@ import type { Route } from "./+types/realisations";
 import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil1.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 interface Project {
   title: string;
   description: string;
   link: string;
+  isExternal: boolean;
   bgImage: string; // URL de l'image
   colSpanDesktop: string;
   rowSpanDesktop: string;
@@ -41,7 +43,7 @@ export default function Realisations() {
   };
 
   return (
-    <main className="container mx-auto">
+    <main className="mx-auto">
       {/* Section Présentation */}
       <Presentation
         image={photoProfil}
@@ -55,12 +57,14 @@ export default function Realisations() {
             constante de progresser.
           </>
         }
+        showArrows={true}
+        showButtons={false}
       />
 
       {/* Grille des Projets */}
       <section
-        className="
-          grid grid-cols-1 md:grid-cols-3 gap-[6vh] auto-rows-[85vw] md:auto-rows-[45vh] pt-[26vh] pb-[12vh] md:w-[80%] mx-auto"
+        className="realisations 
+          grid grid-cols-1 md:grid-cols-3 gap-[6vh] auto-rows-[85vw] md:auto-rows-[45vh] pt-[26vh] pb-[12vh] mx-auto"
       >
         {PROJECTS.map((project, index) => (
           <motion.div
@@ -81,29 +85,53 @@ export default function Realisations() {
               `}
           >
             {/* Overlay (Hover sur Desktop, Toujours visible sur Mobile) */}
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noreferrer"
-              className="
+            {project.isExternal ? (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="
                   w-full h-full p-6 rounded-[5px] bg-black/40 backdrop-blur-[2px]
                   flex flex-col items-center justify-center text-center text-white
                   md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300
                 "
-            >
-              <h5 className="drop-shadow-md">{formatTitle(project.title)}</h5>
-              <p className="mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 justify-center whitespace-nowrap">
-                {project.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="text-xs bg-white/20 px-2 py-1 rounded"
-                  >
-                    #{t}
-                  </span>
-                ))}
-              </div>
-            </a>
+              >
+                <h5 className="drop-shadow-md">{formatTitle(project.title)}</h5>
+                <p className="mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 justify-center whitespace-nowrap">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="text-xs bg-white/20 px-2 py-1 rounded"
+                    >
+                      #{t}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ) : (
+              <Link
+                to={project.link}
+                className="
+                  w-full h-full p-6 rounded-[5px] bg-black/40 backdrop-blur-[2px]
+                  flex flex-col items-center justify-center text-center text-white
+                  md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300
+                "
+              >
+                <h5 className="drop-shadow-md">{formatTitle(project.title)}</h5>
+                <p className="mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 justify-center whitespace-nowrap">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="text-xs bg-white/20 px-2 py-1 rounded"
+                    >
+                      #{t}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            )}
           </motion.div>
         ))}
       </section>
@@ -114,10 +142,11 @@ export default function Realisations() {
 // données centralisées
 const PROJECTS: Project[] = [
   {
-    title: "Caroline Vézina",
+    title: "Caroline Vézina .dev",
     description:
       "création d'un site monopage pour présenter mes services et portfolio.",
     link: "https://www.carolinevezina.dev/",
+    isExternal: true,
     bgImage: "./images/carolinevezina/vignette.png",
     colSpanDesktop: "md:col-span-2",
     rowSpanDesktop: "md:row-start-1",
@@ -127,7 +156,8 @@ const PROJECTS: Project[] = [
     title: "Mireille Cliche, écrivaine",
     description: "optimisation d'un site WordPress.",
     link: "https://mireillecliche.com/",
-    bgImage: "./images/mireillecliche/vignette.png",
+    isExternal: true,
+    bgImage: "./images/mireillecliche/vignette.jpeg",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-1",
     tech: ["figma", "wordpress"],
@@ -138,6 +168,7 @@ const PROJECTS: Project[] = [
     description:
       "conception d'un site vitrine avec WordPress pour une agence de voyage.",
     link: "https://agencevoyageav.go.yj.fr/",
+    isExternal: true,
     bgImage: "./images/av/vignette.jpg",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-2",
@@ -148,6 +179,7 @@ const PROJECTS: Project[] = [
     description:
       "actualisation d'un site WordPress existant pour refléter la nouvelle identité visuelle et inclure des sections supplémentaires sur demande.",
     link: "https://mtavie.ca/",
+    isExternal: true,
     bgImage: "./images/mtavie/vignette.png",
     colSpanDesktop: "md:col-span-2",
     rowSpanDesktop: "md:row-start-2",
@@ -159,6 +191,7 @@ const PROJECTS: Project[] = [
     description:
       "conception d'un site vitrine avec générateur de site statique et CMS pour un photographe amateur.",
     link: "https://c-cantin-photographe.netlify.app/",
+    isExternal: true,
     bgImage: "./images/charlescantin/vignette.jpg",
     colSpanDesktop: "md:col-span-2",
     rowSpanDesktop: "md:row-start-3",
@@ -180,6 +213,7 @@ const PROJECTS: Project[] = [
     description:
       "création d'un site vitrine avec générateur de site statique pour un blog de photos de voyage.",
     link: "https://carolinealetranger.netlify.app/",
+    isExternal: true,
     bgImage: "./images/carolinealetranger/vignette.jpg",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-3",
@@ -200,7 +234,8 @@ const PROJECTS: Project[] = [
     title: "Thanks-Boss",
     description:
       "participation au développement d'un site web monopage de recherche d'emplois, avec intégration des maquettes UX/UI, un design responsive et des fonctionnalités interactives en collaboration avec le backend.",
-    link: "#",
+    link: "/realisations/thanks-boss",
+    isExternal: false,
     bgImage: "./images/thanksboss/vignette.png",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-4",
@@ -209,7 +244,8 @@ const PROJECTS: Project[] = [
   {
     title: "Terre de thés",
     description: "création d'une identité visuelle.",
-    link: "#",
+    link: "/realisations/terre-de-thes",
+    isExternal: false,
     bgImage: "./images/terredethes/vignette.png",
     colSpanDesktop: "md:col-span-2",
     rowSpanDesktop: "md:row-start-4",
@@ -226,7 +262,8 @@ const PROJECTS: Project[] = [
     title: "l'agrume indigo",
     description:
       "conception d'un site web de gestion des droits d'accès pour une marque de salles de sport, avec rôles et interf personnalisée selon les contrats utilisateurs.",
-    link: "#",
+    link: "/realisations/l-agrume-indigo",
+    isExternal: false,
     bgImage: "./images/lagrumeindigo/vignette.jpg",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-5",
@@ -252,6 +289,7 @@ const PROJECTS: Project[] = [
     title: "la jungle verte",
     description: "création d'un site web monopage d'une boutique en ligne.",
     link: "https://lajungleverte.netlify.app/",
+    isExternal: true,
     bgImage: "./images/lajungleverte/vignette.png",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-5",
@@ -262,6 +300,7 @@ const PROJECTS: Project[] = [
     description:
       "création d'une interface inspirée des instruments de musique électronique.",
     link: "https://oursupermusicapp.netlify.app/",
+    isExternal: true,
     bgImage: "./images/oursupermusicapp/vignette.png",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-5",

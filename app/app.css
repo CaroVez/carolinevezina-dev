@@ -103,7 +103,11 @@ h1 {
   font-size: 1.75rem;
   color: var(--gold);
   font-weight: bold;
-  margin: 8rem 0;
+  padding: 8rem 0;
+}
+h1 span.code {
+  font-size: 1.25rem;
+  font-weight: normal;
 }
 
 /* ########### je m'appelle Caroline. ########### */
@@ -165,21 +169,33 @@ nav svg {
     transform 0.2s ease,
     color 0.2s ease;
 }
+.mobile-nav-link.active svg {
+  fill: var(--gold);
+}
 
 /* ########### section presentation ########### */
 .presentation {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 0 auto;
+  width: 100%;
   margin-bottom: 1.5rem;
+  position: relative;
+  text-align: center;
+}
+.presentation-container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
-h1 span.code {
-  font-size: 1.25rem;
-  font-weight: normal;
+.image-profil-home,
+.image-profil-services,
+.image-profil-realisations,
+.image-profil-about,
+.image-profil-contact,
+.image-profil-404 {
+  display: none;
 }
+
 .typewriter {
   display: inline-block;
   overflow: hidden;
@@ -215,15 +231,6 @@ h1 span.code {
 .presentation .intro,
 .presentation .intro b {
   font-size: 1.5rem;
-}
-
-.image-profil-home,
-.image-profil-services,
-.image-profil-realisations,
-.image-profil-about,
-.image-profil-contact,
-.image-profil-404 {
-  display: none;
 }
 
 .presentation .arrows {
@@ -268,6 +275,20 @@ h1 span.code {
   width: 20px;
 }
 
+/* ########### section services ########### */
+.services {
+  width: 90%;
+  padding-top: 26vh;
+}
+
+/* ########### section realisations ########### */
+.realisations {
+  width: 90%;
+}
+.project-subtitle {
+  font-size: 1.75rem;
+}
+
 /* ########### section about ########### */
 .about {
   width: 90%;
@@ -275,6 +296,7 @@ h1 span.code {
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
+  padding-top: 26vh;
 }
 .about p {
   font-size: 1rem;
@@ -312,6 +334,7 @@ h1 span.code {
   flex-direction: column;
   gap: 8rem;
   text-align: center;
+  padding-top: 26vh;
 }
 .contact-info a {
   font-family:
@@ -382,13 +405,15 @@ form button:disabled {
 
   /* ########### titre principal ########### */
   h1 {
-    font-size: 4rem;
-    margin: 4rem 0;
+    font-size: 3.5rem;
+  }
+  h1 span.code {
+    font-size: 2rem;
   }
 
   /* ########### je m'appelle Caroline. ########### */
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   /* ########### titre projets & about & contact ########### */
@@ -407,6 +432,9 @@ form button:disabled {
       transform 0.2s ease,
       color 0.2s ease;
   }
+  header a.active {
+    color: var(--gold);
+  }
   header svg {
     fill: var(--turquoise);
     cursor: pointer;
@@ -416,50 +444,11 @@ form button:disabled {
   }
 
   /* ########### section presentation ########### */
-  .presentation {
-    width: 60%;
-    text-align: justify;
-  }
-
-  h1 span.code {
-    font-size: 2.5rem;
-  }
-
   .presentation .intro,
   .presentation .intro b {
     font-size: 2rem;
   }
 
-  .image-profil-home,
-  .image-profil-services,
-  .image-profil-realisations,
-  .image-profil-about,
-  .image-profil-contact,
-  .image-profil-404 {
-    display: block;
-    position: absolute;
-    top: 50%;
-    bottom: inherit;
-    right: 50%;
-    height: 20rem;
-    z-index: 5;
-  }
-  .image-profil-home {
-    transform: translate(calc(-50% + 700px), calc(-50% - 100px));
-  }
-  .image-profil-services,
-  .image-profil-realisations,
-  .image-profil-about,
-  .image-profil-contact,
-  .image-profil-404 {
-    transform: translate(calc(-50% + 750px), calc(-50% - -300px));
-  }
-
-  .buttons {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-  }
   .buttons .button {
     padding: 1rem 1.5rem;
     cursor: pointer;
@@ -484,9 +473,19 @@ form button:disabled {
     width: 24px;
   }
 
+  /* ########### section services ########### */
+  .services {
+    width: 90%;
+  }
+
+  /* ########### section realisations ########### */
+  .realisations {
+    width: 90%;
+  }
+
   /* ########### section about ########### */
   .about {
-    width: 60%;
+    width: 90%;
     text-align: justify;
   }
   .about p {
@@ -497,13 +496,13 @@ form button:disabled {
   }
   .icones img,
   .icones li {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 
   /* ########### section contact ########### */
   .contact {
-    width: 70%;
+    width: 90%;
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
@@ -526,10 +525,6 @@ form button:disabled {
   .contact-info .work-scope p {
     justify-content: left;
   }
-  .contact-info svg {
-    width: 24px;
-    height: 24px;
-  }
 
   /* ########### form buttons ########### */
   form button {
@@ -550,20 +545,59 @@ form button:disabled {
   /* ########### titre principal ########### */
   h1 {
     font-size: 3.5rem;
+    padding: 5rem 0;
+  }
+
+  h1 span.code {
+    font-size: 2rem;
   }
 
   /* ########### je m'appelle Caroline. ########### */
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   /* ########### section presentation ########### */
   .presentation {
-    width: 70%;
+    height: calc(100vh - 55px);
+    position: relative;
+    text-align: justify;
   }
-
-  h1 span.code {
-    font-size: 1.5rem;
+  .presentation-container {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .image-profil-home,
+  .image-profil-services,
+  .image-profil-realisations,
+  .image-profil-about,
+  .image-profil-contact {
+    display: block;
+    position: absolute;
+    height: 12rem;
+    z-index: 10;
+  }
+  .image-profil-home,
+  .image-profil-services,
+  .image-profil-about,
+  .image-profil-contact {
+    right: 0;
+  }
+  .image-profil-realisations {
+    left: 0;
+  }
+  .image-profil-home {
+    top: 15%;
+  }
+  .image-profil-about {
+    top: 10%;
+  }
+  .image-profil-services,
+  .image-profil-realisations,
+  .image-profil-contact {
+    bottom: 0;
   }
 
   .presentation .intro,
@@ -571,33 +605,10 @@ form button:disabled {
     font-size: 1.5rem;
   }
 
-  .image-profil-home,
-  .image-profil-services,
-  .image-profil-realisations,
-  .image-profil-about,
-  .image-profil-contact,
-  .image-profil-404 {
-    display: block;
-    position: absolute;
-    top: 50%;
-    bottom: inherit;
-    right: 50%;
-    height: 15rem;
-    z-index: 5;
-  }
-  .image-profil-home {
-    transform: translate(calc(-50% + 575px), calc(-50% - 100px));
-  }
-  .image-profil-services,
-  .image-profil-realisations,
-  .image-profil-about,
-  .image-profil-contact,
-  .image-profil-404 {
-    transform: translate(calc(-50% + 575px), calc(-50% - -200px));
-  }
-
   .buttons {
-    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
   .buttons .button p {
     font-size: 1rem;
@@ -607,9 +618,21 @@ form button:disabled {
     width: 22px;
   }
 
+  /* ########### section services ########### */
+  .services {
+    width: 70%;
+    padding-top: 18vh;
+  }
+
+  /* ########### section realisations ########### */
+  .realisations {
+    width: 70%;
+  }
+
   /* ########### section about ########### */
   .about {
     width: 70%;
+    padding-top: 18vh;
   }
   .icones img,
   .icones li {
@@ -619,7 +642,8 @@ form button:disabled {
 
   /* ########### section contact ########### */
   .contact {
-    width: 80%;
+    width: 70%;
+    padding-top: 18vh;
   }
   .contact-form {
     width: 55%;
@@ -627,17 +651,16 @@ form button:disabled {
   .contact-info {
     width: 45%;
   }
-  .contact-info svg {
-    width: 20px;
-    height: 20px;
-  }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   /* ########### titre principal ########### */
   h1 {
     font-size: 4rem;
-    margin: 8rem 0;
+    padding: 8rem 0;
+  }
+  h1 span.code {
+    font-size: 2.5rem;
   }
 
   /* ########### je m'appelle Caroline. ########### */
@@ -646,12 +669,18 @@ form button:disabled {
   }
 
   /* ########### section presentation ########### */
-  .presentation {
+  .presentation-container {
     width: 60%;
   }
-
-  h1 span.code {
-    font-size: 2.5rem;
+  .image-profil-home,
+  .image-profil-services,
+  .image-profil-realisations,
+  .image-profil-about,
+  .image-profil-contact {
+    height: 20rem;
+  }
+  .image-profil-about {
+    top: 5%;
   }
 
   .presentation .intro,
@@ -659,55 +688,33 @@ form button:disabled {
     font-size: 2rem;
   }
 
-  .image-profil-home,
-  .image-profil-services,
-  .image-profil-realisations,
-  .image-profil-about,
-  .image-profil-contact,
-  .image-profil-404 {
-    display: block;
-    position: absolute;
-    top: 50%;
-    bottom: inherit;
-    right: 50%;
-    height: 20rem;
-    z-index: 5;
-  }
-  .image-profil-home {
-    transform: translate(calc(-50% + 650px), calc(-50% - 100px));
-  }
-  .image-profil-services,
-  .image-profil-realisations,
-  .image-profil-about,
-  .image-profil-contact,
-  .image-profil-404 {
-    transform: translate(calc(-50% + 575px), calc(-50% - -200px));
+  .buttons {
+    padding-top: 6rem;
   }
 
-  .buttons {
+  /* ########### section services ########### */
+  .services {
     width: 60%;
   }
-  .buttons .button p {
-    font-size: 1rem;
-  }
-  .buttons svg {
-    height: 22px;
-    width: 22px;
+
+  /* ########### section realisations ########### */
+  .realisations {
+    width: 60%;
   }
 
   /* ########### section about ########### */
   .about {
-    width: 70%;
+    width: 60%;
   }
   .icones img,
   .icones li {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
 
   /* ########### section contact ########### */
   .contact {
-    width: 80%;
+    width: 60%;
   }
   .contact-form {
     width: 55%;
@@ -715,8 +722,11 @@ form button:disabled {
   .contact-info {
     width: 45%;
   }
-  .contact-info svg {
-    width: 20px;
-    height: 20px;
+}
+
+@media screen and (min-width: 1920px) {
+  .presentation-container,
+  .about {
+    width: 50%;
   }
 }

@@ -41,7 +41,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="container mx-auto">
+    <main className="mx-auto">
       {/* Section Présentation */}
       <Presentation
         image={photoProfil}
@@ -53,9 +53,11 @@ export default function Contact() {
             mes services ? N'hésitez pas à me contacter !
           </>
         }
+        showArrows={true}
+        showButtons={false}
       />
 
-      <section className="contact pt-[32vh] pb-[12vh]">
+      <section className="contact pb-[12vh]">
         <div className="contact-info">
           <h5>
             coordo<span className="alt">nn</span>ées

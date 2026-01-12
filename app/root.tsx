@@ -12,6 +12,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import ThemeToggle from "./components/ThemeToggle";
+import { s } from "framer-motion/client";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -39,6 +40,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const formatTitle = (title: string) => {
+    // On sépare le texte à chaque 'm', 'M', 'n' ou 'N'
+    const parts = title.split(/(m|n)/gi);
+
+    return parts.map((part, index) =>
+      /m|n/i.test(part) ? (
+        <span key={index} className="alt">
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  };
+
   return (
     <html lang="fr">
       <head>
@@ -60,27 +76,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <span className="h3-alt">z</span>i
                 <span className="h3-alt">n</span>a
               </h3>
-              <h4>
-                développeur web fro<span className="alt">n</span>t-e
-                <span className="alt">n</span>d | desig
-                <span className="alt">n</span>er ui
-              </h4>
+              <h4>{formatTitle("développeur web front-end | designer ui")}</h4>
             </div>
           </NavLink>
 
           <div className="hidden lg:flex items-center gap-12 ml-auto">
-            <NavLink to="/services">
-              <span className="alt">m</span>es services
-            </NavLink>
+            <NavLink to="/services">{formatTitle("mes services")}</NavLink>
             <NavLink to="/realisations">
-              <span className="alt">m</span>es réalisatio
-              <span className="alt">n</span>s
+              {formatTitle("mes réalisations")}
             </NavLink>
-            <NavLink to="/qui-suis-je">qui suis-je ?</NavLink>
-            <NavLink to="/contact">
-              <span className="alt">m</span>e joi<span className="alt">n</span>
-              dre
-            </NavLink>
+            <NavLink to="/qui-suis-je">{formatTitle("qui suis-je ?")}</NavLink>
+            <NavLink to="/contact">{formatTitle("me joindre")}</NavLink>
             <ThemeToggle />
           </div>
         </header>
@@ -168,7 +174,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     message = error.status === 404 ? "404" : "Error";
     details =
       error.status === 404
-        ? "The requested page could not be found."
+        ? "la page que vous recherchez n'existe pas"
         : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;

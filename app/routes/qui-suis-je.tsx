@@ -27,7 +27,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function About() {
   return (
-    <main className="container mx-auto">
+    <main className="mx-auto">
       {/* Section Présentation */}
       <Presentation
         image={photoProfil}
@@ -42,9 +42,11 @@ export default function About() {
             naturellement.
           </>
         }
+        showArrows={true}
+        showButtons={false}
       />
 
-      <section className="about pt-[26vh] pb-[12vh]">
+      <section className="about pb-[12vh]">
         <div className="historique">
           <h5>
             <span className="alt">m</span>o<span className="alt">n</span>{" "}
