@@ -36,7 +36,30 @@ export default function ThanksBoss() {
         showButtons={false}
       />
 
-      <section></section>
+      <section className="projet">
+        <div className="item text video1-text">
+          <p>création du calendrier par le recruteur</p>
+        </div>
+        <div className="item video1">
+          <video className="video1" controls disablePictureInPicture muted>
+            <source
+              src="../images/thanksboss/tb_entretiens-part1.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div className="item text video2-text">
+          <p>acceptation d'un entretien par le candidat</p>
+        </div>
+        <div className="item video2">
+          <video className="video2" controls disablePictureInPicture muted>
+            <source
+              src="../images/thanksboss/tb_entretiens-part2.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </section>
     </main>
   );
 }

@@ -286,7 +286,239 @@ nav svg {
   width: 90%;
 }
 .project-subtitle {
-  font-size: 1.75rem;
+  color: var(--gold);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.projet {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2vh;
+  padding-bottom: 28vh;
+}
+.projet .text p {
+  color: var(--gold);
+  font-size: 1.25rem;
+  text-align: center;
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  margin-top: 6rem;
+}
+
+/* ##### THANKS-BOSS ##### */
+.video1-text {
+  grid-column: 1 / 5;
+  grid-row: 3;
+}
+.video1 {
+  grid-column: 1 / 5;
+  grid-row: 4;
+  width: 100%;
+}
+.video2-text {
+  grid-column: 1 / 5;
+  grid-row: 5;
+}
+.video2 {
+  grid-column: 1 / 5;
+  grid-row: 6;
+  width: 100%;
+}
+
+/* ##### TERRE DE THÉS ##### */
+
+.moodboard-text {
+  grid-column: 1 / 5;
+  grid-row: 3;
+}
+.moodboard {
+  grid-column: 1 / 5;
+  grid-row: 4;
+}
+.moodboard img {
+  border: solid 1px var(--bg-color-dark);
+}
+.logos-text {
+  grid-column: 1 / 5;
+  grid-row: 5;
+}
+.logo1 {
+  grid-column: 1 / 3;
+  grid-row: 6;
+}
+.logo2 {
+  grid-column: 3 / 5;
+  grid-row: 6;
+}
+.logo3 {
+  grid-column: 1 / 3;
+  grid-row: 7;
+}
+.logo4 {
+  grid-column: 3 / 5;
+  grid-row: 7;
+}
+.arborescence-text {
+  grid-column: 1 / 5;
+  grid-row: 8;
+}
+.arborescence {
+  grid-column: 1 / 5;
+  grid-row: 9;
+}
+.mobiles-text {
+  grid-column: 1 / 5;
+  grid-row: 10;
+}
+.mobile1 {
+  grid-column: 1 / 3;
+  grid-row: 11;
+}
+.mobile2 {
+  grid-column: 3 / 5;
+  grid-row: 11;
+}
+.mobile3 {
+  grid-column: 1 / 3;
+  grid-row: 12;
+}
+.mobile4 {
+  grid-column: 3 / 5;
+  grid-row: 12;
+}
+.mobile5 {
+  grid-column: 1 / 3;
+  grid-row: 13;
+}
+.mobile6 {
+  grid-column: 3 / 5;
+  grid-row: 13;
+}
+.prototype1 {
+  grid-column: 1 / 5;
+  grid-row: 14;
+}
+.desktops-text {
+  grid-column: 1 / 5;
+  grid-row: 15;
+}
+.desktop1 {
+  grid-column: 1 / 5;
+  grid-row: 16;
+}
+.desktop2 {
+  grid-column: 1 / 5;
+  grid-row: 17;
+}
+.desktop3 {
+  grid-column: 1 / 5;
+  grid-row: 18;
+}
+.desktop4 {
+  grid-column: 1 / 5;
+  grid-row: 19;
+}
+.desktop5 {
+  grid-column: 1 / 5;
+  grid-row: 20;
+}
+.desktop6 {
+  grid-column: 1 / 5;
+  grid-row: 21;
+}
+.prototype2 {
+  grid-column: 1 / 5;
+  grid-row: 22;
+}
+.video-text {
+  grid-column: 1 / 5;
+  grid-row: 23;
+}
+.video {
+  grid-column: 1 / 5;
+  grid-row: 24;
+  width: 100%;
+}
+.mockups-text {
+  grid-column: 1 / 5;
+  grid-row: 25;
+}
+.mockup1 {
+  grid-column: 1 / 5;
+  grid-row: 26;
+}
+.mockup2 {
+  grid-column: 1 / 5;
+  grid-row: 27;
+}
+.packagings-text {
+  grid-column: 1 / 5;
+  grid-row: 28;
+}
+.packaging4 {
+  grid-column: 1 / 5;
+  grid-row: 29;
+}
+.packaging5 {
+  grid-column: 1 / 5;
+  grid-row: 30;
+}
+.packaging1 {
+  grid-column: 1 / 5;
+  grid-row: 31;
+}
+.packaging2 {
+  grid-column: 1 / 3;
+  grid-row: 32;
+}
+.packaging3 {
+  grid-column: 3 / 5;
+  grid-row: 32;
+}
+.menus-text {
+  grid-column: 1 / 5;
+  grid-row: 33;
+}
+.menu1 {
+  grid-column: 1 / 5;
+  grid-row: 34;
+}
+.menu2 {
+  grid-column: 1 / 5;
+  grid-row: 35;
+}
+
+/* ##### L'AGRUME INDIGO ##### */
+
+.video1-text {
+  grid-column: 1 / 5;
+  grid-row: 3;
+}
+.video1 {
+  grid-column: 1 / 5;
+  grid-row: 4;
+  width: 100%;
+}
+.video2-text {
+  grid-column: 1 / 5;
+  grid-row: 5;
+}
+.video2 {
+  grid-column: 1 / 5;
+  grid-row: 6;
+  width: 100%;
+}
+.video3-text {
+  grid-column: 1 / 5;
+  grid-row: 7;
+}
+.video3 {
+  grid-column: 1 / 5;
+  grid-row: 8;
+  width: 100%;
 }
 
 /* ########### section about ########### */
@@ -628,6 +860,156 @@ form button:disabled {
   .realisations {
     width: 70%;
   }
+  .projet {
+    width: 70%;
+  }
+
+  /* ##### TERRE DE THÉS ##### */
+  .logo1 {
+    grid-column: 1;
+    grid-row: 6;
+  }
+  .logo2 {
+    grid-column: 2;
+    grid-row: 6;
+  }
+  .logo3 {
+    grid-column: 3;
+    grid-row: 6;
+  }
+  .logo4 {
+    grid-column: 4;
+    grid-row: 6;
+  }
+  .arborescence-text {
+    grid-column: 1 / 5;
+    grid-row: 7;
+  }
+  .arborescence {
+    grid-column: 1 / 5;
+    grid-row: 8;
+  }
+  .mobiles-text {
+    grid-column: 1 / 5;
+    grid-row: 9;
+  }
+  .mobile1 {
+    grid-column: 1;
+    grid-row: 10;
+  }
+  .mobile2 {
+    grid-column: 2;
+    grid-row: 10;
+  }
+  .mobile3 {
+    grid-column: 3;
+    grid-row: 10;
+  }
+  .mobile4 {
+    grid-column: 4;
+    grid-row: 10;
+  }
+  .mobile5 {
+    grid-column: 1;
+    grid-row: 11;
+  }
+  .mobile6 {
+    grid-column: 2;
+    grid-row: 11;
+  }
+  .prototype1 {
+    grid-column: 3 / 5;
+    grid-row: 11;
+  }
+  .desktops-text {
+    grid-column: 1 / 5;
+    grid-row: 12;
+  }
+  .desktop1 {
+    grid-column: 1 / 3;
+    grid-row: 13;
+  }
+  .desktop2 {
+    grid-column: 3 / 5;
+    grid-row: 13;
+  }
+  .desktop3 {
+    grid-column: 1 / 3;
+    grid-row: 14;
+  }
+  .desktop4 {
+    grid-column: 3 / 5;
+    grid-row: 14;
+  }
+  .desktop5 {
+    grid-column: 1 / 3;
+    grid-row: 15;
+  }
+  .desktop6 {
+    grid-column: 3 / 5;
+    grid-row: 15;
+  }
+  .prototype2 {
+    grid-column: 1 / 5;
+    grid-row: 16;
+  }
+  .video-text {
+    grid-column: 1 / 5;
+    grid-row: 17;
+  }
+  .video {
+    grid-column: 1 / 5;
+    grid-row: 18;
+    width: 100%;
+  }
+  .mockups-text {
+    grid-column: 1 / 5;
+    grid-row: 19;
+  }
+  .mockup1 {
+    grid-column: 1 / 3;
+    grid-row: 20;
+  }
+  .mockup2 {
+    grid-column: 3 / 5;
+    grid-row: 20;
+  }
+  .packagings-text {
+    grid-column: 1 / 5;
+    grid-row: 21;
+  }
+  .packaging4 {
+    grid-column: 1 / 5;
+    grid-row: 22;
+  }
+  .packaging5 {
+    grid-column: 1 / 5;
+    grid-row: 23;
+  }
+  .packaging1 {
+    grid-column: 1 / 3;
+    grid-row: 24;
+  }
+  .packaging2 {
+    grid-column: 3 / 4;
+    grid-row: 24;
+  }
+  .packaging3 {
+    grid-column: 4 / 5;
+    grid-row: 24;
+  }
+  .menus-text {
+    grid-column: 1 / 5;
+    grid-row: 25;
+  }
+  .menu1 {
+    grid-column: 1 / 3;
+    grid-row: 26;
+  }
+  .menu2 {
+    grid-column: 3 / 5;
+    grid-row: 26;
+  }
 
   /* ########### section about ########### */
   .about {
@@ -700,6 +1082,12 @@ form button:disabled {
   /* ########### section realisations ########### */
   .realisations {
     width: 60%;
+  }
+  .projet {
+    width: 60%;
+  }
+  .projet .text p {
+    margin-top: 10rem;
   }
 
   /* ########### section about ########### */

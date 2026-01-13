@@ -19,30 +19,64 @@ export default function LAgrumeIndigo() {
       <Presentation
         imageClass="image-profil-about"
         title="l'argume indigo"
-        subtitle="formation développeur web | projet présenté lors de ma soutenance"
+        subtitle="formation développeur web | projet présenté lors de ma soutenance finale"
         subtitleClass="project-subtitle"
         description={
-          <>
-            Développement d'une application web de gestion de droit d'accès.
-            Création de différents rôles et réalisation d'une interface
-            personnalisée au type d'utilisateur (adaptable à tous les formats
-            d'écran). Le sujet imposé : Une grande Marque de salle de sport
-            souhaite la création d'une application web pour son équipe qui gère
-            leurs différentes franchises et leur donner accès aux outils en
-            ligne. L'administration de la Marque doit pouvoir gérer la création
-            de nouvelles franchises ainsi que leurs salles de sport et leur
-            associer un utilisateur. Elle pourra également gérer l'accès aux
-            outils disponibles de chaque partenaire selon le contrat signé avec
-            ces derniers. Les franchisés et les gérants de salles de sport
-            doivent quant à eux pouvoir utiliser les outils en lignes selon leur
-            contrat respectif, sans pouvoir toutefois modifier leur contrat.
-          </>
+          <div className="space-y-4">
+            <p>
+              Développement d'une application web de gestion de droit d'accès.
+              Création de différents rôles et réalisation d'une interface
+              personnalisée au type d'utilisateur (adaptable à tous les formats
+              d'écran).
+            </p>
+            <p>
+              Le sujet imposé : Une grande Marque de salle de sport souhaite la
+              création d'une application web pour son équipe qui gère leurs
+              différentes franchises et leur donner accès aux outils en ligne.
+              L'administration de la Marque doit pouvoir gérer la création de
+              nouvelles franchises ainsi que leurs salles de sport et leur
+              associer un utilisateur. Elle pourra également gérer l'accès aux
+              outils disponibles de chaque partenaire selon le contrat signé
+              avec ces derniers.
+            </p>
+          </div>
         }
         showArrows={true}
         showButtons={false}
       />
 
-      <section></section>
+      <section className="projet">
+        <div className="item text video1-text">
+          <p>gérant de salle de sport</p>
+        </div>
+        <div className="item video1">
+          <video className="video1" controls disablePictureInPicture muted>
+            <source
+              src="../images/lagrumeindigo/GerantH.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div className="item text video2-text">
+          <p>directeur de franchise</p>
+        </div>
+        <div className="item video2">
+          <video className="video2" controls disablePictureInPicture muted>
+            <source
+              src="../images/lagrumeindigo/DirecteurH.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div className="item text video3-text">
+          <p>administrateur</p>
+        </div>
+        <div className="item video3">
+          <video className="video3" controls disablePictureInPicture muted>
+            <source src="../images/lagrumeindigo/AdminH.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
     </main>
   );
 }
