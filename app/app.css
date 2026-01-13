@@ -41,15 +41,15 @@ html.light {
 }
 /* Image en dark */
 html.dark.dark-bg {
-  background: var(--bg-color-dark) url("images/bandeau_moy_small.png") no-repeat
-    top center;
+  background: var(--bg-color-dark) url("../public/images/bandeau_moy_small.png")
+    no-repeat top center;
   background-size: cover;
   height: 100vh;
 }
 /* Image en light */
 html.light-bg {
-  background: var(--bg-color-light) url("images/bandeau_light_small.png")
-    no-repeat top center;
+  background: var(--bg-color-light)
+    url("../public/images/bandeau_light_small.png") no-repeat top center;
   background-size: cover;
   height: 100vh;
 }
