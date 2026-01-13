@@ -280,6 +280,12 @@ nav svg {
   width: 90%;
   padding-top: 26vh;
 }
+.card {
+  background-color: #fff;
+}
+.dark .card {
+  background-color: #424242;
+}
 
 /* ########### section realisations ########### */
 .realisations {

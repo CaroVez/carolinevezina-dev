@@ -7,6 +7,7 @@ import iconWordpress from "../assets/wordpress-original.png";
 import iconHTML5 from "../assets/html5-original.svg";
 import iconCSS3 from "../assets/css3-original.svg";
 import iconJavascript from "../assets/javascript-original.png";
+import iconTypescript from "../assets/typescript-original.svg";
 import iconVuejs from "../assets/vuejs-original.svg";
 import iconReact from "../assets/react-original.svg";
 import iconPhotoshop from "../assets/photoshop-original.svg";
@@ -26,6 +27,21 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function About() {
+  const formatTitle = (title: string) => {
+    // On sépare le texte à chaque 'm', 'M', 'n' ou 'N'
+    const parts = title.split(/(m|n)/gi);
+
+    return parts.map((part, index) =>
+      /m|n/i.test(part) ? (
+        <span key={index} className="alt">
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  };
+
   return (
     <main className="mx-auto">
       {/* Section Présentation */}
@@ -48,18 +64,15 @@ export default function About() {
 
       <section className="about pb-[12vh]">
         <div className="historique">
-          <h5>
-            <span className="alt">m</span>o<span className="alt">n</span>{" "}
-            historique
-          </h5>
+          <h5>{formatTitle("mon historique")}</h5>
           <p>
             Mon parcours n'a pas commencé dans le code, mais dans le design
             d'espaces. Pendant plus de neuf ans, j'ai travaillé comme
-            dessinatrice en aménagement intérieur, avant de me tourner vers la
-            gestion d'immeubles en copropriété. Ces années m'ont appris à
-            organiser, planifier, collaborer et surtout à donner vie à des
-            projets concrets - des qualités que je mets aujourd'hui au service
-            du web.
+            technicienne en architecture pour des aménagements intérieurs, avant
+            de me tourner vers la gestion d'immeubles en copropriété. Ces années
+            m'ont appris à organiser, planifier, collaborer et surtout à donner
+            vie à des projets concrets - des qualités que je mets aujourd'hui au
+            service du web.
           </p>
           <br />
           <p>
@@ -74,11 +87,7 @@ export default function About() {
         </div>
 
         <div className="experience">
-          <h5>
-            <span className="alt">m</span>o<span className="alt">n</span>{" "}
-            expérie
-            <span className="alt">n</span>ce
-          </h5>
+          <h5>{formatTitle("mon expérience")}</h5>
           <p>
             Mes premières expériences en développement web m'ont amenée à
             explorer le monde des interfaces réactives avec <b>Vue.js</b>, puis
@@ -90,20 +99,40 @@ export default function About() {
         </div>
 
         <div className="competences-techniques">
-          <h5>
-            <span className="alt">m</span>es co<span className="alt">m</span>
-            péte
-            <span className="alt">n</span>ces tech<span className="alt">n</span>
-            iques
-          </h5>
+          <h5>{formatTitle("mes compétences techniques")}</h5>
+
           <ul className="icones">
             <li>
-              <img src={iconFigma} alt="logo figma" />
+              <img src={iconReact} alt="logo react" />
+            </li>
+            <li>
+              <img src={iconVuejs} alt="logo vue-js" />
             </li>
           </ul>
           <p>
-            En conception d'interfaces, je crée des maquettes modernes et
-            intuitives avec <b>Figma</b>, centrées sur l'expérience utilisateur.
+            Avec les frameworks pour créer des applications monopage, je conçois
+            des interfaces dynamiques et réactives à l'aide de <b>React</b> et{" "}
+            <b>Vue.js</b>.
+          </p>
+
+          <ul className="icones">
+            <li>
+              <img src={iconHTML5} alt="logo html5" />
+            </li>
+            <li>
+              <img src={iconCSS3} alt="logo css3" />
+            </li>
+            <li>
+              <img src={iconJavascript} alt="logo javascript" />
+            </li>
+            <li>
+              <img src={iconTypescript} alt="logo typescript" />
+            </li>
+          </ul>
+          <p>
+            Côté langages front-end, j'intègre des interfaces responsives et
+            fluides en <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b> et{" "}
+            <b>TypeScript</b>.
           </p>
 
           <ul className="icones">
@@ -118,32 +147,12 @@ export default function About() {
 
           <ul className="icones">
             <li>
-              <img src={iconHTML5} alt="logo html5" />
-            </li>
-            <li>
-              <img src={iconCSS3} alt="logo css3" />
-            </li>
-            <li>
-              <img src={iconJavascript} alt="logo javascript" />
+              <img src={iconFigma} alt="logo figma" />
             </li>
           </ul>
           <p>
-            Côté langages front-end, j'intègre des interfaces responsives et
-            fluides en <b>HTML</b>, <b>CSS</b> et <b>JavaScript</b>.
-          </p>
-
-          <ul className="icones">
-            <li>
-              <img src={iconVuejs} alt="logo vue-js" />
-            </li>
-            <li>
-              <img src={iconReact} alt="logo react" />
-            </li>
-          </ul>
-          <p>
-            Avec les frameworks pour créer des applications monopage, je conçois
-            des interfaces dynamiques et réactives à l'aide de <b>Vue.js</b> et{" "}
-            <b>React</b>.
+            En conception d'interfaces, je crée des maquettes modernes et
+            intuitives avec <b>Figma</b>, centrées sur l'expérience utilisateur.
           </p>
 
           <ul className="icones">

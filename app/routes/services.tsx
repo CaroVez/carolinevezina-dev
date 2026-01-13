@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // Import des icônes depuis assets
 import iconFigma from "../assets/figma-original.svg";
 import iconWordpress from "../assets/wordpress-original.png";
-import iconCode from "../assets/code-slash.svg";
+import iconReact from "../assets/react-original.svg";
 
 interface Service {
   title: string;
@@ -53,7 +53,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }} // État quand l'élément entre dans l'écran
             viewport={{ once: true, margin: "-100px" }} // S'anime une seule fois
             transition={{ duration: 0.6, delay: index * 0.1 }} // Animation fluide
-            className="w-full max-w-[85vw] md:max-w-[700px] min-h-[45vh] flex flex-col items-center md:items-start justify-center text-center md:text-left p-8 bg-[#fff] rounded-[5px] border shadow-[8px_8px_0px_rgba(0,0,0,0.5)]"
+            className="card w-full max-w-[85vw] md:max-w-[700px] min-h-[45vh] flex flex-col items-center md:items-start justify-center text-center md:text-left p-8 rounded-[5px] border shadow-[8px_8px_0px_rgba(0,0,0,0.5)]"
           >
             <img
               src={service.icon}
@@ -82,16 +82,16 @@ export default function Services() {
 // données centralisées
 const SERVICES: Service[] = [
   {
-    title: "maquette & prototype",
-    icon: iconFigma,
+    title: "projet web sur mesure",
+    icon: iconReact,
     description:
-      "Des maquettes claires et efficaces pour donner vie à votre vision avant le développement.",
+      "Un site unique, pensé et développé selon vos besoins spécifiques.",
     items: [
-      "analyse du site existant ou conception à partir de zéro;",
-      "proposition de design moderne et cohérent;",
-      "création de maquettes et prototypes sur Figma;",
-      "optimisation de l'expérience utilisateur;",
-      "visuels adaptés desktop et mobile.",
+      "développement à partir de zéro;",
+      "design personnalisé image de marque;",
+      "fonctionnalités sur mesure;",
+      "expérience utilisateur soignée;",
+      "site évolutif et prêt pour la croissance.",
     ],
   },
   {
@@ -109,16 +109,16 @@ const SERVICES: Service[] = [
     ],
   },
   {
-    title: "projet web sur mesure",
-    icon: iconCode,
+    title: "maquette & prototype",
+    icon: iconFigma,
     description:
-      "Un site unique, pensé et développé selon vos besoins spécifiques.",
+      "Des maquettes claires et efficaces pour donner vie à votre vision avant le développement.",
     items: [
-      "développement à partir de zéro;",
-      "design personnalisé image de marque;",
-      "fonctionnalités sur mesure;",
-      "expérience utilisateur soignée;",
-      "site évolutif et prêt pour la croissance.",
+      "analyse du site existant ou conception à partir de zéro;",
+      "proposition de design moderne et cohérent;",
+      "création de maquettes et prototypes sur Figma;",
+      "optimisation de l'expérience utilisateur;",
+      "visuels adaptés desktop et mobile.",
     ],
   },
 ];
