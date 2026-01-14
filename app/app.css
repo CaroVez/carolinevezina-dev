@@ -731,6 +731,12 @@ form button:disabled {
   .realisations {
     width: 90%;
   }
+  .project-subtitle {
+    font-size: 1.75rem;
+  }
+  .project-description p {
+    font-size: 1.5rem;
+  }
 
   /* ########### section about ########### */
   .about {
