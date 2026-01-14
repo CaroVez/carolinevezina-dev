@@ -150,7 +150,17 @@ const PROJECTS: Project[] = [
     bgImage: "./images/carolinevezina/vignette.png",
     colSpanDesktop: "md:col-span-2",
     rowSpanDesktop: "md:row-start-1",
-    tech: ["react", "typescript", "html", "css", "github", "emailjs"],
+    tech: [
+      "react",
+      "typescript",
+      "html",
+      "css",
+      "javascript",
+      "tailwindcss",
+      "github",
+      "emailjs",
+      "netlify",
+    ],
   },
   {
     title: "Mireille Cliche, écrivaine",
@@ -293,7 +303,7 @@ const PROJECTS: Project[] = [
     bgImage: "./images/lajungleverte/vignette.png",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-5",
-    tech: ["react", "html", "css", "github", "netlify"],
+    tech: ["react", "html", "css", "javascript", "github", "netlify"],
   },
   {
     title: "Our super music app",
@@ -304,6 +314,6 @@ const PROJECTS: Project[] = [
     bgImage: "./images/oursupermusicapp/vignette.png",
     colSpanDesktop: "md:col-span-1",
     rowSpanDesktop: "md:row-start-5",
-    tech: ["react", "html", "css", "github", "netlify"],
+    tech: ["react", "html", "css", "javascript", "github", "netlify"],
   },
 ];
