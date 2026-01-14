@@ -296,7 +296,7 @@ const PROJECTS: Project[] = [
     tech: ["react", "html", "css", "github", "netlify"],
   },
   {
-    title: "Our surper music app",
+    title: "Our super music app",
     description:
       "création d'une interface inspirée des instruments de musique électronique.",
     link: "https://oursupermusicapp.netlify.app/",
