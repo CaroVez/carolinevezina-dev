@@ -89,10 +89,13 @@ h3,
 h4,
 h5,
 .alt,
-.typewriter {
+.typewriter-title {
   font-family:
     "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
+}
+.typewriter-title span {
+  font-family: inherit;
 }
 .alt {
   font-variant-alternates: styleset(alt);
@@ -105,9 +108,18 @@ h1 {
   font-weight: bold;
   padding: 4rem 0;
 }
-h1 span.code {
+.code-tag {
+  font-family: monospace !important;
   font-size: 1.25rem;
   font-weight: normal;
+}
+.cursor-line {
+  display: inline-block;
+  width: 1.5px;
+  height: 1.1em;
+  background-color: #000;
+  margin-left: 2px;
+  vertical-align: middle;
 }
 
 /* ########### je m'appelle Caroline. ########### */
@@ -194,31 +206,6 @@ nav svg {
 .image-profil-contact,
 .image-profil-404 {
   display: none;
-}
-
-.typewriter {
-  display: inline-block;
-  overflow: hidden;
-  border-right: 2px solid var(--text-color-light); /* curseur */
-  white-space: nowrap;
-  animation:
-    typing 2s steps(20, end),
-    blink 1s step-end infinite;
-}
-/* effet d’écriture */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-/* curseur clignotant */
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
 }
 
 .presentation p,
@@ -657,7 +644,7 @@ form button:disabled {
   h1 {
     font-size: 3.5rem;
   }
-  h1 span.code {
+  .code-tag {
     font-size: 2rem;
   }
 
@@ -799,12 +786,7 @@ form button:disabled {
 @media screen and (min-width: 1024px) {
   /* ########### titre principal ########### */
   h1 {
-    font-size: 3.5rem;
     padding: 6rem 0;
-  }
-
-  h1 span.code {
-    font-size: 2rem;
   }
 
   /* ########### je m'appelle Caroline. ########### */
@@ -1064,7 +1046,7 @@ form button:disabled {
     font-size: 4rem;
     padding: 8rem 0;
   }
-  h1 span.code {
+  .code-tag {
     font-size: 2.5rem;
   }
 

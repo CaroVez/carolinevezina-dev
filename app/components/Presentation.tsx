@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import Typewriter from "./Typewriter";
 
 interface PresentationProps {
   title: string;
@@ -45,13 +46,7 @@ export default function Presentation({
         {image && <img src={image} alt="Illustration" className={imageClass} />}
 
         <div className="presentation-content">
-          <h1>
-            <span className="typewriter">
-              <span className="code">&lt;h1&gt;</span>
-              {formatTitle(title)}
-              <span className="code">&lt;/h1&gt;</span>
-            </span>
-          </h1>
+          <Typewriter text={title} />
           {subtitle && (
             <h2 className={subtitleClass}>{formatTitle(subtitle)}</h2>
           )}
