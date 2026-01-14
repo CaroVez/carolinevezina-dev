@@ -21,14 +21,20 @@ export default function TerreDeThes() {
         title="terre de thés"
         subtitle="formation designer ui | projet présenté lors de ma soutenance finale"
         subtitleClass="project-subtitle"
+        descriptionClass="project-description"
         description={
-          <>
-            Élaboration d'une nouvelle identité visuelle pour un salon de thé
-            écoresponsable situé à Marseille. Ce qui inclus la création d'un
-            logo ainsi qu'une charte graphique, la production de maquettages
-            pour leur site internet, une animation vidéo promotionnelle de leur
-            site et quelques supports de communication à imprimer.
-          </>
+          <div className="space-y-4">
+            <p>
+              Élaboration d'une nouvelle identité visuelle pour un salon de thé
+              écoresponsable situé à Marseille.
+            </p>
+            <p>
+              Ce qui inclus la création d'un logo ainsi qu'une charte graphique,
+              la production de maquettages pour leur site internet, une
+              animation vidéo promotionnelle de leur site et quelques supports
+              de communication à imprimer.
+            </p>
+          </div>
         }
         showArrows={true}
         showButtons={false}

@@ -21,6 +21,7 @@ export default function LAgrumeIndigo() {
         title="l'argume indigo"
         subtitle="formation développeur web | projet présenté lors de ma soutenance finale"
         subtitleClass="project-subtitle"
+        descriptionClass="project-description"
         description={
           <div className="space-y-4">
             <p>

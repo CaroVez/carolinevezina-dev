@@ -293,8 +293,18 @@ nav svg {
 }
 .project-subtitle {
   color: var(--gold);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
+}
+.project-description p {
+  font-family:
+    century gothic,
+    segoe ui,
+    tahoma,
+    geneva,
+    verdana,
+    sans-serif;
+  font-size: 1rem;
 }
 .projet {
   width: 90%;
@@ -634,10 +644,12 @@ form button:disabled {
   /* ########### hover ########### */
   .navbar-brand:hover,
   header a:hover,
-  header svg:hover,
   .work-scope a:hover {
     color: var(--gold);
     fill: var(--gold);
+    transform: translateY(2px);
+  }
+  header svg:hover {
     transform: translateY(2px);
   }
 
@@ -674,7 +686,6 @@ form button:disabled {
     color: var(--gold);
   }
   header svg {
-    fill: var(--turquoise);
     cursor: pointer;
     transition:
       transform 0.2s ease,

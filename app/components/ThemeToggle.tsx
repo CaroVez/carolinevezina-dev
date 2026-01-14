@@ -14,7 +14,7 @@ export default function ThemeToggle() {
   });
 
   useEffect(() => {
-    const root = window.document.documentElement; // Ton CSS utilise le body
+    const root = window.document.documentElement;
     if (isDark) {
       root.classList.add("dark");
       root.classList.add("dark-bg");
@@ -33,14 +33,16 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="relative w-5 h-5 flex items-center justify-center focus:outline-none"
+      className="group relative w-5 h-5 flex items-center justify-center focus:outline-none text-[#479796]"
       title="Changer le thème"
     >
       {/* Icône Soleil (Visible en Dark Mode) */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
-        className={`absolute transition-opacity duration-300 ${isDark ? "opacity-100" : "opacity-0"}`}
+        className={`absolute transition-all duration-300 transform 
+          ${isDark ? "opacity-100 scale-100" : "opacity-0 scale-50 pointer-events-none"} 
+          group-hover:text-[#ba7954]`}
         viewBox="0 0 16 16"
         width="20"
         height="20"
@@ -52,7 +54,9 @@ export default function ThemeToggle() {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
-        className={`absolute transition-opacity duration-300 ${isDark ? "opacity-0" : "opacity-100"}`}
+        className={`absolute transition-all duration-300 transform 
+          ${isDark ? "opacity-0 scale-50 pointer-events-none" : "opacity-100 scale-100"} 
+          group-hover:text-[#ba7954]`}
         viewBox="0 0 16 16"
         width="20"
         height="20"

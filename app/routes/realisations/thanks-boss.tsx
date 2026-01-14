@@ -1,5 +1,6 @@
 import type { Route } from "./+types/thanks-boss";
 import Presentation from "../../components/Presentation";
+import { div } from "framer-motion/client";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -21,16 +22,22 @@ export default function ThanksBoss() {
         title="thanks-boss"
         subtitle="contrat en freelance"
         subtitleClass="project-subtitle"
+        descriptionClass="project-description"
         description={
-          <>
-            participation au développement d'une plateforme de recherche
-            d'emplois, incluant le développement et l'intégration des
-            différentes pages du site à partir des maquettes fournies par les
-            designers UX/UI. J'ai également contribué à l'implémentation de
-            nouvelles fonctionnalités en collaboration avec l'équipe backend,
-            notamment pour la gestion des données, les appels API et les
-            interactions dynamiques.
-          </>
+          <div className="space-y-4">
+            <p>
+              participation au développement d'une plateforme de recherche
+              d'emplois, incluant le développement et l'intégration des
+              différentes pages du site à partir des maquettes fournies par les
+              designers UX/UI.
+            </p>
+            <p>
+              J'ai également contribué à l'implémentation de nouvelles
+              fonctionnalités en collaboration avec l'équipe backend, notamment
+              pour la gestion des données, les appels API et les interactions
+              dynamiques.
+            </p>
+          </div>
         }
         showArrows={true}
         showButtons={false}

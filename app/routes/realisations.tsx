@@ -261,7 +261,7 @@ const PROJECTS: Project[] = [
   {
     title: "l'agrume indigo",
     description:
-      "conception d'un site web de gestion des droits d'accès pour une marque de salles de sport, avec rôles et interf personnalisée selon les contrats utilisateurs.",
+      "conception d'un site web de gestion des droits d'accès pour une marque de salles de sport, avec rôles et interfaces personnalisées selon les contrats utilisateurs.",
     link: "/realisations/l-agrume-indigo",
     isExternal: false,
     bgImage: "./images/lagrumeindigo/vignette.jpg",
