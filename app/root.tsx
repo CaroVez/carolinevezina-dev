@@ -12,7 +12,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import ThemeToggle from "./components/ThemeToggle";
-import { s } from "framer-motion/client";
+import ScrollToTop from "./components/ScrollToTop";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -39,6 +39,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Pour un effet de glissement fluide
+    });
+  };
 
   const formatTitle = (title: string) => {
     // On sépare le texte à chaque 'm', 'M', 'n' ou 'N'
@@ -154,6 +161,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </nav>
         {children}
+        <ScrollToTop />
         <ScrollRestoration />
         <Scripts />
       </body>

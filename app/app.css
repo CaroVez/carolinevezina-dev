@@ -60,7 +60,6 @@ html.dark {
 .mobile-tab-bar {
   background-color: rgba(242, 242, 242, 0.8); /* Couleur light par défaut */
 }
-
 .dark .mobile-tab-bar {
   background-color: rgba(73, 73, 73, 0.8); /* Couleur dark */
 }
@@ -81,6 +80,7 @@ html.dark {
 
 html {
   scroll-padding-top: 80px; /* Adapte selon la hauteur de ta navbar */
+  scroll-behavior: smooth;
 }
 
 h1,
