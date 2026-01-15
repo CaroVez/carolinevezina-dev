@@ -95,7 +95,7 @@ const SERVICES: Service[] = [
     ],
   },
   {
-    title: "site WordPress clé en main",
+    title: "Site WordPress prêt-à-gérer",
     icon: iconWordpress,
     description:
       "Un site professionnel, prêt à être utilisé dès sa mise en ligne.",

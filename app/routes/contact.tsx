@@ -145,13 +145,13 @@ export default function Contact() {
               <option value="" disabled>
                 veuillez choisir un sujet
               </option>
-              <option value="maquette sur Figma">maquette sur Figma</option>
+              <option value="projet web sur mesure">
+                projet web sur mesure
+              </option>
               <option value="site clé en main sur WordPress">
-                site clé en main sur WordPress
+                site prêt-à-gérer sur WordPress
               </option>
-              <option value="refonte d'un site existant">
-                refonte d'un site existant
-              </option>
+              <option value="maquette sur Figma">maquette sur Figma</option>
               <option value="autre">autre</option>
             </select>
 
