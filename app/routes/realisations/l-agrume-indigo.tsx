@@ -3,11 +3,13 @@ import Presentation from "../../components/Presentation";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Caroline Vézina - mes réalisations" },
+    {
+      title: "l'agrume indigo | Caroline Vézina - développeur web front-end",
+    },
     {
       name: "description",
       content:
-        "Découvrez mon portfolio : projets clients, personnels et formations. Témoignages de ma passion pour le développement web front-end et le design UI.",
+        "Découvrez le projet L'Agrume Indigo, une application web de gestion de droit d'accès.",
     },
   ];
 }

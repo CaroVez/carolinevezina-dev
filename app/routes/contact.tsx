@@ -7,8 +7,12 @@ import emailjs from "@emailjs/browser";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Caroline Vézina - me joindre" },
-    { name: "description", content: "" },
+    { title: "me joindre | Caroline Vézina - développeur web front-end" },
+    {
+      name: "description",
+      content:
+        "Vous souhaitez discuter d'un projet web ou en savoir plus sur mes services ? Contactez-moi pour vos besoins en développement front-end et design UI. À bientôt !",
+    },
   ];
 }
 

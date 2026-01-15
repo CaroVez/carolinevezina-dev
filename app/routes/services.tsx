@@ -16,7 +16,7 @@ interface Service {
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Caroline Vézina - mes services" },
+    { title: "mes services | Caroline Vézina - développeur web front-end" },
     {
       name: "description",
       content:

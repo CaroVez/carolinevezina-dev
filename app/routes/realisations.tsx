@@ -17,7 +17,7 @@ interface Project {
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Caroline Vézina - mes réalisations" },
+    { title: "mes réalisations | Caroline Vézina - développeur web front-end" },
     {
       name: "description",
       content:

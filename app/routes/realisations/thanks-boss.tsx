@@ -4,11 +4,13 @@ import { div } from "framer-motion/client";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Caroline Vézina - mes réalisations" },
+    {
+      title: "thanks-boss | Caroline Vézina - développeur web front-end",
+    },
     {
       name: "description",
       content:
-        "Découvrez mon portfolio : projets clients, personnels et formations. Témoignages de ma passion pour le développement web front-end et le design UI.",
+        "Découvrez le projet Thank-Boss, une plateforme de recherche d'emplois.",
     },
   ];
 }

@@ -6,7 +6,7 @@ import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Caroline Vézina - développeur web front-end & designer UI" },
+    { title: "Caroline Vézina - développeur web front-end & designer ui" },
     {
       name: "description",
       content:

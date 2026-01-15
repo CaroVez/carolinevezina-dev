@@ -17,11 +17,11 @@ import iconAftereffects from "../assets/aftereffects-original.svg";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Caroline Vézina - qui suis-je ?" },
+    { title: "qui suis-je ? | Caroline Vézina - développeur web front-end" },
     {
       name: "description",
       content:
-        "Caroline Vézina : Développeuse web front-end & Design UI. Découvrez mon parcours, mes compétences et mon approche créative.",
+        "Caroline Vézina : Développeuse web front-end & Design UI. Découvrez mon parcours et mes compétences.",
     },
   ];
 }

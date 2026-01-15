@@ -3,11 +3,13 @@ import Presentation from "../../components/Presentation";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Caroline Vézina - mes réalisations" },
+    {
+      title: "terre de thés | Caroline Vézina - développeur web front-end",
+    },
     {
       name: "description",
       content:
-        "Découvrez mon portfolio : projets clients, personnels et formations. Témoignages de ma passion pour le développement web front-end et le design UI.",
+        "Découvrez le projet Terre de Thés, une identité visuelle complète.",
     },
   ];
 }
