@@ -1,8 +1,7 @@
 import type { Route } from "./+types/home";
 import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil1.png";
-
-import { Link } from "react-router";
+import FacebookFeed from "../components/FacebookFeed";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -34,6 +33,7 @@ export default function Home() {
         showArrows={false}
         showButtons={true}
       />
+      {/* <FacebookFeed /> */}
     </main>
   );
 }

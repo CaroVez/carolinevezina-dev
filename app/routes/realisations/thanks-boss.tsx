@@ -1,6 +1,5 @@
 import type { Route } from "./+types/thanks-boss";
 import Presentation from "../../components/Presentation";
-import { div } from "framer-motion/client";
 
 export function meta({}: Route.MetaArgs) {
   return [

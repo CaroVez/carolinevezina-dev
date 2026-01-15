@@ -164,6 +164,25 @@ h5 {
   font-weight: bold;
 }
 
+/* ########### section facebook feed ########### 
+.fb-page {
+  border-radius: 5px;
+  border: var(--text-color-light) solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+  margin-bottom: 12vh;
+  overflow: hidden;
+}
+.fb-page,
+.fb-page span,
+.fb-page iframe {
+  width: 100% !important;
+  max-width: 500px !important;
+}
+.facebook h5 {
+  color: var(--gold);
+  font-weight: bold;
+} */
+
 /* ########### navbar ########### */
 nav a {
   color: var(--turquoise);
