@@ -31,9 +31,26 @@ export default function FacebookFeed() {
     return () => clearTimeout(timer);
   }, []);
 
+  // fonction de formatage automatique
+  const formatTitle = (text: string) => {
+    const parts = text.split(/(m|n)/gi);
+
+    return parts.map((part, index) =>
+      /m|n/i.test(part) ? (
+        <span key={index} className="alt">
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  };
+
   return (
     <section className="facebook w-full flex flex-col items-center my-12 px-4">
-      <h5 className="mb-8 text-center">Suivez-moi sur Facebook</h5>
+      <h5 className="mb-8 text-center">
+        {formatTitle("mes dernières actualités")}
+      </h5>
 
       {/* ASTUCE : On force le min-width à 500px sur desktop pour que l'iframe 
         générée par FB "croie" qu'elle a de la place. 
@@ -48,11 +65,11 @@ export default function FacebookFeed() {
           data-href="https://www.facebook.com/profile.php?id=61586443329458"
           data-tabs="timeline"
           data-width="500"
-          data-height="600"
-          data-small-header="false"
+          data-height="700"
+          data-small-header="true"
           data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="true"
+          data-hide-cover="true"
+          data-show-facepile="fasle"
         >
           <blockquote
             cite="https://www.facebook.com/profile.php?id=61586443329458"

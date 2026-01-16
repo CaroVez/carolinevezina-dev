@@ -165,6 +165,12 @@ h5 {
 }
 
 /* ########### section facebook feed ########### 
+#fb-container {
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  z-index: 10;
+}
 .fb-page {
   border-radius: 5px;
   border: var(--text-color-light) solid 1px;
