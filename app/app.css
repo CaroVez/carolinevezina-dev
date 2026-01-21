@@ -82,6 +82,10 @@ html {
   scroll-padding-top: 80px; /* Adapte selon la hauteur de ta navbar */
   scroll-behavior: smooth;
 }
+body {
+  /* Évite le saut de mise en page quand on bloque le scroll */
+  scrollbar-gutter: stable;
+}
 
 h1,
 h2,

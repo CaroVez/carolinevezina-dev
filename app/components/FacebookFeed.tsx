@@ -11,6 +11,14 @@ export default function FacebookFeed() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    if (isOpen) {
+      // Empêche le scroll
+      document.body.style.overflow = "hidden";
+    } else {
+      // Réactive le scroll
+      document.body.style.overflow = "";
+    }
+
     let tick = false;
 
     const handleScroll = () => {
@@ -46,10 +54,11 @@ export default function FacebookFeed() {
     // On laisse un petit délai (100ms) pour être sûr que le DOM est prêt
     const timer = setTimeout(loadFacebookSDK, 100);
     return () => {
+      document.body.style.overflow = "";
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(timer);
     };
-  }, []);
+  }, [isOpen]);
 
   // fonction de formatage automatique
   const formatTitle = (text: string) => {
@@ -131,7 +140,12 @@ export default function FacebookFeed() {
       </section>
       {/* Fond sombre quand le tiroir est ouvert */}
       {isOpen && (
-        <div className="fb-overlay" onClick={() => setIsOpen(false)} />
+        <div
+          className="fb-overlay"
+          onClick={() => setIsOpen(false)}
+          onWheel={(e) => e.preventDefault()}
+          onTouchMove={(e) => e.preventDefault()}
+        />
       )}
     </>
   );
