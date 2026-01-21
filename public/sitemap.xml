@@ -6,11 +6,11 @@
   </url>
   <url>
     <loc>https://www.carolinevezina.dev/services</loc>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.carolinevezina.dev/realisations</loc>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.carolinevezina.dev/qui-suis-je</loc>
@@ -23,14 +23,14 @@
 
   <url>
     <loc>https://www.carolinevezina.dev/realisations/thank-boss</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.carolinevezina.dev/realisations/terre-de-thes</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.carolinevezina.dev/realisations/l-agrume-indigo</loc>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
