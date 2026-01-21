@@ -1,6 +1,7 @@
 import type { Route } from "./+types/contact";
 import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil1.png";
+import FacebookFeed from "../components/FacebookFeed";
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -19,7 +20,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"" | "sending" | "success" | "error">(
-    ""
+    "",
   );
 
   const sendEmail = (e: React.FormEvent) => {
@@ -32,7 +33,7 @@ export default function Contact() {
           "service_0ke8d4d", // SERVICE_ID
           "template_1t9ji6o", // TEMPLATE_ID
           form.current,
-          "NiesIfimsw2Du_rsf" // CLE_PUBLIQUE
+          "NiesIfimsw2Du_rsf", // CLE_PUBLIQUE
         )
         .then(() => {
           setStatus("success");
@@ -184,6 +185,10 @@ export default function Contact() {
             )}
           </form>
         </div>
+      </section>
+
+      <section className="facebook-section">
+        <FacebookFeed />
       </section>
     </main>
   );

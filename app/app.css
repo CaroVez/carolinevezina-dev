@@ -125,7 +125,6 @@ h1 {
 /* ########### je m'appelle Caroline. ########### */
 h2 {
   font-size: 1.75rem;
-  z-index: 10;
   margin-bottom: 2rem;
   font-weight: bold;
 }
@@ -164,30 +163,47 @@ h5 {
   font-weight: bold;
 }
 
-/* ########### section facebook feed ########### 
-#fb-container {
-  overflow: hidden;
-  border-radius: 5px;
-  position: relative;
-  z-index: 10;
+/* ########### section facebook feed ########### */
+.facebook {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 700px;
+  max-width: none;
+  background: rgba(242, 242, 242, 0.8);
+  padding: 20px;
+  padding-bottom: 100px;
+  z-index: 40;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.fb-page {
-  border-radius: 5px;
-  border: var(--text-color-light) solid 1px;
-  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
-  margin-bottom: 12vh;
+.facebook.open {
+  transform: translateY(0);
+}
+#fb-container {
   overflow: hidden;
 }
 .fb-page,
 .fb-page span,
 .fb-page iframe {
-  width: 100% !important;
-  max-width: 500px !important;
+  width: 100%;
+  max-width: 350px;
 }
 .facebook h5 {
   color: var(--gold);
   font-weight: bold;
-} */
+  width: 100%;
+  margin-bottom: 0;
+}
+.fb-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 30;
+}
 
 /* ########### navbar ########### */
 nav a {
@@ -817,6 +833,28 @@ form button:disabled {
   /* ########### je m'appelle Caroline. ########### */
   h2 {
     font-size: 2.5rem;
+  }
+
+  /* ########### section facebook feed ########### */
+  .facebook {
+    top: 55px;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    width: 400px; /* Largeur du panneau latéral */
+    height: calc(100vh - 55px);
+    transform: translateX(100%); /* Arrive de la droite */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  }
+  .facebook.open {
+    transform: translateX(0); /* Glisse vers la gauche */
+  }
+  .close-panel {
+    cursor: pointer;
+    font-family: sans-serif;
+  }
+  .facebook h5 {
+    font-size: 1.5rem;
   }
 
   /* ########### section presentation ########### */
