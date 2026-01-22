@@ -63,7 +63,12 @@ html.dark {
 .dark .mobile-tab-bar {
   background-color: rgba(73, 73, 73, 0.8); /* Couleur dark */
 }
-
+/* État scrollé */
+.nav-scrolled {
+  border-bottom-color: var(--turquoise) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
 .dark .nav-scrolled {
   background-color: rgba(
     73,
@@ -134,6 +139,10 @@ h2 {
 }
 
 /* ########### brand navbar ########### */
+header {
+  border-bottom: 1px solid transparent; /* La bordure existe déjà, elle est juste invisible */
+  background-clip: padding-box; /* Empêche le fond de baver sous la bordure */
+}
 .navbar-brand {
   color: var(--turquoise);
 }
