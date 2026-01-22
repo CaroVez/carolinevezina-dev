@@ -42,8 +42,8 @@ export default function TerreDeThes() {
         showButtons={false}
       />
 
-      <section className="projet">
-        <div className="item text moodboard-text">
+      <section className="projet terre">
+        <div className="text moodboard-text">
           <p>planche d'inspiration pour la création du logo</p>
         </div>
         <div className="item moodboard">
@@ -52,7 +52,7 @@ export default function TerreDeThes() {
             alt="planche d'inspiration"
           />
         </div>
-        <div className="item text logos-text">
+        <div className="text logos-text">
           <p>déclinaisons du logo</p>
         </div>
         <div className="item logo1">
@@ -67,7 +67,7 @@ export default function TerreDeThes() {
         <div className="item logo4">
           <img src="../images/terredethes/logo4.png" alt="logo salon de thé" />
         </div>
-        <div className="item text arborescence-text">
+        <div className="text arborescence-text">
           <p>arborescence du site web</p>
         </div>
         <div className="item arborescence">
@@ -76,7 +76,7 @@ export default function TerreDeThes() {
             alt="arborescence site web salon de thé"
           />
         </div>
-        <div className="item text mobiles-text">
+        <div className="text mobiles-text">
           <p>maquette mobile du site web</p>
         </div>
         <div className="item mobile1">
@@ -115,7 +115,7 @@ export default function TerreDeThes() {
             alt="maquette site web page contact version mobile"
           />
         </div>
-        <div className="item text desktops-text">
+        <div className="text desktops-text">
           <p>maquette desktop du site web</p>
         </div>
         <div className="item desktop1">
@@ -154,18 +154,24 @@ export default function TerreDeThes() {
             alt="maquette site web page contact version desktop"
           />
         </div>
-        <div className="item text video-text">
+        <div className="text video-text">
           <p>vidéo promotionnelle du site web</p>
         </div>
         <div className="item video">
-          <video className="video" controls disablePictureInPicture muted>
+          <video
+            className="video"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
             <source src="../images/terredethes/video.mp4" type="video/mp4" />
             Le navigateur ne supporte pas la lecture de la vidéo. La vidéo
             montre une démonstration rapide de l'interface utilisateur et de
             l'expérience de navigation du site web "Terre de thés".
           </video>
         </div>
-        <div className="item text mockups-text">
+        <div className="text mockups-text">
           <p>affiches pour promouvoir les ateliers</p>
         </div>
         <div className="item mockup1">
@@ -180,7 +186,7 @@ export default function TerreDeThes() {
             alt="affiche promotionnelle atelier bricolage"
           />
         </div>
-        <div className="item text packagings-text">
+        <div className="text packagings-text">
           <p>emballages des poches de thés avec carte de visite détachable</p>
         </div>
         <div className="item packaging4">
@@ -213,7 +219,7 @@ export default function TerreDeThes() {
             alt="photo d'emballage poche de thé"
           />
         </div>
-        <div className="item text menus-text">
+        <div className="text menus-text">
           <p>menu</p>
         </div>
         <div className="item menu1">

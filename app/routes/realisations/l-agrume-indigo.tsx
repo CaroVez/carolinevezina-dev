@@ -48,34 +48,52 @@ export default function LAgrumeIndigo() {
         showButtons={false}
       />
 
-      <section className="projet">
-        <div className="item text video1-text">
+      <section className="projet agrume">
+        <div className="text video1-text">
           <p>gérant de salle de sport</p>
         </div>
         <div className="item video1">
-          <video className="video1" controls disablePictureInPicture muted>
+          <video
+            className="video1"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
             <source
               src="../images/lagrumeindigo/GerantH.mp4"
               type="video/mp4"
             />
           </video>
         </div>
-        <div className="item text video2-text">
+        <div className="text video2-text">
           <p>directeur de franchise</p>
         </div>
         <div className="item video2">
-          <video className="video2" controls disablePictureInPicture muted>
+          <video
+            className="video2"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
             <source
               src="../images/lagrumeindigo/DirecteurH.mp4"
               type="video/mp4"
             />
           </video>
         </div>
-        <div className="item text video3-text">
+        <div className="text video3-text">
           <p>administrateur</p>
         </div>
         <div className="item video3">
-          <video className="video3" controls disablePictureInPicture muted>
+          <video
+            className="video3"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
             <source src="../images/lagrumeindigo/AdminH.mp4" type="video/mp4" />
           </video>
         </div>

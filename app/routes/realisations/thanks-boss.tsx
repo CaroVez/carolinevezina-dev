@@ -1,4 +1,5 @@
 import type { Route } from "./+types/thanks-boss";
+import { useEffect, useRef } from "react";
 import Presentation from "../../components/Presentation";
 
 export function meta({}: Route.MetaArgs) {
@@ -15,6 +16,17 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function ThanksBoss() {
+  const videoRef1 = useRef<HTMLVideoElement>(null);
+  const videoRef2 = useRef<HTMLVideoElement>(null);
+  const videoRef3 = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const speed = 1.25;
+    if (videoRef1.current) videoRef1.current.playbackRate = speed;
+    if (videoRef2.current) videoRef2.current.playbackRate = speed;
+    if (videoRef3.current) videoRef3.current.playbackRate = speed;
+  }, []);
+
   return (
     <main className="mx-auto">
       {/* Section Présentation */}
@@ -44,25 +56,57 @@ export default function ThanksBoss() {
         showButtons={false}
       />
 
-      <section className="projet">
-        <div className="item text video1-text">
+      <section className="projet boss">
+        <div className="text video1-text">
           <p>création du calendrier par le recruteur</p>
         </div>
         <div className="item video1">
-          <video className="video1" controls disablePictureInPicture muted>
+          <video
+            ref={videoRef1}
+            className="video1"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
             <source
-              src="../images/thanksboss/tb_entretiens-part1.mp4"
+              src="../images/thanksboss/tb_entretiens-part1_recruteur.mp4"
               type="video/mp4"
             />
           </video>
         </div>
-        <div className="item text video2-text">
+        <div className="text video2-text">
           <p>acceptation d'un entretien par le candidat</p>
         </div>
         <div className="item video2">
-          <video className="video2" controls disablePictureInPicture muted>
+          <video
+            ref={videoRef2}
+            className="video2"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
             <source
-              src="../images/thanksboss/tb_entretiens-part2.mp4"
+              src="../images/thanksboss/tb_entretiens-part2_candidat.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div className="text video3-text">
+          <p>entretien prochain par le recruteur</p>
+        </div>
+        <div className="item video3">
+          <video
+            ref={videoRef3}
+            className="video3"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
+            <source
+              src="../images/thanksboss/tb_entretiens-part3_recruteur.mp4"
               type="video/mp4"
             />
           </video>

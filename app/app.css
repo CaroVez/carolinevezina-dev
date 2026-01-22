@@ -63,11 +63,8 @@ html.dark {
 .dark .mobile-tab-bar {
   background-color: rgba(73, 73, 73, 0.8); /* Couleur dark */
 }
-/* État scrollé */
 .nav-scrolled {
   border-bottom-color: var(--turquoise) !important;
-  box-shadow: none !important;
-  outline: none !important;
 }
 .dark .nav-scrolled {
   background-color: rgba(
@@ -140,8 +137,7 @@ h2 {
 
 /* ########### brand navbar ########### */
 header {
-  border-bottom: 1px solid transparent; /* La bordure existe déjà, elle est juste invisible */
-  background-clip: padding-box; /* Empêche le fond de baver sous la bordure */
+  border-bottom: 1px solid transparent;
 }
 .navbar-brand {
   color: var(--turquoise);
@@ -365,214 +361,227 @@ nav svg {
   margin-top: 6rem;
 }
 
+.item {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  height: fit-content;
+}
+
 /* ##### THANKS-BOSS ##### */
-.video1-text {
+.boss .video1-text {
   grid-column: 1 / 5;
   grid-row: 3;
 }
-.video1 {
+.boss .video1 {
   grid-column: 1 / 5;
   grid-row: 4;
   width: 100%;
 }
-.video2-text {
+.boss .video2-text {
   grid-column: 1 / 5;
   grid-row: 5;
 }
-.video2 {
+.boss .video2 {
   grid-column: 1 / 5;
   grid-row: 6;
+  width: 100%;
+}
+.boss .video3-text {
+  grid-column: 1 / 5;
+  grid-row: 7;
+}
+.boss .video3 {
+  grid-column: 1 / 5;
+  grid-row: 8;
   width: 100%;
 }
 
 /* ##### TERRE DE THÉS ##### */
 
-.moodboard-text {
+.terre .moodboard-text {
   grid-column: 1 / 5;
   grid-row: 3;
 }
-.moodboard {
+.terre .moodboard {
   grid-column: 1 / 5;
   grid-row: 4;
 }
-.moodboard img {
-  border: solid 1px var(--bg-color-dark);
-}
-.logos-text {
+.terre .logos-text {
   grid-column: 1 / 5;
   grid-row: 5;
 }
-.logo1 {
+.terre .logo1 {
   grid-column: 1 / 3;
   grid-row: 6;
 }
-.logo2 {
+.terre .logo2 {
   grid-column: 3 / 5;
   grid-row: 6;
 }
-.logo3 {
+.terre .logo3 {
   grid-column: 1 / 3;
   grid-row: 7;
 }
-.logo4 {
+.terre .logo4 {
   grid-column: 3 / 5;
   grid-row: 7;
 }
-.arborescence-text {
+.terre .arborescence-text {
   grid-column: 1 / 5;
   grid-row: 8;
 }
-.arborescence {
+.terre .arborescence {
   grid-column: 1 / 5;
   grid-row: 9;
 }
-.mobiles-text {
+.terre .mobiles-text {
   grid-column: 1 / 5;
   grid-row: 10;
 }
-.mobile1 {
+.terre .mobile1 {
   grid-column: 1 / 3;
   grid-row: 11;
 }
-.mobile2 {
+.terre .mobile2 {
   grid-column: 3 / 5;
   grid-row: 11;
 }
-.mobile3 {
+.terre .mobile3 {
   grid-column: 1 / 3;
   grid-row: 12;
 }
-.mobile4 {
+.terre .mobile4 {
   grid-column: 3 / 5;
   grid-row: 12;
 }
-.mobile5 {
+.terre .mobile5 {
   grid-column: 1 / 3;
   grid-row: 13;
 }
-.mobile6 {
+.terre .mobile6 {
   grid-column: 3 / 5;
   grid-row: 13;
 }
-.prototype1 {
+.terre .prototype1 {
   grid-column: 1 / 5;
   grid-row: 14;
 }
-.desktops-text {
+.terre .desktops-text {
   grid-column: 1 / 5;
   grid-row: 15;
 }
-.desktop1 {
+.terre .desktop1 {
   grid-column: 1 / 5;
   grid-row: 16;
 }
-.desktop2 {
+.terre .desktop2 {
   grid-column: 1 / 5;
   grid-row: 17;
 }
-.desktop3 {
+.terre .desktop3 {
   grid-column: 1 / 5;
   grid-row: 18;
 }
-.desktop4 {
+.terre .desktop4 {
   grid-column: 1 / 5;
   grid-row: 19;
 }
-.desktop5 {
+.terre .desktop5 {
   grid-column: 1 / 5;
   grid-row: 20;
 }
-.desktop6 {
+.terre .desktop6 {
   grid-column: 1 / 5;
   grid-row: 21;
 }
-.prototype2 {
+.terre .prototype2 {
   grid-column: 1 / 5;
   grid-row: 22;
 }
-.video-text {
+.terre .video-text {
   grid-column: 1 / 5;
   grid-row: 23;
 }
-.video {
+.terre .video {
   grid-column: 1 / 5;
   grid-row: 24;
   width: 100%;
 }
-.mockups-text {
+.terre .mockups-text {
   grid-column: 1 / 5;
   grid-row: 25;
 }
-.mockup1 {
+.terre .mockup1 {
   grid-column: 1 / 5;
   grid-row: 26;
 }
-.mockup2 {
+.terre .mockup2 {
   grid-column: 1 / 5;
   grid-row: 27;
 }
-.packagings-text {
+.terre .packagings-text {
   grid-column: 1 / 5;
   grid-row: 28;
 }
-.packaging4 {
+.terre .packaging4 {
   grid-column: 1 / 5;
   grid-row: 29;
 }
-.packaging5 {
+.terre .packaging5 {
   grid-column: 1 / 5;
   grid-row: 30;
 }
-.packaging1 {
+.terre .packaging1 {
   grid-column: 1 / 5;
   grid-row: 31;
 }
-.packaging2 {
+.terre .packaging2 {
   grid-column: 1 / 3;
   grid-row: 32;
 }
-.packaging3 {
+.terre .packaging3 {
   grid-column: 3 / 5;
   grid-row: 32;
 }
-.menus-text {
+.terre .menus-text {
   grid-column: 1 / 5;
   grid-row: 33;
 }
-.menu1 {
+.terre .menu1 {
   grid-column: 1 / 5;
   grid-row: 34;
 }
-.menu2 {
+.terre .menu2 {
   grid-column: 1 / 5;
   grid-row: 35;
 }
 
 /* ##### L'AGRUME INDIGO ##### */
 
-.video1-text {
+.agrume .video1-text {
   grid-column: 1 / 5;
   grid-row: 3;
 }
-.video1 {
+.agrume .video1 {
   grid-column: 1 / 5;
   grid-row: 4;
   width: 100%;
 }
-.video2-text {
+.agrume .video2-text {
   grid-column: 1 / 5;
   grid-row: 5;
 }
-.video2 {
+.agrume .video2 {
   grid-column: 1 / 5;
   grid-row: 6;
   width: 100%;
 }
-.video3-text {
+.agrume .video3-text {
   grid-column: 1 / 5;
   grid-row: 7;
 }
-.video3 {
+.agrume .video3 {
   grid-column: 1 / 5;
   grid-row: 8;
   width: 100%;
@@ -946,148 +955,148 @@ form button:disabled {
   }
 
   /* ##### TERRE DE THÉS ##### */
-  .logo1 {
+  .terre .logo1 {
     grid-column: 1;
     grid-row: 6;
   }
-  .logo2 {
+  .terre .logo2 {
     grid-column: 2;
     grid-row: 6;
   }
-  .logo3 {
+  .terre .logo3 {
     grid-column: 3;
     grid-row: 6;
   }
-  .logo4 {
+  .terre .logo4 {
     grid-column: 4;
     grid-row: 6;
   }
-  .arborescence-text {
+  .terre .arborescence-text {
     grid-column: 1 / 5;
     grid-row: 7;
   }
-  .arborescence {
+  .terre .arborescence {
     grid-column: 1 / 5;
     grid-row: 8;
   }
-  .mobiles-text {
+  .terre .mobiles-text {
     grid-column: 1 / 5;
     grid-row: 9;
   }
-  .mobile1 {
+  .terre .mobile1 {
     grid-column: 1;
     grid-row: 10;
   }
-  .mobile2 {
+  .terre .mobile2 {
     grid-column: 2;
     grid-row: 10;
   }
-  .mobile3 {
+  .terre .mobile3 {
     grid-column: 3;
     grid-row: 10;
   }
-  .mobile4 {
+  .terre .mobile4 {
     grid-column: 4;
     grid-row: 10;
   }
-  .mobile5 {
+  .terre .mobile5 {
     grid-column: 1;
     grid-row: 11;
   }
-  .mobile6 {
+  .terre .mobile6 {
     grid-column: 2;
     grid-row: 11;
   }
-  .prototype1 {
+  .terre .prototype1 {
     grid-column: 3 / 5;
     grid-row: 11;
   }
-  .desktops-text {
+  .terre .desktops-text {
     grid-column: 1 / 5;
     grid-row: 12;
   }
-  .desktop1 {
+  .terre .desktop1 {
     grid-column: 1 / 3;
     grid-row: 13;
   }
-  .desktop2 {
+  .terre .desktop2 {
     grid-column: 3 / 5;
     grid-row: 13;
   }
-  .desktop3 {
+  .terre .desktop3 {
     grid-column: 1 / 3;
     grid-row: 14;
   }
-  .desktop4 {
+  .terre .desktop4 {
     grid-column: 3 / 5;
     grid-row: 14;
   }
-  .desktop5 {
+  .terre .desktop5 {
     grid-column: 1 / 3;
     grid-row: 15;
   }
-  .desktop6 {
+  .terre .desktop6 {
     grid-column: 3 / 5;
     grid-row: 15;
   }
-  .prototype2 {
+  .terre .prototype2 {
     grid-column: 1 / 5;
     grid-row: 16;
   }
-  .video-text {
+  .terre .video-text {
     grid-column: 1 / 5;
     grid-row: 17;
   }
-  .video {
+  .terre .video {
     grid-column: 1 / 5;
     grid-row: 18;
     width: 100%;
   }
-  .mockups-text {
+  .terre .mockups-text {
     grid-column: 1 / 5;
     grid-row: 19;
   }
-  .mockup1 {
+  .terre .mockup1 {
     grid-column: 1 / 3;
     grid-row: 20;
   }
-  .mockup2 {
+  .terre .mockup2 {
     grid-column: 3 / 5;
     grid-row: 20;
   }
-  .packagings-text {
+  .terre .packagings-text {
     grid-column: 1 / 5;
     grid-row: 21;
   }
-  .packaging4 {
+  .terre .packaging4 {
     grid-column: 1 / 5;
     grid-row: 22;
   }
-  .packaging5 {
+  .terre .packaging5 {
     grid-column: 1 / 5;
     grid-row: 23;
   }
-  .packaging1 {
+  .terre .packaging1 {
     grid-column: 1 / 3;
     grid-row: 24;
   }
-  .packaging2 {
+  .terre .packaging2 {
     grid-column: 3 / 4;
     grid-row: 24;
   }
-  .packaging3 {
+  .terre .packaging3 {
     grid-column: 4 / 5;
     grid-row: 24;
   }
-  .menus-text {
+  .terre .menus-text {
     grid-column: 1 / 5;
     grid-row: 25;
   }
-  .menu1 {
+  .terre .menu1 {
     grid-column: 1 / 3;
     grid-row: 26;
   }
-  .menu2 {
+  .terre .menu2 {
     grid-column: 3 / 5;
     grid-row: 26;
   }
