@@ -63,7 +63,7 @@ export default function ThanksBoss() {
         <div className="item video1">
           <video
             ref={videoRef1}
-            className="video1"
+            className="video1 video-no-sound"
             controls
             controlsList="nodownload"
             disablePictureInPicture
@@ -81,7 +81,7 @@ export default function ThanksBoss() {
         <div className="item video2">
           <video
             ref={videoRef2}
-            className="video2"
+            className="video2 video-no-sound"
             controls
             controlsList="nodownload"
             disablePictureInPicture
@@ -99,7 +99,7 @@ export default function ThanksBoss() {
         <div className="item video3">
           <video
             ref={videoRef3}
-            className="video3"
+            className="video3 video-no-sound"
             controls
             controlsList="nodownload"
             disablePictureInPicture

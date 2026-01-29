@@ -360,12 +360,43 @@ nav svg {
     sans-serif;
   margin-top: 6rem;
 }
+.projet .text2 p {
+  color: var(--turquoise);
+  font-size: 1rem;
+  text-align: center;
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+}
 
 .item {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
   border-radius: 5px;
   overflow: hidden;
   height: fit-content;
+}
+/* Cache le bouton de volume et la barre de volume sur Chrome, Edge et Safari */
+.video-no-sound::-webkit-media-controls-mute-button {
+  display: none !important;
+}
+
+.video-no-sound::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+/* Pour certains navigateurs qui utilisent encore d'autres noms */
+.video-no-sound::-webkit-media-controls-volume-control-container {
+  display: none !important;
+}
+.flip-page-shadow {
+  /* Le sélecteur ci-dessus cible les pages générées par react-pageflip */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* Optionnel : sépare visuellement les deux pages au centre */
+.charte-flipbook div:nth-child(even) {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* ##### THANKS-BOSS ##### */
@@ -507,6 +538,18 @@ nav svg {
 .terre .menu2 {
   grid-column: 1 / 5;
   grid-row: 25;
+}
+.terre .charte-text {
+  grid-column: 1 / 5;
+  grid-row: 26;
+}
+.terre .charte {
+  grid-column: 1 / 5;
+  grid-row: 27;
+}
+.terre .charte-text2 {
+  grid-column: 1 / 5;
+  grid-row: 28;
 }
 
 /* ##### L'AGRUME INDIGO ##### */
@@ -1003,6 +1046,18 @@ form button:disabled {
   .terre .menu2 {
     grid-column: 3 / 5;
     grid-row: 22;
+  }
+  .terre .charte-text {
+    grid-column: 1 / 5;
+    grid-row: 23;
+  }
+  .terre .charte {
+    grid-column: 1 / 5;
+    grid-row: 24;
+  }
+  .terre .charte-text2 {
+    grid-column: 1 / 5;
+    grid-row: 25;
   }
 
   /* ########### section about ########### */

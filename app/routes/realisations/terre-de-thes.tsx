@@ -1,5 +1,6 @@
 import type { Route } from "./+types/terre-de-thes";
 import Presentation from "../../components/Presentation";
+import CharteGraphique from "~/components/CharteGraphique";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -81,7 +82,7 @@ export default function TerreDeThes() {
         </div>
         <div className="item video-mobile">
           <video
-            className="video"
+            className="video-no-sound"
             controls
             controlsList="nodownload"
             disablePictureInPicture
@@ -138,7 +139,7 @@ export default function TerreDeThes() {
         </div>
         <div className="item video-desktop">
           <video
-            className="video"
+            className="video-no-sound"
             controls
             controlsList="nodownload"
             disablePictureInPicture
@@ -270,6 +271,15 @@ export default function TerreDeThes() {
             src="../images/terredethes/menu2.jpg"
             alt="menu salon de thé verso"
           />
+        </div>
+        <div className="text charte-text">
+          <p>charte graphique</p>
+        </div>
+        <div className="charte">
+          <CharteGraphique />
+        </div>
+        <div className="text2 charte-text2 animate-pulse">
+          <p>Cliquez ou glissez les coins pour tourner les pages</p>
         </div>
       </section>
     </main>

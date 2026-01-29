@@ -54,7 +54,7 @@ export default function LAgrumeIndigo() {
         </div>
         <div className="item video1">
           <video
-            className="video1"
+            className="video1 video-no-sound"
             controls
             controlsList="nodownload"
             disablePictureInPicture
@@ -71,7 +71,7 @@ export default function LAgrumeIndigo() {
         </div>
         <div className="item video2">
           <video
-            className="video2"
+            className="video2 video-no-sound"
             controls
             controlsList="nodownload"
             disablePictureInPicture
@@ -88,7 +88,7 @@ export default function LAgrumeIndigo() {
         </div>
         <div className="item video3">
           <video
-            className="video3"
+            className="video3 video-no-sound"
             controls
             controlsList="nodownload"
             disablePictureInPicture
