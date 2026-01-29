@@ -398,6 +398,11 @@ nav svg {
 .charte-flipbook div:nth-child(even) {
   border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
+.charte-flipbook {
+  touch-action: none !important;
+  /* Empêche le rebond élastique sur iOS et le rafraîchissement sur Android */
+  overscroll-behavior: none;
+}
 
 /* ##### THANKS-BOSS ##### */
 .boss .video1-text {

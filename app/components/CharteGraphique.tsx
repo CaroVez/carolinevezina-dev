@@ -35,30 +35,42 @@ export default function CharteGraphique() {
       >
         {numPages && (
           /* @ts-ignore */
-          <HTMLFlipBook
-            key={isMobile ? "mobile" : "desktop"}
-            width={isMobile ? 320 : 450}
-            height={isMobile ? 443 : 625}
-            size={isMobile ? "fixed" : "fixed"}
-            minWidth={isMobile ? 300 : 450}
-            maxWidth={1000}
-            minHeight={400}
-            maxHeight={1200}
-            showCover={true}
-            usePortrait={isMobile}
-            className="charte-flipbook"
-          >
-            {Array.from(new Array(numPages), (el, index) => (
-              <div key={`page_${index + 1}`} className="flip-page-shadow">
-                <Page
-                  pageNumber={index + 1}
-                  width={isMobile ? 320 : 450} // DOIT être identique à la width du FlipBook
-                  renderAnnotationLayer={false}
-                  renderTextLayer={false}
-                />
-              </div>
-            ))}
-          </HTMLFlipBook>
+          <div style={{ minHeight: isMobile ? "443px" : "625px" }}>
+            <HTMLFlipBook
+              key={isMobile ? "mobile" : "desktop"}
+              width={isMobile ? 320 : 450}
+              height={isMobile ? 443 : 625}
+              size={isMobile ? "fixed" : "fixed"}
+              minWidth={isMobile ? 300 : 450}
+              maxWidth={1000}
+              minHeight={400}
+              maxHeight={1200}
+              showCover={true}
+              usePortrait={isMobile}
+              clickEventForward={false}
+              useMouseEvents={true}
+              swipeDistance={30}
+              style={{ touchAction: "none" }}
+              disableFlipByClick={false}
+              /* @ts-ignore */
+              onPointerDown={(e) => {
+                e.stopPropagation();
+              }}
+              flippingTime={isMobile ? 1 : 1000}
+              className="charte-flipbook"
+            >
+              {Array.from(new Array(numPages), (el, index) => (
+                <div key={`page_${index + 1}`} className="flip-page-shadow">
+                  <Page
+                    pageNumber={index + 1}
+                    width={isMobile ? 320 : 450} // DOIT être identique à la width du FlipBook
+                    renderAnnotationLayer={false}
+                    renderTextLayer={false}
+                  />
+                </div>
+              ))}
+            </HTMLFlipBook>
+          </div>
         )}
       </Document>
     </div>
