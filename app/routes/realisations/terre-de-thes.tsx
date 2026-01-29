@@ -79,6 +79,24 @@ export default function TerreDeThes() {
         <div className="text mobiles-text">
           <p>maquette mobile du site web</p>
         </div>
+        <div className="item video-mobile">
+          <video
+            className="video"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
+            <source
+              src="../images/terredethes/mobile_small.mp4"
+              type="video/mp4"
+            />
+            Le navigateur ne supporte pas la lecture de la vidéo. La vidéo
+            montre une démonstration rapide de l'interface utilisateur et de
+            l'expérience de navigation du site web "Terre de thés".
+          </video>
+        </div>
+        {/* 
         <div className="item mobile1">
           <img
             src="../images/terredethes/mobile1.png"
@@ -114,10 +132,28 @@ export default function TerreDeThes() {
             src="../images/terredethes/mobile6.png"
             alt="maquette site web page contact version mobile"
           />
-        </div>
+        </div> */}
         <div className="text desktops-text">
           <p>maquette desktop du site web</p>
         </div>
+        <div className="item video-desktop">
+          <video
+            className="video"
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+            muted
+          >
+            <source
+              src="../images/terredethes/desktop_small.mp4"
+              type="video/mp4"
+            />
+            Le navigateur ne supporte pas la lecture de la vidéo. La vidéo
+            montre une démonstration rapide de l'interface utilisateur et de
+            l'expérience de navigation du site web "Terre de thés".
+          </video>
+        </div>
+        {/*
         <div className="item desktop1">
           <img
             src="../images/terredethes/desktop1.png"
@@ -154,6 +190,7 @@ export default function TerreDeThes() {
             alt="maquette site web page contact version desktop"
           />
         </div>
+        */}
         <div className="text video-text">
           <p>vidéo promotionnelle du site web</p>
         </div>

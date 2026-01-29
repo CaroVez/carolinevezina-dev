@@ -439,122 +439,74 @@ nav svg {
   grid-column: 1 / 5;
   grid-row: 10;
 }
-.terre .mobile1 {
-  grid-column: 1 / 3;
-  grid-row: 11;
-}
-.terre .mobile2 {
-  grid-column: 3 / 5;
-  grid-row: 11;
-}
-.terre .mobile3 {
-  grid-column: 1 / 3;
-  grid-row: 12;
-}
-.terre .mobile4 {
-  grid-column: 3 / 5;
-  grid-row: 12;
-}
-.terre .mobile5 {
-  grid-column: 1 / 3;
-  grid-row: 13;
-}
-.terre .mobile6 {
-  grid-column: 3 / 5;
-  grid-row: 13;
-}
-.terre .prototype1 {
+.terre .video-mobile {
   grid-column: 1 / 5;
-  grid-row: 14;
+  grid-row: 11;
 }
 .terre .desktops-text {
   grid-column: 1 / 5;
-  grid-row: 15;
+  grid-row: 12;
 }
-.terre .desktop1 {
+.terre .video-desktop {
   grid-column: 1 / 5;
-  grid-row: 16;
-}
-.terre .desktop2 {
-  grid-column: 1 / 5;
-  grid-row: 17;
-}
-.terre .desktop3 {
-  grid-column: 1 / 5;
-  grid-row: 18;
-}
-.terre .desktop4 {
-  grid-column: 1 / 5;
-  grid-row: 19;
-}
-.terre .desktop5 {
-  grid-column: 1 / 5;
-  grid-row: 20;
-}
-.terre .desktop6 {
-  grid-column: 1 / 5;
-  grid-row: 21;
-}
-.terre .prototype2 {
-  grid-column: 1 / 5;
-  grid-row: 22;
+  grid-row: 13;
 }
 .terre .video-text {
   grid-column: 1 / 5;
-  grid-row: 23;
+  grid-row: 14;
 }
 .terre .video {
   grid-column: 1 / 5;
-  grid-row: 24;
+  grid-row: 15;
   width: 100%;
 }
 .terre .mockups-text {
   grid-column: 1 / 5;
-  grid-row: 25;
+  grid-row: 16;
 }
 .terre .mockup1 {
   grid-column: 1 / 5;
-  grid-row: 26;
+  grid-row: 17;
 }
 .terre .mockup2 {
   grid-column: 1 / 5;
-  grid-row: 27;
+  grid-row: 18;
 }
 .terre .packagings-text {
   grid-column: 1 / 5;
-  grid-row: 28;
+  grid-row: 19;
 }
 .terre .packaging4 {
   grid-column: 1 / 5;
-  grid-row: 29;
+  grid-row: 20;
 }
 .terre .packaging5 {
   grid-column: 1 / 5;
-  grid-row: 30;
+  grid-row: 21;
 }
 .terre .packaging1 {
   grid-column: 1 / 5;
-  grid-row: 31;
+  grid-row: 22;
 }
 .terre .packaging2 {
   grid-column: 1 / 3;
-  grid-row: 32;
+  grid-row: 23;
 }
 .terre .packaging3 {
   grid-column: 3 / 5;
-  grid-row: 32;
+  grid-row: 23;
 }
 .terre .menus-text {
   grid-column: 1 / 5;
-  grid-row: 33;
+  grid-row: 24;
 }
 .terre .menu1 {
   grid-column: 1 / 5;
-  grid-row: 34;
+  grid-row: 25;
 }
 .terre .menu2 {
   grid-column: 1 / 5;
-  grid-row: 35;
+  grid-row: 25;
 }
 
 /* ##### L'AGRUME INDIGO ##### */
@@ -983,122 +935,74 @@ form button:disabled {
     grid-column: 1 / 5;
     grid-row: 9;
   }
-  .terre .mobile1 {
-    grid-column: 1;
+  .terre .video-mobile {
+    grid-column: 1 / 5;
     grid-row: 10;
-  }
-  .terre .mobile2 {
-    grid-column: 2;
-    grid-row: 10;
-  }
-  .terre .mobile3 {
-    grid-column: 3;
-    grid-row: 10;
-  }
-  .terre .mobile4 {
-    grid-column: 4;
-    grid-row: 10;
-  }
-  .terre .mobile5 {
-    grid-column: 1;
-    grid-row: 11;
-  }
-  .terre .mobile6 {
-    grid-column: 2;
-    grid-row: 11;
-  }
-  .terre .prototype1 {
-    grid-column: 3 / 5;
-    grid-row: 11;
   }
   .terre .desktops-text {
     grid-column: 1 / 5;
-    grid-row: 12;
+    grid-row: 11;
   }
-  .terre .desktop1 {
-    grid-column: 1 / 3;
-    grid-row: 13;
-  }
-  .terre .desktop2 {
-    grid-column: 3 / 5;
-    grid-row: 13;
-  }
-  .terre .desktop3 {
-    grid-column: 1 / 3;
-    grid-row: 14;
-  }
-  .terre .desktop4 {
-    grid-column: 3 / 5;
-    grid-row: 14;
-  }
-  .terre .desktop5 {
-    grid-column: 1 / 3;
-    grid-row: 15;
-  }
-  .terre .desktop6 {
-    grid-column: 3 / 5;
-    grid-row: 15;
-  }
-  .terre .prototype2 {
+  .terre .video-desktop {
     grid-column: 1 / 5;
-    grid-row: 16;
+    grid-row: 12;
   }
   .terre .video-text {
     grid-column: 1 / 5;
-    grid-row: 17;
+    grid-row: 13;
   }
   .terre .video {
     grid-column: 1 / 5;
-    grid-row: 18;
+    grid-row: 14;
     width: 100%;
   }
   .terre .mockups-text {
     grid-column: 1 / 5;
-    grid-row: 19;
+    grid-row: 15;
   }
   .terre .mockup1 {
     grid-column: 1 / 3;
-    grid-row: 20;
+    grid-row: 16;
   }
   .terre .mockup2 {
     grid-column: 3 / 5;
-    grid-row: 20;
+    grid-row: 16;
   }
   .terre .packagings-text {
     grid-column: 1 / 5;
-    grid-row: 21;
+    grid-row: 17;
   }
   .terre .packaging4 {
     grid-column: 1 / 5;
-    grid-row: 22;
+    grid-row: 18;
   }
   .terre .packaging5 {
     grid-column: 1 / 5;
-    grid-row: 23;
+    grid-row: 19;
   }
   .terre .packaging1 {
     grid-column: 1 / 3;
-    grid-row: 24;
+    grid-row: 20;
   }
   .terre .packaging2 {
     grid-column: 3 / 4;
-    grid-row: 24;
+    grid-row: 20;
   }
   .terre .packaging3 {
     grid-column: 4 / 5;
-    grid-row: 24;
+    grid-row: 20;
   }
   .terre .menus-text {
     grid-column: 1 / 5;
-    grid-row: 25;
+    grid-row: 21;
   }
   .terre .menu1 {
     grid-column: 1 / 3;
-    grid-row: 26;
+    grid-row: 22;
   }
   .terre .menu2 {
     grid-column: 3 / 5;
-    grid-row: 26;
+    grid-row: 22;
   }
 
   /* ########### section about ########### */
