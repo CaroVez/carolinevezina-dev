@@ -163,27 +163,44 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    title: "Thanks-Boss",
+    description:
+      "participation au développement d'un site web monopage de recherche d'emplois, avec intégration des maquettes UX/UI, un design responsive et des fonctionnalités interactives en collaboration avec le backend.",
+    link: "/realisations/thanks-boss",
+    isExternal: false,
+    bgImage: "./images/thanksboss/vignette.png",
+    colSpanDesktop: "md:col-span-1",
+    rowSpanDesktop: "md:row-start-1",
+    tech: ["vue-js", "html", "css", "javascript", "gitlab"],
+  },
+
+  {
     title: "Mireille Cliche, écrivaine",
     description: "optimisation d'un site WordPress.",
     link: "https://mireillecliche.com/",
     isExternal: true,
     bgImage: "./images/mireillecliche/vignette.jpeg",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-1",
+    rowSpanDesktop: "md:row-start-2",
     tech: ["figma", "wordpress"],
   },
-
   {
-    title: "AV",
-    description:
-      "conception d'un site vitrine avec WordPress pour une agence de voyage.",
-    link: "https://agencevoyageav.go.yj.fr/",
-    isExternal: true,
-    bgImage: "./images/av/vignette.jpg",
-    colSpanDesktop: "md:col-span-1",
+    title: "Terre de thés",
+    description: "création d'une identité visuelle.",
+    link: "/realisations/terre-de-thes",
+    isExternal: false,
+    bgImage: "./images/terredethes/vignette.png",
+    colSpanDesktop: "md:col-span-2",
     rowSpanDesktop: "md:row-start-2",
-    tech: ["adobe xd", "wordpress", "xampp", "mysql", "planethoster"],
+    tech: [
+      "figma",
+      "adobe indesign",
+      "adobe aftereffects",
+      "adobe photoshop",
+      "adobe illustrator",
+    ],
   },
+
   {
     title: "M ta vie",
     description:
@@ -192,31 +209,8 @@ const PROJECTS: Project[] = [
     isExternal: true,
     bgImage: "./images/mtavie/vignette.png",
     colSpanDesktop: "md:col-span-2",
-    rowSpanDesktop: "md:row-start-2",
-    tech: ["figma", "wordpress"],
-  },
-
-  {
-    title: "Charles Cantin Photographe",
-    description:
-      "conception d'un site vitrine avec générateur de site statique et CMS pour un photographe amateur.",
-    link: "https://c-cantin-photographe.netlify.app/",
-    isExternal: true,
-    bgImage: "./images/charlescantin/vignette.jpg",
-    colSpanDesktop: "md:col-span-2",
     rowSpanDesktop: "md:row-start-3",
-    tech: [
-      "adobe xd",
-      "nunjucks",
-      "html",
-      "css",
-      "bootstrap",
-      "javascript",
-      "11ty",
-      "github",
-      "forestry",
-      "netlify",
-    ],
+    tech: ["figma", "wordpress"],
   },
   {
     title: "Caroline à l'étranger",
@@ -241,42 +235,36 @@ const PROJECTS: Project[] = [
   },
 
   {
-    title: "Thanks-Boss",
+    title: "Charles Cantin Photographe",
     description:
-      "participation au développement d'un site web monopage de recherche d'emplois, avec intégration des maquettes UX/UI, un design responsive et des fonctionnalités interactives en collaboration avec le backend.",
-    link: "/realisations/thanks-boss",
-    isExternal: false,
-    bgImage: "./images/thanksboss/vignette.png",
-    colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-4",
-    tech: ["vue-js", "html", "css", "javascript", "gitlab"],
-  },
-  {
-    title: "Terre de thés",
-    description: "création d'une identité visuelle.",
-    link: "/realisations/terre-de-thes",
-    isExternal: false,
-    bgImage: "./images/terredethes/vignette.png",
+      "conception d'un site vitrine avec générateur de site statique et CMS pour un photographe amateur.",
+    link: "https://c-cantin-photographe.netlify.app/",
+    isExternal: true,
+    bgImage: "./images/charlescantin/vignette.jpg",
     colSpanDesktop: "md:col-span-2",
     rowSpanDesktop: "md:row-start-4",
     tech: [
-      "figma",
-      "adobe indesign",
-      "adobe aftereffects",
-      "adobe photoshop",
-      "adobe illustrator",
+      "adobe xd",
+      "nunjucks",
+      "html",
+      "css",
+      "bootstrap",
+      "javascript",
+      "11ty",
+      "github",
+      "forestry",
+      "netlify",
     ],
   },
-
   {
     title: "l'agrume indigo",
     description:
-      "conception d'un site web de gestion des droits d'accès pour une marque de salles de sport, avec rôles et interfaces personnalisées selon les contrats utilisateurs.",
+      "conception d'un site web de gestion des droits d'accès pour une marque de salles de sport, avec rôles et interfaces personnalisées selon les utilisateurs.",
     link: "/realisations/l-agrume-indigo",
     isExternal: false,
     bgImage: "./images/lagrumeindigo/vignette.jpg",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-5",
+    rowSpanDesktop: "md:row-start-4",
     tech: [
       "drawio",
       "adobe xd",
@@ -294,6 +282,18 @@ const PROJECTS: Project[] = [
       "gitbub",
       "heroku",
     ],
+  },
+
+  {
+    title: "AV",
+    description:
+      "conception d'un site vitrine avec WordPress pour une agence de voyage.",
+    link: "https://agencevoyageav.go.yj.fr/",
+    isExternal: true,
+    bgImage: "./images/av/vignette.jpg",
+    colSpanDesktop: "md:col-span-1",
+    rowSpanDesktop: "md:row-start-5",
+    tech: ["adobe xd", "wordpress", "xampp", "mysql", "planethoster"],
   },
   {
     title: "la jungle verte",
