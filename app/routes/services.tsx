@@ -182,10 +182,12 @@ export default function Services() {
                 <p>
                   <span className="font-bold text-[#479796] not-italic">
                     **
-                  </span>{" "}
-                  La mise en ligne est incluse. Des frais mensuels sont à
-                  prévoir pour WordPress, tandis que l'hébergement React est
-                  généralement gratuit.
+                  </span>
+                  La mise en ligne est incluse. Toutefois, l'achat du{" "}
+                  <strong>nom de domaine</strong> est à la charge du client pour
+                  tout projet. Concernant l'<strong>hébergement</strong>, des
+                  frais mensuels sont à prévoir pour WordPress, tandis qu'il est
+                  généralement gratuit pour un site React.
                 </p>
               </div>
 
@@ -268,7 +270,7 @@ const PACKS = [
     target:
       "Vous lancez votre projet et souhaitez une image de marque forte dès le départ.",
     features: [
-      "Design de logo & palette de couleurs",
+      "Design de logo & charte de couleurs",
       "Site sur mesure (jusqu'à 5 pages)",
       "Maquette Figma complète*",
       "Développement React ou WordPress",
@@ -311,11 +313,11 @@ const PACKS = [
   {
     id: "optimisation",
     name: "L'optimisation",
-    price: "à partir de 600$ +tx",
+    price: "à partir de 500$ +tx",
     target:
       "Votre site actuel nécessite une refonte ergonomique ou une amélioration de l'expérience utilisateur.",
     features: [
-      "Audit UI/UX (Interface et Expérience)",
+      "Audit UI/UX (interface et expérience)",
       "Maquette Figma simplifiée",
       "Intégration des changements",
     ],
