@@ -358,11 +358,25 @@ nav svg {
   width: 90%;
   padding-top: 2vh;
 }
-.card {
+.card,
+.note-card {
   background-color: #fff;
 }
-.dark .card {
+.dark .card,
+.dark .note-card {
   background-color: #424242;
+}
+.border-notes p {
+  color: var(--text-color-light);
+}
+.border-notes,
+.notes p {
+  color: #424242;
+}
+.dark .border-notes,
+.dark .border-notes p,
+.dark .notes p {
+  color: var(--text-color-dark);
 }
 
 /* ########### section realisations ########### */
@@ -962,11 +976,11 @@ nav svg {
 
   /* ########### section services ########### */
   .services {
-    width: 70%;
+    width: 90%;
     padding-top: 18vh;
   }
   .forfaits {
-    width: 70%;
+    width: 90%;
     padding-top: 2vh;
   }
 
@@ -1155,12 +1169,12 @@ nav svg {
   /* ########### section services ########### */
   .services,
   .forfaits {
-    width: 70%;
+    width: 90%;
   }
 
   /* ########### section realisations ########### */
   .realisations {
-    width: 60%;
+    width: 70%;
   }
   .projet {
     width: 60%;
@@ -1195,5 +1209,9 @@ nav svg {
   .presentation-container,
   .about {
     width: 50%;
+  }
+  .services,
+  .forfaits {
+    width: 70%;
   }
 }

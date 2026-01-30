@@ -173,16 +173,24 @@ export default function Contact() {
               className="flex-1 border border-gray-300 p-3 rounded-[5px] focus:outline-none focus:border-[#479796] focus:shadow-[0_0_0_3px_rgba(71,151,150,0.25)] transition-colors"
             >
               <option value="" disabled>
-                veuillez choisir un sujet
+                quel est votre besoin ?
               </option>
-              <option value="essentiel">forfait L'essentiel</option>
-              <option value="identite">forfait L'identité</option>
-              <option value="optimisation">forfait L'optimisation</option>
-              <option value="referencement">forfait Le référencement</option>
-              <option value="react">projet web sur mesure</option>
-              <option value="wordpress">site web prêt-à-gérer</option>
-              <option value="figma">maquette & prototype</option>
-              <option value="autre">autre</option>
+              <optgroup label="Nouveau projet">
+                <option value="forfait_essentiel">Forfait L'essentiel</option>
+                <option value="forfait_identite">Forfait L'identité</option>
+              </optgroup>
+              <optgroup label="Amélioration & Design">
+                <option value="optimisation">
+                  Optimisation ou refonte de site
+                </option>
+                <option value="maquette_figma">
+                  Conception de maquette (Figma)
+                </option>
+                <option value="seo_visibilite">
+                  Référencement et visibilité (SEO)
+                </option>
+              </optgroup>
+              <option value="autre">Autre demande</option>
             </select>
 
             <textarea
