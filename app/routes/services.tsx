@@ -268,11 +268,11 @@ const PACKS = [
     target:
       "Vous lancez votre projet et souhaitez une image de marque forte dès le départ.",
     features: [
-      "Design de logo & Palette de couleurs",
+      "Design de logo & palette de couleurs",
       "Site sur mesure (jusqu'à 5 pages)",
       "Maquette Figma complète*",
       "Développement React ou WordPress",
-      "Rédaction de contenu (optimisé SEO)",
+      "Optimisation SEO",
       "Mise en ligne incluse**",
     ],
     highlight: true,
@@ -288,7 +288,8 @@ const PACKS = [
       "Site sur mesure (jusqu'à 3 pages)",
       "Maquette Figma complète*",
       "Développement React ou WordPress",
-      "Optimisation SEO de base",
+      "Optimisation SEO",
+      "Mise en ligne incluse**",
     ],
     highlight: false,
   },
@@ -299,7 +300,7 @@ const PACKS = [
     target:
       "Vous cherchez une conception visuelle unique avant de passer à l'étape du code.",
     features: [
-      "Design de logo & Palette de couleurs",
+      "Design de logo & palette de couleurs",
       "Analyse de l'expérience utilisateur (UX)",
       "Maquette Figma complète (jusqu'à 5 pages)",
       "Prototype cliquable",
