@@ -2,6 +2,7 @@ import type { Route } from "./+types/contact";
 import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil1.png";
 import FacebookFeed from "../components/FacebookFeed";
+import InstagramFeed from "../components/InstagramFeed";
 import { useSearchParams, useLocation } from "react-router";
 import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
@@ -224,6 +225,9 @@ export default function Contact() {
         </div>
       </section>
 
+      <section className="instagram-section">
+        <InstagramFeed />
+      </section>
       <section className="facebook-section">
         <FacebookFeed />
       </section>
