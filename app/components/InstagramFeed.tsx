@@ -25,6 +25,8 @@ export default function InstagramFeed() {
       setIsVisible(window.scrollY > 300);
     };
 
+    handleScroll();
+
     const scriptId = "behold-script";
     if (!document.getElementById(scriptId)) {
       const script = document.createElement("script");

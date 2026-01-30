@@ -125,12 +125,9 @@ h5,
   letter-spacing: 0.1em;
 }
 .btn-custom:hover {
+  background-color: var(--gold);
   transform: translate(2px, 2px);
   box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 0px;
-}
-.btn-custom:active {
-  transform: translate(8px, 8px);
-  box-shadow: none;
 }
 .btn-custom:disabled {
   background-color: #9ca3af !important; /* Gris (équivalent gray-400) */
@@ -347,6 +344,7 @@ nav svg {
   margin-top: 0rem;
   padding: 0.5rem 0.75rem;
   text-align: center;
+  transition: all 0.2s ease;
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
 }
 .buttons .button p {
@@ -796,16 +794,14 @@ nav svg {
     padding: 1rem 1.5rem;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
-    transition:
-      transform 0.2s ease,
-      color 0.2s ease;
   }
   .buttons .button p {
     font-size: 1.25rem;
   }
   .buttons .button:hover {
     background-color: var(--gold);
-    transform: translateY(2px);
+    transform: translate(2px, 2px);
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 0px;
   }
   .buttons svg:hover {
     color: var(--text-color-light);

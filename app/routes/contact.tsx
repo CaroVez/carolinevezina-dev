@@ -91,7 +91,7 @@ export default function Contact() {
         showButtons={false}
       />
 
-      <section className="contact pb-[12vh]">
+      <section className="contact pb-[20vh]">
         <div className="contact-info">
           <h5>
             coordo<span className="alt">nn</span>ées

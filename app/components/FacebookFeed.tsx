@@ -31,6 +31,8 @@ export default function FacebookFeed() {
       }
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
 
     // Fonction pour charger ou parser le widget
