@@ -107,6 +107,38 @@ h5,
   font-variant-alternates: styleset(alt);
 }
 
+/* ########### buttons ########### */
+.btn-custom {
+  display: inline-block;
+  background-color: var(--turquoise);
+  color: var(--text-color-light);
+  border: var(--text-color-light) solid 1px;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: "MuseoModerno", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+  text-align: center;
+  transition: all 0.2s ease;
+  text-transform: lowercase; /* Pour garder ton style */
+  letter-spacing: 0.1em;
+}
+.btn-custom:hover {
+  transform: translate(2px, 2px);
+  box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 0px;
+}
+.btn-custom:active {
+  transform: translate(8px, 8px);
+  box-shadow: none;
+}
+.btn-custom:disabled {
+  background-color: #9ca3af !important; /* Gris (équivalent gray-400) */
+  cursor: not-allowed;
+  box-shadow: none; /* Optionnel : retire l'ombre pour montrer qu'il est inactif */
+  opacity: 0.7;
+}
+
 /* ########### titre principal ########### */
 h1 {
   font-size: 1.75rem;
@@ -166,10 +198,15 @@ h5 {
   margin-bottom: 1.5rem;
 }
 .services h5,
+.forfaits h5,
 .about h5,
 .contact h5 {
   color: var(--gold);
   font-weight: bold;
+}
+
+.forfaits h4 {
+  font-size: 1rem;
 }
 
 /* ########### section facebook feed ########### */
@@ -316,6 +353,10 @@ nav svg {
 .services {
   width: 90%;
   padding-top: 26vh;
+}
+.forfaits {
+  width: 90%;
+  padding-top: 2vh;
 }
 .card {
   background-color: #fff;
@@ -665,28 +706,6 @@ nav svg {
   padding: 2rem 0 0 0;
 }
 
-/* ########### form buttons ########### */
-form button {
-  background-color: var(--turquoise);
-  color: var(--text-color-light);
-  border: var(--text-color-light) solid 1px;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  font-size: 0.8rem;
-  cursor: pointer;
-  font-family:
-    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
-  text-align: center;
-}
-form button:disabled {
-  background-color: #9ca3af !important; /* Gris (équivalent gray-400) */
-  cursor: not-allowed;
-  box-shadow: none; /* Optionnel : retire l'ombre pour montrer qu'il est inactif */
-  opacity: 0.7;
-}
-
 /* ################################################# */
 /* #################### DESKTOP #################### */
 /* ################################################# */
@@ -773,7 +792,8 @@ form button:disabled {
   }
 
   /* ########### section services ########### */
-  .services {
+  .services,
+  .forfaits {
     width: 90%;
   }
 
@@ -944,6 +964,10 @@ form button:disabled {
   .services {
     width: 70%;
     padding-top: 18vh;
+  }
+  .forfaits {
+    width: 70%;
+    padding-top: 2vh;
   }
 
   /* ########### section realisations ########### */
@@ -1129,8 +1153,9 @@ form button:disabled {
   }
 
   /* ########### section services ########### */
-  .services {
-    width: 60%;
+  .services,
+  .forfaits {
+    width: 70%;
   }
 
   /* ########### section realisations ########### */

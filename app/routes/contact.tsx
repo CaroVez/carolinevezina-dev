@@ -2,8 +2,8 @@ import type { Route } from "./+types/contact";
 import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil1.png";
 import FacebookFeed from "../components/FacebookFeed";
-
-import React, { useRef, useState } from "react";
+import { useSearchParams, useLocation } from "react-router";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 export function meta({}: Route.MetaArgs) {
@@ -18,6 +18,34 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Contact() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        // On attend un tout petit peu que le rendu soit stable
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    } else {
+      // Si pas de hash, on remonte en haut de page proprement
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+
+  const [searchParams] = useSearchParams();
+  const subjectFromUrl = searchParams.get("sujet");
+
+  const [selectedSubject, setSelectedSubject] = useState("");
+
+  useEffect(() => {
+    if (subjectFromUrl) {
+      setSelectedSubject(subjectFromUrl);
+    }
+  }, [subjectFromUrl]);
+
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"" | "sending" | "success" | "error">(
     "",
@@ -117,7 +145,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="contact-form">
+        <div className="contact-form" id="contact">
           <h5>formulaire de contact</h5>
 
           <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
@@ -140,19 +168,20 @@ export default function Contact() {
             <select
               name="title"
               required
-              defaultValue=""
+              value={selectedSubject}
+              onChange={(e) => setSelectedSubject(e.target.value)}
               className="flex-1 border border-gray-300 p-3 rounded-[5px] focus:outline-none focus:border-[#479796] focus:shadow-[0_0_0_3px_rgba(71,151,150,0.25)] transition-colors"
             >
               <option value="" disabled>
                 veuillez choisir un sujet
               </option>
-              <option value="projet web sur mesure">
-                projet web sur mesure
-              </option>
-              <option value="site clé en main sur WordPress">
-                site prêt-à-gérer sur WordPress
-              </option>
-              <option value="maquette sur Figma">maquette sur Figma</option>
+              <option value="essentiel">forfait L'essentiel</option>
+              <option value="identite">forfait L'identité</option>
+              <option value="optimisation">forfait L'optimisation</option>
+              <option value="referencement">forfait Le référencement</option>
+              <option value="react">projet web sur mesure</option>
+              <option value="wordpress">site web prêt-à-gérer</option>
+              <option value="figma">maquette & prototype</option>
               <option value="autre">autre</option>
             </select>
 
@@ -167,7 +196,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="self-center w-full md:self-start md:w-fit tracking-widest"
+              className="btn-custom w-full block tracking-widest self-center  md:self-start md:w-fit tracking-widest"
             >
               {status === "sending" ? "envoi en cours..." : "envoyer"}
             </button>
