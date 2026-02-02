@@ -1,11 +1,8 @@
 import type { Route } from "./+types/services";
 import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil-gold.png";
+import ExpertiseTabs from "~/components/ExpertiseTabs";
 import { motion } from "framer-motion";
-// Import des icônes depuis assets
-import iconFigma from "../assets/figma-original.svg";
-import iconWordpress from "../assets/wordpress-original.png";
-import iconReact from "../assets/react-original.svg";
 import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
@@ -54,54 +51,14 @@ export default function Services() {
         showButtons={false}
       />
 
-      {/* Grille des expertises */}
-      <section className="services pb-[12vh] px-4 py-16 mx-auto">
-        <div className="mx-auto">
-          <h5 className="text-center mb-12 tracking-wider text-[#479796]">
+      {/* Onglets des expertises */}
+      <section className="services w-full pb-4 pt-[24vh] mb-[24vh] transition-colors duration-500">
+        <div className="max-w-5xl mx-auto px-6">
+          {/* <h5 className="text-center mb-12 tracking-wider">
             {formatTitle("comment je vous accompagne")}
-          </h5>
+          </h5>*/}
 
-          <div className="flex flex-wrap justify-center gap-8">
-            {SERVICES.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`card relative p-8 mt-2 rounded-[5px] border flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] min-w-[min(300px,100%)] max-w-[400px] ${
-                  service.highlight
-                    ? "border-[#ba7954] shadow-[8px_8px_0px_#ba7954] z-10"
-                    : "shadow-[8px_8px_0px_rgba(0,0,0,0.5)]"
-                }`}
-              >
-                {service.highlight && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ba7954] text-white px-4 py-1 mt-1 text-xs font-bold rounded-full uppercase">
-                    mon préféré
-                  </span>
-                )}
-                <img
-                  src={service.icon}
-                  alt={service.title}
-                  className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] mb-4"
-                />
-                <div className="text-2xl font-bold text-[#479796] mb-4">
-                  {service.title}
-                </div>
-                <p className="text-sm italic mb-6">{service.description}</p>
-
-                {/* La liste à puces */}
-                <ul className="space-y-3 text-sm md:text-base text-left self-start md:self-left">
-                  {service.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm">
-                      <span className="text-500">•</span>
-                      <span className="">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
+          <ExpertiseTabs />
         </div>
       </section>
 
@@ -214,54 +171,6 @@ export default function Services() {
 }
 
 // données centralisées
-const SERVICES = [
-  {
-    id: "react",
-    title: "performance & sur-mesure",
-    icon: iconReact,
-    description:
-      "L'idéal pour les sites vitrines et portfolio ultra-rapides qui privilégient l'esthétique et la performance brute.",
-    items: [
-      "Utilisation de React (technologie haute performance);",
-      "Sécurité accrue (architecture sans base de données);",
-      "Animations fluides et interface interactive;",
-      "Hébergement web souvent gratuit;",
-      "Idéal pour se démarquer avec un site unique.",
-    ],
-    highlight: false,
-  },
-  {
-    id: "wordpress",
-    title: "gestion & autonomie",
-    icon: iconWordpress,
-    description:
-      "Le choix idéal pour les sites de contenu et les blogues où vous souhaitez garder le plein contrôle.",
-    items: [
-      "Interface simple pour modifier vos textes vous-même;",
-      "Écosystème robuste et facile à faire évoluer;",
-      "Installation et configuration clé en main;",
-      "Optimisé pour la gestion de contenu fréquente;",
-      "Parfait pour les entrepreneurs qui veulent être autonomes.",
-    ],
-    highlight: false,
-  },
-  {
-    id: "figma",
-    title: "design & stratégie",
-    icon: iconFigma,
-    description:
-      "Une étape cruciale pour visualiser votre projet et valider l'expérience utilisateur avant le code.",
-    items: [
-      "Conception de maquettes haute fidélité;",
-      "Prototypes cliquables (testez avant de développer);",
-      "Design adaptatif (Desktop, Tablette, Mobile);",
-      "Validation de l'image de marque et des couleurs;",
-      "Réduction des coûts et des délais de production.",
-    ],
-    highlight: false,
-  },
-];
-
 const PACKS = [
   {
     id: "forfait_identite",

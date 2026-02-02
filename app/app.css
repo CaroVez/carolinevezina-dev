@@ -283,7 +283,7 @@ nav svg {
 /* ########### section presentation ########### */
 .presentation {
   width: 100%;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   position: relative;
   text-align: center;
 }
@@ -359,18 +359,16 @@ nav svg {
 }
 
 /* ########### section services ########### */
-.services {
-  width: 90%;
-  padding-top: 26vh;
-}
 .forfaits {
   width: 90%;
   padding-top: 2vh;
 }
+.services,
 .card,
 .note-card {
   background-color: #fff;
 }
+.dark .services,
 .dark .card,
 .dark .note-card {
   background-color: #424242;
@@ -386,6 +384,14 @@ nav svg {
 .dark .border-notes p,
 .dark .notes p {
   color: var(--text-color-dark);
+}
+.expertise-tabs button,
+.expertise-tabs button span,
+.expertise-tabs div {
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif !important;
+  font-weight: bold !important;
 }
 
 /* ########### section realisations ########### */
@@ -813,7 +819,6 @@ nav svg {
   }
 
   /* ########### section services ########### */
-  .services,
   .forfaits {
     width: 90%;
   }
@@ -968,10 +973,6 @@ nav svg {
   }
 
   /* ########### section services ########### */
-  .services {
-    width: 90%;
-    padding-top: 18vh;
-  }
   .forfaits {
     width: 90%;
     padding-top: 2vh;
@@ -1160,7 +1161,6 @@ nav svg {
   }
 
   /* ########### section services ########### */
-  .services,
   .forfaits {
     width: 90%;
   }
@@ -1203,7 +1203,6 @@ nav svg {
   .about {
     width: 50%;
   }
-  .services,
   .forfaits {
     width: 70%;
   }
