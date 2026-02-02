@@ -72,13 +72,15 @@ export default function ExpertiseTabs() {
             className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
           >
             {/* Colonne Texte */}
-            <div className="min-w-[50vw]">
-              <div className="text-2xl font-bold text-[#479796] mb-4">
+            <div className="min-w-[35vw] xl:min-w-[30vw]">
+              <div className="text-2xl text-center md:text-left font-bold text-[#479796] mb-4">
                 {SERVICES[activeTab].title}
               </div>
-              <p className="italic mb-8 ">{SERVICES[activeTab].description}</p>
+              <p className="italic mb-8 text-center md:text-left">
+                {SERVICES[activeTab].description}
+              </p>
 
-              <ul className="space-y-4">
+              <ul className="space-y-4 min-w-[50vw]">
                 {SERVICES[activeTab].items.map((item, i) => (
                   <li key={i} className="flex items-center gap-4 group">
                     <span className="h-px w-6 bg-[#ba7954] transition-all group-hover:w-10"></span>
