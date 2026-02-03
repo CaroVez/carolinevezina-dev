@@ -183,8 +183,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <footer className="py-4 mt-auto">
           <div className="container mx-auto text-center w-[70%] md:w-full">
             <p className="text-[10px] md:text-xs tracking-widest pb-24 lg:pb-0">
-              © {new Date().getFullYear()} Caroline Vézina | développeur web &
-              designer ui - tous droits réservés -{" "}
+              © {new Date().getFullYear()} Caroline Vézina | développeur web
+              front-end & designer ui - tous droits réservés -{" "}
               <NavLink
                 to="/politique-de-confidentialite"
                 className="hover:text-[#ba7954] transition-colors"
