@@ -47,7 +47,7 @@ export default function Home() {
 
             {/* --- CONDITIONS GÉNÉRALES --- */}
             <section>
-              <h5>{formatTitle("1. Services et Devis")}</h5>
+              <h5>{formatTitle("1. services et devis")}</h5>
               <p>
                 Les services présentés sur ce site (développement front-end et
                 design ui) sont fournis à titre informatif.{" "}
@@ -58,7 +58,7 @@ export default function Home() {
               </p>
             </section>
             <section>
-              <h5>{formatTitle("2. Propriété intellectuelle")}</h5>
+              <h5>{formatTitle("2. propriété intellectuelle")}</h5>
               <p>
                 Tout le contenu publié sur ce site — textes, images, logos,
                 design et code — est la propriété exclusive de{" "}
@@ -68,7 +68,7 @@ export default function Home() {
               </p>
             </section>
             <section>
-              <h5>{formatTitle("3. Limitation de responsabilité")}</h5>
+              <h5>{formatTitle("3. limitation de responsabilité")}</h5>
               <p>
                 Bien que les informations soient fournies avec le plus grand
                 soin, ce site est rendu disponible « tel quel ». L'entreprise ne
@@ -80,7 +80,7 @@ export default function Home() {
 
             {/* --- CONFIDENTIALITÉ --- */}
             <section>
-              <h5>{formatTitle("4. Mentions Légales")}</h5>
+              <h5>{formatTitle("4. mentions légales")}</h5>
               <p>
                 Ce site est la propriété de{" "}
                 <b>{formatTitle("Caroline Vézina")}</b>, basée à Montréal,
@@ -88,7 +88,7 @@ export default function Home() {
               </p>
             </section>
             <section>
-              <h5>{formatTitle("5. Collecte et utilisation")}</h5>
+              <h5>{formatTitle("5. collecte et utilisation")}</h5>
               <p>
                 Seuls les renseignements transmis volontairement via le
                 formulaire de contact (nom, courriel, sujet et message) sont
@@ -97,7 +97,7 @@ export default function Home() {
               </p>
             </section>
             <section>
-              <h5>{formatTitle("6. Partage et Conservation")}</h5>
+              <h5>{formatTitle("6. partage et conservation")}</h5>
               <p>
                 Aucune donnée n'est vendue ou partagée à des tiers, sauf si
                 requis par la loi. L'utilisation de{" "}
@@ -107,7 +107,7 @@ export default function Home() {
               </p>
             </section>
             <section>
-              <h5>{formatTitle("7. Témoins (Cookies)")}</h5>
+              <h5>{formatTitle("7. témoins (cookies)")}</h5>
               <p>
                 Ce site peut utiliser des témoins techniques pour optimiser la
                 navigation. Ces données sont anonymes. Tout utilisateur peut
@@ -116,7 +116,7 @@ export default function Home() {
               </p>
             </section>
             <section>
-              <h5>{formatTitle("8. Vos droits (Loi 25)")}</h5>
+              <h5>{formatTitle("8. vos droits (Loi 25)")}</h5>
               <p>
                 Conformément à la Loi 25, vous disposez d'un droit d'accès, de
                 rectification et de retrait de votre consentement. Pour exercer
@@ -131,7 +131,7 @@ export default function Home() {
               </p>
             </section>
             <section>
-              <h5>{formatTitle("9. Modifications")}</h5>
+              <h5>{formatTitle("9. modifications")}</h5>
               <p>
                 Ces conditions peuvent être mises à jour à tout moment afin de
                 demeurer conformes aux exigences légales et aux pratiques de
