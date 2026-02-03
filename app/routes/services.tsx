@@ -19,10 +19,10 @@ export function meta({}: Route.MetaArgs) {
 export default function Services() {
   const formatTitle = (title: string) => {
     // On sépare le texte à chaque 'm', 'M', 'n' ou 'N'
-    const parts = title.split(/(m|n)/gi);
+    const parts = title.split(/(m|n|z)/gi);
 
     return parts.map((part, index) =>
-      /m|n/i.test(part) ? (
+      /m|n|z/i.test(part) ? (
         <span key={index} className="alt">
           {part}
         </span>
@@ -105,7 +105,7 @@ export default function Services() {
                 </ul>
                 <div className="mt-auto pt-8">
                   <Link
-                    to={`/contact?sujet=${pack.id}#contact`}
+                    to={`/me-joindre?sujet=${pack.id}#contact`}
                     className="btn-custom w-full md:w-fit block tracking-widest uppercase text-xs"
                   >
                     sélectionner ce forfait

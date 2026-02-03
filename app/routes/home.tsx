@@ -15,9 +15,10 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main className="mx-auto">
+    <main className="flex flex-col min-h-[calc(100vh-200px)] md:min-h-[calc(100vh-110px)] mx-auto">
       {/* Section Présentation */}
       <Presentation
+        className="home"
         image={photoProfil}
         imageClass="image-profil-home"
         title="bienvenue"

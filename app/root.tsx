@@ -106,12 +106,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </NavLink>
 
           <div className="hidden lg:flex items-center gap-12 ml-auto">
-            <NavLink to="/services">{formatTitle("mes services")}</NavLink>
-            <NavLink to="/realisations">
+            <NavLink to="/mes-services">{formatTitle("mes services")}</NavLink>
+            <NavLink to="/mes-realisations">
               {formatTitle("mes réalisations")}
             </NavLink>
             <NavLink to="/qui-suis-je">{formatTitle("qui suis-je ?")}</NavLink>
-            <NavLink to="/contact">{formatTitle("me joindre")}</NavLink>
+            <NavLink to="/me-joindre">{formatTitle("me joindre")}</NavLink>
             <ThemeToggle />
           </div>
         </header>
@@ -119,7 +119,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {/* BARRE DE NAVIGATION BASSE (Mobile uniquement) */}
         <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 mobile-tab-bar backdrop-blur-md border-t border-[#479796] px-2 pt-4 pb-8">
           <div className="flex justify-around items-center">
-            <NavLink to="/services" className="mobile-nav-link">
+            <NavLink to="/mes-services" className="mobile-nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -133,7 +133,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </svg>
             </NavLink>
 
-            <NavLink to="/realisations" className="mobile-nav-link">
+            <NavLink to="/mes-realisations" className="mobile-nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -160,7 +160,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </svg>
             </NavLink>
 
-            <NavLink to="/contact" className="mobile-nav-link">
+            <NavLink to="/me-joindre" className="mobile-nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -179,6 +179,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </nav>
         {children}
+
+        <footer className="py-4 mt-auto">
+          <div className="container mx-auto text-center w-[70%] md:w-full">
+            <p className="text-[10px] md:text-xs tracking-widest pb-24 lg:pb-0">
+              © {new Date().getFullYear()} Caroline Vézina | développeur web &
+              designer ui - tous droits réservés -{" "}
+              <NavLink
+                to="/politique-de-confidentialite"
+                className="hover:text-[#ba7954] transition-colors"
+              >
+                politique de confidentialité et mentions légales
+              </NavLink>
+            </p>
+          </div>
+        </footer>
+
         <ScrollToTop />
         <ScrollRestoration />
         <Scripts />

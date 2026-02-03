@@ -166,7 +166,7 @@ const PROJECTS: Project[] = [
     title: "Thanks-Boss",
     description:
       "participation au développement d'un site web monopage de recherche d'emplois, avec intégration des maquettes UX/UI, un design responsive et des fonctionnalités interactives en collaboration avec le backend.",
-    link: "/realisations/thanks-boss",
+    link: "/mes-realisations/thanks-boss",
     isExternal: false,
     bgImage: "./images/thanksboss/vignette.png",
     colSpanDesktop: "md:col-span-1",
@@ -187,7 +187,7 @@ const PROJECTS: Project[] = [
   {
     title: "Terre de thés",
     description: "création d'une identité visuelle.",
-    link: "/realisations/terre-de-thes",
+    link: "/mes-realisations/terre-de-thes",
     isExternal: false,
     bgImage: "./images/terredethes/vignette.png",
     colSpanDesktop: "md:col-span-2",
@@ -260,7 +260,7 @@ const PROJECTS: Project[] = [
     title: "l'agrume indigo",
     description:
       "conception d'un site web de gestion des droits d'accès pour une marque de salles de sport, avec rôles et interfaces personnalisées selon les utilisateurs.",
-    link: "/realisations/l-agrume-indigo",
+    link: "/mes-realisations/l-agrume-indigo",
     isExternal: false,
     bgImage: "./images/lagrumeindigo/vignette.jpg",
     colSpanDesktop: "md:col-span-1",

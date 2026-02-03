@@ -40,7 +40,7 @@ export default function Typewriter({ text }: TypewriterProps) {
               variants={letterVariants}
               className={`${isTag ? "code-tag" : ""} ${isAlt ? "alt" : ""}`}
             >
-              {letter === " " ? "\u00A0" : letter}
+              {letter}
             </motion.span>
           );
         })}

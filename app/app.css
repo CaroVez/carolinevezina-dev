@@ -165,6 +165,11 @@ h1 {
   vertical-align: middle;
 }
 
+.politique h1 {
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
 /* ########### je m'appelle Caroline. ########### */
 h2 {
   font-size: 1.75rem;
@@ -205,7 +210,8 @@ h5 {
 .services h5,
 .forfaits h5,
 .about h5,
-.contact h5 {
+.contact h5,
+.politique h5 {
   color: var(--gold);
   font-weight: bold;
 }
@@ -278,6 +284,14 @@ nav svg {
 }
 .mobile-nav-link.active svg {
   fill: var(--gold);
+}
+
+/* ########### secton footer ########### */
+footer {
+  color: var(--bg-color-dark);
+}
+.dark footer {
+  color: var(--bg-color-light);
 }
 
 /* ########### section presentation ########### */
@@ -735,6 +749,20 @@ nav svg {
   padding: 2rem 0 0 0;
 }
 
+/* ########### section politique ########### */
+.politique p {
+  font-family:
+    "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 1rem;
+  padding-bottom: 6vh;
+}
+.politique p b {
+  font-family:
+    "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 1rem;
+}
+
 /* ################################################# */
 /* #################### DESKTOP #################### */
 /* ################################################# */
@@ -912,16 +940,24 @@ nav svg {
   }
 
   /* ########### section presentation ########### */
+  .home {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
   .presentation {
     height: calc(100vh - 55px);
     position: relative;
-    text-align: justify;
+    text-align: left;
   }
   .presentation-container {
     width: 70%;
     height: 100%;
     margin: 0 auto;
     position: relative;
+  }
+  .politique {
+    height: fit-content;
   }
   .image-profil-home,
   .image-profil-services,
@@ -1157,7 +1193,7 @@ nav svg {
   }
 
   .buttons {
-    padding-top: 6rem;
+    padding-top: 4rem;
   }
 
   /* ########### section services ########### */

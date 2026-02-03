@@ -3,18 +3,20 @@ import { Link } from "react-router";
 import Typewriter from "./Typewriter";
 
 interface PresentationProps {
+  className?: string;
   title: string;
   subtitle?: string;
   subtitleClass?: string;
   description: React.ReactNode;
   image?: string;
-  imageClass: string; // pour changer entre image-profil-1, 2, etc.
+  imageClass?: string; // pour changer entre image-profil-1, 2, etc.
   descriptionClass?: string;
   showArrows?: boolean;
   showButtons?: boolean;
 }
 
 export default function Presentation({
+  className,
   title,
   subtitle,
   subtitleClass = "",
@@ -36,12 +38,12 @@ export default function Presentation({
         </span>
       ) : (
         part
-      )
+      ),
     );
   };
 
   return (
-    <section className="presentation">
+    <section className={`presentation ${className || ""}`}>
       <div className="presentation-container">
         {image && <img src={image} alt="Illustration" className={imageClass} />}
 
@@ -82,7 +84,7 @@ export default function Presentation({
 
         {showButtons && (
           <div className="buttons">
-            <Link to="/services" className="button">
+            <Link to="/mes-services" className="button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -99,7 +101,7 @@ export default function Presentation({
               </p>
             </Link>
 
-            <Link to="/realisations" className="button">
+            <Link to="/mes-realisations" className="button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -130,7 +132,7 @@ export default function Presentation({
               <p>qui suis-je ?</p>
             </Link>
 
-            <Link to="/contact" className="button">
+            <Link to="/me-joindre" className="button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
