@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
   NavLink,
+  useLocation,
 } from "react-router";
 
 import type { Route } from "./+types/root";
@@ -44,6 +45,8 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -65,10 +68,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   const formatTitle = (title: string) => {
     // On sépare le texte à chaque 'm', 'M', 'n' ou 'N'
-    const parts = title.split(/(m|n)/gi);
+    const parts = title.split(/(m|n|z)/gi);
 
     return parts.map((part, index) =>
-      /m|n/i.test(part) ? (
+      /m|n|z/i.test(part) ? (
         <span key={index} className="alt">
           {part}
         </span>
@@ -180,14 +183,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </nav>
         {children}
 
-        <footer className="py-4 mt-auto">
+        <footer
+          className={`py-4 mt-auto ${isHome ? "home-footer" : "pages-footer"}`}
+        >
           <div className="container mx-auto text-center w-[70%] md:w-full">
             <p className="text-[10px] md:text-xs tracking-widest pb-24 lg:pb-0">
-              © {new Date().getFullYear()} Caroline Vézina | développeur web
-              front-end & designer ui - tous droits réservés -{" "}
+              © {new Date().getFullYear()}{" "}
+              <span>
+                {formatTitle(
+                  `Caroline Vézina | développeur web front-end | designer ui`,
+                )}
+              </span>{" "}
+              - tous droits réservés -{" "}
               <NavLink
                 to="/politique-de-confidentialite"
-                className="hover:text-[#ba7954] transition-colors"
+                className="transition-colors"
               >
                 politique de confidentialité et mentions légales
               </NavLink>
