@@ -74,6 +74,15 @@ export default function Contact() {
     }
   };
 
+  const subjectLabels: { [key: string]: string } = {
+    forfait_essentiel: "Forfait L'essentiel",
+    forfait_identite: "Forfait L'identité",
+    optimisation: "Optimisation ou refonte de site",
+    maquette_figma: "Conception de maquette (Figma)",
+    seo_visibilite: "Référencement et visibilité (SEO)",
+    autre: "Autre demande",
+  };
+
   return (
     <main className="mx-auto">
       {/* Section Présentation */}
@@ -166,6 +175,11 @@ export default function Contact() {
                 className="flex-1 border border-gray-300 p-3 rounded-[5px] focus:outline-none focus:border-[#479796] focus:shadow-[0_0_0_3px_rgba(71,151,150,0.25)] transition-colors"
               />
             </div>
+            <input
+              type="hidden"
+              name="subject_label"
+              value={subjectLabels[selectedSubject] || selectedSubject}
+            />
             <select
               name="title"
               required
