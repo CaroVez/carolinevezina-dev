@@ -777,11 +777,22 @@ footer p span {
   font-family:
     "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-size: 1rem;
-  padding-bottom: 6vh;
+  padding-bottom: 7vh;
 }
 .politique p b {
   font-family:
-    "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 1rem;
+}
+.politique .politique-responsable,
+.politique .politique-date {
+  padding-bottom: 0;
+}
+.politique .politique-responsable b,
+.politique .politique-date b {
+  font-family:
+    "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
   font-size: 1rem;
 }
