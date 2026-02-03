@@ -410,16 +410,16 @@ footer p span {
 .dark .note-card {
   background-color: #424242;
 }
+
+.border-notes {
+  width: 60%;
+  color: #424242;
+}
 .border-notes p {
   color: var(--text-color-light);
 }
-.border-notes,
-.notes p {
-  color: #424242;
-}
 .dark .border-notes,
-.dark .border-notes p,
-.dark .notes p {
+.dark .border-notes p {
   color: var(--text-color-dark);
 }
 .expertise-tabs button,

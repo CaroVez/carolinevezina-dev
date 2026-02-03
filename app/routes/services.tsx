@@ -116,17 +116,7 @@ export default function Services() {
           </div>
 
           {/* SECTION NOTES ET PRÉCISIONS */}
-          <div className="border-notes mt-12 space-y-6 px-2 mx-auto border-t pt-8">
-            {/* Note importante : Prix */}
-            <p className="text-sm font-medium text-center md:text-left leading-relaxed">
-              <span className="text-[#ba7954] uppercase tracking-wider text-xs font-bold block mb-1">
-                Précision tarifaire
-              </span>
-              Le tarif final peut varier selon la plateforme choisie et la
-              complexité des fonctionnalités demandées. Un devis détaillé vous
-              sera fourni après analyse de vos besoins.
-            </p>
-
+          <div className="border-notes mt-48 space-y-6 px-2 mx-auto border-t pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs italic leading-relaxed text-gray-600">
               {/* Colonne 1 : Technique */}
               <div className="space-y-3 text-center md:text-left">
@@ -149,18 +139,28 @@ export default function Services() {
               </div>
 
               {/* Colonne 2 : Spécialisation (Ton point crucial) */}
-              <div className="note-card p-4 rounded-[5px] border-l-2 border-[#ba7954]">
-                <p className="">
-                  <span className="font-bold text-[#ba7954] not-italic uppercase block mb-1">
-                    Domaine d'expertise
-                  </span>
-                  Mes services se concentrent exclusivement sur le{" "}
-                  <span className="text-[#479796]">
-                    développement front-end (sites vitrines et visuels)
-                  </span>
-                  . Je ne réalise pas de sites transactionnels, d'espaces
-                  membres ou de systèmes avec authentification.
-                </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="note-card p-4 rounded-[5px] border-l-2 border-[#ba7954]">
+                  <p>
+                    <span className="font-bold text-[#ba7954] not-italic uppercase block mb-1">
+                      Précision tarifaire
+                    </span>
+                    Le tarif final peut varier selon la plateforme choisie et la
+                    complexité des fonctionnalités demandées. Un devis détaillé
+                    vous sera fourni après analyse de vos besoins.
+                  </p>
+                </div>
+                <div className="note-card p-4 rounded-[5px] border-l-2 border-[#ba7954]">
+                  <p>
+                    <span className="font-bold text-[#ba7954] not-italic uppercase block mb-1">
+                      Domaine d'expertise
+                    </span>
+                    Nos services se concentrent exclusivement sur le
+                    développement front-end (sites vitrines et visuels). Nous ne
+                    réalisons pas de sites transactionnels, d'espaces membres ou
+                    de systèmes avec authentification.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
