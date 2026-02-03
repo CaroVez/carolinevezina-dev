@@ -93,7 +93,7 @@ export default function Contact() {
         description={
           <>
             Vous souhaitez discuter d'un projet ou simplement en savoir plus sur
-            mes services ? N'hésitez pas à me contacter !
+            mes services{"\u00A0"}? N'hésitez pas à me contacter{"\u00A0"}!
           </>
         }
         showArrows={true}

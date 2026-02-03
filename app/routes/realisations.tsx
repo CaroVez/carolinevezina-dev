@@ -53,8 +53,8 @@ export default function Realisations() {
           <>
             Découvrez quelques projets réalisés au fil de mon parcours :
             formations, projets personnels et collaborations clients. Ils
-            témoignent de ma passion pour le web (et le design!) et de mon envie
-            constante de progresser.
+            témoignent de ma passion pour le web (et le design{"\u00A0"}!) et de
+            mon envie constante de progresser.
           </>
         }
         showArrows={true}

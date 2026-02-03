@@ -38,7 +38,7 @@ export default function About() {
         </span>
       ) : (
         part
-      )
+      ),
     );
   };
 
@@ -81,8 +81,8 @@ export default function About() {
             <b>développement web</b>, puis une autre en <b>design UI</b>, pour
             allier la logique du code à la sensibilité du design. Aujourd'hui,
             je retrouve dans la conception d'interfaces la même satisfaction que
-            dans l'aménagement d'un espace : créer quelque chose de beau,
-            fonctionnel et intuitif.
+            dans l'aménagement d'un espace{"\u00A0"}: créer quelque chose de
+            beau, fonctionnel et intuitif.
           </p>
         </div>
 
