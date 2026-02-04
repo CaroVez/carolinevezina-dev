@@ -12,15 +12,13 @@ export default function ExpertiseTabs() {
   return (
     <>
       {/* 1. La Navigation des Onglets */}
-      <div className="expertise-tabs flex flex-wrap justify-center w-full mx-auto">
+      <div className="expertise-tabs w-full mx-auto">
         {SERVICES.map((service, index) => (
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`relative py-4 tracking-widest transition-colors duration-300 cursor-pointer ${
-              activeTab === index
-                ? "text-[#ba7954] bg-white"
-                : "text-[#808080] hover:text-[#ba7954]"
+            className={`relative tracking-widest transition-colors duration-300 cursor-pointer ${
+              activeTab === index ? "active-tab" : "other-tab"
             }`}
           >
             <div className="flex items-center gap-3 relative">
@@ -61,7 +59,7 @@ export default function ExpertiseTabs() {
       </div>
 
       {/* 2. Le Contenu de l'Onglet */}
-      <div className="px-6 py-12 min-h-[400px]">
+      <div className="expertise-content mx-auto px-6 py-12 min-h-[400px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -69,7 +67,7 @@ export default function ExpertiseTabs() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+            className="expertise-text mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
           >
             {/* Colonne Texte */}
             <div className="min-w-[35vw] xl:min-w-[30vw]">

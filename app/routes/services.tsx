@@ -53,7 +53,7 @@ export default function Services() {
 
       {/* Onglets des expertises */}
       <section className="services w-full pb-4 pt-[24vh] mb-[24vh] transition-colors duration-500">
-        <div className="services-card max-w-5xl mx-auto backdrop-blur-md shadow-md">
+        <div className="services-card mx-auto">
           {/* <h5 className="text-center mb-12 tracking-wider">
             {formatTitle("comment je vous accompagne")}
           </h5>*/}
