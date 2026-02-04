@@ -119,7 +119,7 @@ export default function Services() {
           <div className="border-notes mt-48 space-y-6 px-2 mx-auto border-t pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs italic leading-relaxed text-gray-600">
               {/* Colonne 1 : Technique */}
-              <div className="space-y-3 text-center md:text-left">
+              <div className="space-y-4 text-center md:text-left">
                 <p>
                   <span className="font-bold text-[#479796] not-italic">*</span>{" "}
                   La maquette est complète pour un développement React (design
@@ -129,7 +129,7 @@ export default function Services() {
                 <p>
                   <span className="font-bold text-[#479796] not-italic">
                     **
-                  </span>
+                  </span>{" "}
                   La mise en ligne est incluse. Toutefois, l'achat du{" "}
                   <strong>nom de domaine</strong> est à la charge du client pour
                   tout projet. Concernant l'<strong>hébergement</strong>, des
@@ -140,7 +140,7 @@ export default function Services() {
 
               {/* Colonne 2 : Spécialisation (Ton point crucial) */}
               <div className="flex flex-wrap justify-center gap-4">
-                <div className="note-card p-4 rounded-[5px] border-l-2 border-[#ba7954]">
+                <div className="note-card">
                   <p>
                     <span className="font-bold text-[#ba7954] not-italic uppercase block mb-1">
                       Précision tarifaire
@@ -150,7 +150,7 @@ export default function Services() {
                     vous sera fourni après analyse de vos besoins.
                   </p>
                 </div>
-                <div className="note-card p-4 rounded-[5px] border-l-2 border-[#ba7954]">
+                <div className="note-card">
                   <p>
                     <span className="font-bold text-[#ba7954] not-italic uppercase block mb-1">
                       Domaine d'expertise
@@ -215,7 +215,6 @@ const PACKS = [
       "Analyse de l'expérience utilisateur (UX)",
       "Maquette Figma complète (jusqu'à 5 pages)",
       "Prototype cliquable",
-      "Exportation des fichiers pour le développement",
     ],
     highlight: false,
   },

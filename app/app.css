@@ -334,10 +334,9 @@ footer p span {
   width: 8rem;
   height: 8rem;
   margin: 1.5rem auto;
-  border: var(--text-color-light) solid 1px;
   border-radius: 50%;
   overflow: hidden;
-  filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
 }
 .mobile-only-profile-img {
   width: 100%;
@@ -428,7 +427,7 @@ footer p span {
 }
 
 .border-notes {
-  width: 60%;
+  width: 100%;
   color: #424242;
 }
 .border-notes p {
@@ -438,6 +437,12 @@ footer p span {
 .dark .border-notes p {
   color: var(--text-color-dark);
 }
+.note-card {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
 .expertise-tabs button,
 .expertise-tabs button span,
 .expertise-tabs div {
@@ -1254,6 +1259,9 @@ footer p span {
   /* ########### section services ########### */
   .forfaits {
     width: 90%;
+  }
+  .border-notes {
+    width: 60%;
   }
 
   /* ########### section realisations ########### */

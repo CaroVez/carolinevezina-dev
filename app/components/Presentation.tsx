@@ -48,10 +48,6 @@ export default function Presentation({
         <div className="presentation-content">
           <Typewriter text={title} />
 
-          {subtitle && (
-            <h2 className={subtitleClass}>{formatTitle(subtitle)}</h2>
-          )}
-
           {/* IMAGE MOBILE */}
           <div className="mobile-profile-wrapper">
             <img
@@ -60,6 +56,10 @@ export default function Presentation({
               alt="Illustration"
             />
           </div>
+
+          {subtitle && (
+            <h2 className={subtitleClass}>{formatTitle(subtitle)}</h2>
+          )}
 
           <p className={descriptionClass}>{description}</p>
         </div>
