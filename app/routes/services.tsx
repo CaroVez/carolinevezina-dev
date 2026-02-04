@@ -53,7 +53,7 @@ export default function Services() {
 
       {/* Onglets des expertises */}
       <section className="services w-full pb-4 pt-[24vh] mb-[24vh] transition-colors duration-500">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="services-card max-w-5xl mx-auto backdrop-blur-md shadow-md">
           {/* <h5 className="text-center mb-12 tracking-wider">
             {formatTitle("comment je vous accompagne")}
           </h5>*/}
@@ -63,7 +63,7 @@ export default function Services() {
       </section>
 
       {/* Section Forfaits */}
-      <section className="forfaits pb-[20vh] px-4 py-8 mx-auto">
+      <section className="forfaits pb-[20vh] py-8 mx-auto">
         <div className="mx-auto">
           <h5 className="text-center mb-12 tracking-wider text-[#479796]">
             {formatTitle("mes forfaits")}

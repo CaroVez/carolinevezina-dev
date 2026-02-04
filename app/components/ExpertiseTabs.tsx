@@ -17,9 +17,9 @@ export default function ExpertiseTabs() {
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`relative px-8 py-4 tracking-widest transition-colors duration-300 cursor-pointer ${
+            className={`relative py-4 tracking-widest transition-colors duration-300 cursor-pointer ${
               activeTab === index
-                ? "text-[#ba7954]"
+                ? "text-[#ba7954] bg-white"
                 : "text-[#808080] hover:text-[#ba7954]"
             }`}
           >
@@ -61,7 +61,7 @@ export default function ExpertiseTabs() {
       </div>
 
       {/* 2. Le Contenu de l'Onglet */}
-      <div className="py-12 min-h-[400px]">
+      <div className="px-6 py-12 min-h-[400px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
