@@ -45,15 +45,27 @@ export default function Presentation({
   return (
     <section className={`presentation ${className || ""}`}>
       <div className="presentation-container">
-        {image && <img src={image} alt="Illustration" className={imageClass} />}
-
         <div className="presentation-content">
           <Typewriter text={title} />
+
           {subtitle && (
             <h2 className={subtitleClass}>{formatTitle(subtitle)}</h2>
           )}
+
+          {/* IMAGE MOBILE */}
+          <div className="mobile-profile-wrapper">
+            <img
+              src={image}
+              className="mobile-only-profile-img"
+              alt="Illustration"
+            />
+          </div>
+
           <p className={descriptionClass}>{description}</p>
         </div>
+
+        {/* IMAGE DESKTOP */}
+        {image && <img src={image} alt="Illustration" className={imageClass} />}
 
         {showArrows && (
           <div className="arrows">
