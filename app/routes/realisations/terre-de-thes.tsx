@@ -1,6 +1,7 @@
 import type { Route } from "./+types/terre-de-thes";
 import Presentation from "../../components/Presentation";
 import CharteGraphique from "~/components/CharteGraphique";
+import imageProject from "../../../public/images/terredethes/vignette.png";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -20,7 +21,8 @@ export default function TerreDeThes() {
     <main className="mx-auto">
       {/* Section Présentation */}
       <Presentation
-        imageClass="image-profil-about"
+        image={imageProject}
+        imageClass="image-profil-realisations"
         title="terre de thés"
         subtitle="formation designer ui | projet présenté lors de ma soutenance finale"
         subtitleClass="project-subtitle"

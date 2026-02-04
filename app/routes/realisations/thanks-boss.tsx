@@ -1,6 +1,7 @@
 import type { Route } from "./+types/thanks-boss";
 import { useEffect, useRef } from "react";
 import Presentation from "../../components/Presentation";
+import imageProject from "../../../public/images/thanksboss/vignette.png";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -31,7 +32,8 @@ export default function ThanksBoss() {
     <main className="mx-auto">
       {/* Section Présentation */}
       <Presentation
-        imageClass="image-profil-about"
+        image={imageProject}
+        imageClass="image-profil-realisations"
         title="thanks-boss"
         subtitle="contrat en freelance"
         subtitleClass="project-subtitle"

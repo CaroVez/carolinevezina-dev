@@ -1,5 +1,6 @@
 import type { Route } from "./+types/l-agrume-indigo";
 import Presentation from "../../components/Presentation";
+import imageProject from "../../../public/images/lagrumeindigo/vignette.jpg";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -19,7 +20,8 @@ export default function LAgrumeIndigo() {
     <main className="mx-auto">
       {/* Section Présentation */}
       <Presentation
-        imageClass="image-profil-about"
+        image={imageProject}
+        imageClass="image-profil-realisations"
         title="l'argume indigo"
         subtitle="formation développeur web | projet présenté lors de ma soutenance finale"
         subtitleClass="project-subtitle"
