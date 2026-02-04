@@ -352,6 +352,7 @@ footer p span {
 .image-profil-home,
 .image-profil-services,
 .image-profil-realisations,
+.image-project-realisations,
 .image-profil-about,
 .image-profil-contact,
 .image-profil-404 {
@@ -1069,14 +1070,17 @@ footer p span {
   .image-profil-home,
   .image-profil-services,
   .image-profil-realisations,
+  .image-project-realisations,
   .image-profil-about,
   .image-profil-contact {
     display: block;
     position: absolute;
     height: 12rem;
     z-index: 10;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
   }
   .image-profil-home,
+  .image-project-realisations,
   .image-profil-services,
   .image-profil-about,
   .image-profil-contact {
@@ -1085,7 +1089,8 @@ footer p span {
   .image-profil-realisations {
     left: 0;
   }
-  .image-profil-home {
+  .image-profil-home,
+  .image-project-realisations {
     top: 15%;
   }
   .image-profil-about {
@@ -1096,10 +1101,17 @@ footer p span {
   .image-profil-contact {
     bottom: 0;
   }
+  .image-project-realisations {
+    border-radius: 50%;
+  }
 
   .presentation .intro,
   .presentation .intro b {
     font-size: 1.5rem;
+  }
+
+  .project-subtitle {
+    width: 70%;
   }
 
   .buttons {
@@ -1307,7 +1319,9 @@ footer p span {
   .image-profil-about {
     top: 5%;
   }
-
+  .image-project-realisations {
+    height: 18rem;
+  }
   .presentation .intro,
   .presentation .intro b {
     font-size: 2rem;

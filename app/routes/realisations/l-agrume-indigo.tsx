@@ -21,7 +21,7 @@ export default function LAgrumeIndigo() {
       {/* Section Présentation */}
       <Presentation
         image={imageProject}
-        imageClass="image-profil-realisations"
+        imageClass="image-project-realisations"
         title="l'argume indigo"
         subtitle="formation développeur web | projet présenté lors de ma soutenance finale"
         subtitleClass="project-subtitle"

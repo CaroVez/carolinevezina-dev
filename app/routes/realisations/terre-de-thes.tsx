@@ -22,7 +22,7 @@ export default function TerreDeThes() {
       {/* Section Présentation */}
       <Presentation
         image={imageProject}
-        imageClass="image-profil-realisations"
+        imageClass="image-project-realisations"
         title="terre de thés"
         subtitle="formation designer ui | projet présenté lors de ma soutenance finale"
         subtitleClass="project-subtitle"

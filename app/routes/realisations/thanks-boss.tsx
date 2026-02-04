@@ -33,7 +33,7 @@ export default function ThanksBoss() {
       {/* Section Présentation */}
       <Presentation
         image={imageProject}
-        imageClass="image-profil-realisations"
+        imageClass="image-project-realisations"
         title="thanks-boss"
         subtitle="contrat en freelance"
         subtitleClass="project-subtitle"
