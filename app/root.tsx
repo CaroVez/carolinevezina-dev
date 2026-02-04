@@ -187,7 +187,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           className={`py-4 mt-auto ${isHome ? "home-footer" : "pages-footer"}`}
         >
           <div className="container mx-auto text-center w-[70%] md:w-full">
-            <p className="text-[10px] md:text-xs tracking-widest pb-24 lg:pb-0">
+            <p className="text-[10px] md:text-xs tracking-widest pb-16 lg:pb-0">
               © {new Date().getFullYear()}{" "}
               <span>
                 {formatTitle(
