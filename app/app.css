@@ -32,30 +32,45 @@
   --turquoise: #479796;
   --gold: #ba7954;
 }
+
+/* Image en dark */
+html.dark.dark-bg {
+  background:
+    linear-gradient(to bottom, transparent 70%, var(--bg-color-dark) 100%),
+    url("../images/bandeau_moy_small.png");
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    top center,
+    top center;
+  height: 100vh;
+  /* background-attachment: fixed, fixed; */
+  background-color: var(--bg-color-dark);
+}
+/* Image en light */
+html.light-bg {
+  background:
+    linear-gradient(to bottom, transparent 70%, var(--bg-color-light) 100%),
+    url("../images/bandeau_light_small.png");
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    top center,
+    top center;
+  height: 100vh;
+  /* background-attachment: fixed, fixed; */
+  background-color: var(--bg-color-light);
+}
+/* Dark mode */
+html.dark {
+  color: var(--text-color-dark);
+}
 /* Light mode */
 html.light {
   color: var(--text-color-light);
   transition:
     background-color var(--transition-time) ease,
     color var(--transition-time) ease;
-}
-/* Image en dark */
-html.dark.dark-bg {
-  background: var(--bg-color-dark) url("../public/images/bandeau_moy_small.png")
-    no-repeat top center;
-  background-size: cover;
-  height: 100vh;
-}
-/* Image en light */
-html.light-bg {
-  background: var(--bg-color-light)
-    url("../public/images/bandeau_light_small.png") no-repeat top center;
-  background-size: cover;
-  height: 100vh;
-}
-/* Dark mode */
-html.dark {
-  color: var(--text-color-dark);
 }
 .mobile-tab-bar {
   background-color: rgba(242, 242, 242, 0.8); /* Couleur light par défaut */
@@ -137,9 +152,13 @@ h5,
 }
 
 /* ########### form ########### */
+.contact-form input,
+.contact-form textarea,
 .contact-form select {
   background-color: var(--bg-color-light);
 }
+.dark .contact-form input,
+.dark .contact-form textarea,
 .dark .contact-form select {
   background-color: var(--bg-color-dark);
 }
@@ -429,7 +448,6 @@ footer p span {
   padding-top: 2vh;
   margin: 0 auto;
 }
-.expertise-content,
 .card,
 .note-card {
   background-color: #fff;
@@ -499,8 +517,23 @@ footer p span {
 }
 
 .expertise-content {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    var(--bg-color-light) 100%
+  );
+  box-shadow: 0px -8px 10px -6px rgba(0, 0, 0, 0.5);
 }
+.dark .expertise-content {
+  background-color: #424242;
+  background-image: linear-gradient(
+    to bottom,
+    #494949 0%,
+    var(--bg-color-dark) 100%
+  );
+}
+
 .expertise-text {
   width: 100%;
 }

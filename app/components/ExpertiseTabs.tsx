@@ -4,6 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import iconFigma from "../assets/figma-original.svg";
 import iconWordpress from "../assets/wordpress-original.png";
 import iconReact from "../assets/react-original.svg";
+import Lottie from "lottie-react";
+import reactAnim from "../assets/react-anim.json";
+import figmaAnim from "../assets/figma-anim.json";
+import wordpressAnim from "../assets/wordpress-anim.json";
 
 export default function ExpertiseTabs() {
   // On gère l'onglet actif avec un index
@@ -74,10 +78,10 @@ export default function ExpertiseTabs() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
-            className="expertise-text mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+            className="expertise-text mx-auto grid grid-cols-1 md:grid-cols-[65%_35%] gap-6 items-center"
           >
             {/* Colonne Texte */}
-            <div className="min-w-[35vw] xl:min-w-[30vw]">
+            <div className="">
               <div className="text-2xl text-center md:text-left font-bold text-[#479796] mb-4">
                 {SERVICES[activeTab].title}
               </div>
@@ -85,7 +89,7 @@ export default function ExpertiseTabs() {
                 {SERVICES[activeTab].description}
               </p>
 
-              <ul className="space-y-4 min-w-[50vw]">
+              <ul className="space-y-4 ">
                 {SERVICES[activeTab].items.map((item, i) => (
                   <li key={i} className="flex items-center gap-4 group">
                     <span className="h-px w-6 bg-[#ba7954] transition-all group-hover:w-10"></span>
@@ -95,16 +99,51 @@ export default function ExpertiseTabs() {
               </ul>
             </div>
 
-            {/* Colonne Visuelle (Grande icône décorative) */}
-            <div className="hidden md:flex justify-center items-center relative">
-              <div className="absolute w-64 h-64 bg-[#ba7954]/10 rounded-full blur-3xl" />
-              <motion.img
-                initial={{ scale: 0.8, rotate: -10 }}
-                animate={{ scale: 1, rotate: 0 }}
-                src={SERVICES[activeTab].icon}
-                alt=""
-                className="w-48 h-48 object-contain relative z-10"
-              />
+            {/* Colonne Visuelle - Mockup de navigateur */}
+            <div className="hidden md:flex justify-center items-center relative w-full">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="relative w-full max-w-[320px] rounded-[5px] border border-gray-200 overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.5)]"
+              >
+                {/* Barre de navigation du faux navigateur version Windows */}
+                <div className="bg-[#f3f3f3] h-8 w-full flex items-center justify-between px-3 border-b border-gray-300">
+                  {/* Titre factice à gauche (optionnel, fait très Windows) */}
+                  <span></span>
+
+                  {/* Boutons Windows à droite */}
+                  <div className="flex items-center">
+                    {/* Réduire */}
+                    <div className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 transition-colors">
+                      <div className="w-3 h-[1px] bg-black" />
+                    </div>
+                    {/* Agrandir */}
+                    <div className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 transition-colors">
+                      <div className="w-2.5 h-2.5 border border-black" />
+                    </div>
+                    {/* Fermer */}
+                    <div className="w-10 h-8 flex items-center justify-center hover:bg-[#e81123] hover:text-white transition-colors group">
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
+                        className="stroke-black group-hover:stroke-white"
+                      >
+                        <path d="M1 1L9 9M9 1L1 9" strokeWidth="1" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Le média (Vidéo ou GIF) */}
+                <div className="relative w-full bg-[#f8f9fa]">
+                  <Lottie
+                    animationData={SERVICES[activeTab].preview}
+                    loop={true}
+                    className="w-full "
+                  />
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -128,6 +167,7 @@ const SERVICES = [
       "Animations haute couture pour une identité forte;",
       "Hébergement web souvent gratuit (coûts récurrents réduits).",
     ],
+    preview: reactAnim,
     highlight: true,
   },
   {
@@ -143,6 +183,7 @@ const SERVICES = [
       "Optimisé pour le SEO et la publication de contenus fréquents;",
       "Idéal pour les entrepreneurs souhaitant garder le plein contrôle.",
     ],
+    preview: wordpressAnim,
     highlight: false,
   },
   {
@@ -158,6 +199,7 @@ const SERVICES = [
       "Définition de votre charte graphique et guide de style;",
       "Optimisation du parcours client avant la phase de développement.",
     ],
+    preview: figmaAnim,
     highlight: false,
   },
 ];
