@@ -191,22 +191,20 @@ export default function Contact() {
               <option value="" disabled>
                 quel est votre besoin ?
               </option>
-              <optgroup label="Nouveau projet">
-                <option value="forfait_essentiel">Forfait L'essentiel</option>
-                <option value="forfait_identite">Forfait L'identité</option>
+              <optgroup label="nouveau projet">
+                <option value="forfait_essentiel">forfait L'essentiel</option>
+                <option value="forfait_identite">forfait L'identité</option>
               </optgroup>
-              <optgroup label="Amélioration & Design">
+              <optgroup label="amélioration & design">
                 <option value="optimisation">
-                  Optimisation ou refonte de site
+                  optimisation ou refonte de site
                 </option>
-                <option value="maquette_figma">
-                  Conception de maquette (Figma)
-                </option>
+                <option value="maquette_figma">conception de maquette</option>
                 <option value="seo_visibilite">
-                  Référencement et visibilité (SEO)
+                  référencement et visibilité (SEO)
                 </option>
               </optgroup>
-              <option value="autre">Autre demande</option>
+              <option value="autre">autre demande</option>
             </select>
 
             <textarea
