@@ -487,6 +487,7 @@ footer p span {
   flex-direction: column;
   align-items: center;
   padding: 16px 16px;
+  transition: color 0.3s ease;
 }
 .expertise-tabs button,
 .expertise-tabs button span,
@@ -1146,6 +1147,7 @@ footer p span {
     padding: 16px 72px;
     width: auto;
     flex-direction: row;
+    order: 0 !important;
   }
 
   .expertise-text {

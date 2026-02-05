@@ -14,9 +14,16 @@ export default function ExpertiseTabs() {
       {/* 1. La Navigation des Onglets */}
       <div className="expertise-tabs w-full mx-auto">
         {SERVICES.map((service, index) => (
-          <button
-            key={index}
+          <motion.button
+            layout
+            key={service.id}
             onClick={() => setActiveTab(index)}
+            style={{ order: activeTab === index ? 99 : index }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+            }}
             className={`relative tracking-widest transition-colors duration-300 cursor-pointer ${
               activeTab === index ? "active-tab" : "other-tab"
             }`}
@@ -54,7 +61,7 @@ export default function ExpertiseTabs() {
                 className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ba7954]"
               />
             )}
-          </button>
+          </motion.button>
         ))}
       </div>
 
