@@ -119,7 +119,7 @@ export default function FacebookFeed() {
         <div className="facebook-wrapper">
           <div
             id="fb-container"
-            className="w-full flex justify-center overflow-hidden"
+            className="w-full flex justify-center"
             style={{ minHeight: "400px" }}
           >
             <div
