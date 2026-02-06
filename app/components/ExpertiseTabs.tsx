@@ -70,7 +70,7 @@ export default function ExpertiseTabs() {
       </div>
 
       {/* 2. Le Contenu de l'Onglet */}
-      <div className="expertise-content mx-auto px-6 py-12 min-h-[400px]">
+      <div className="expertise-content mx-auto px-6 md:px-12 py-12 min-h-[400px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -78,7 +78,7 @@ export default function ExpertiseTabs() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
-            className="expertise-text mx-auto grid grid-cols-1 md:grid-cols-[65%_35%] gap-6 items-center"
+            className="expertise-text mx-auto grid grid-cols-1 md:grid-cols-[60%_40%] gap-6 items-center"
           >
             {/* Colonne Texte */}
             <div className="">
@@ -92,7 +92,7 @@ export default function ExpertiseTabs() {
               <ul className="space-y-4 ">
                 {SERVICES[activeTab].items.map((item, i) => (
                   <li key={i} className="flex items-center gap-4 group">
-                    <span className="h-px w-6 bg-[#ba7954] transition-all group-hover:w-10"></span>
+                    <span className="h-px w-4 bg-[#ba7954] shrink-0 transition-all group-hover:w-8"></span>
                     <span className="">{item}</span>
                   </li>
                 ))}

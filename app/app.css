@@ -165,8 +165,8 @@ h5,
   color: var(--text-color-dark);
 }
 ::placeholder {
-  color: #808080; /* Ta couleur ici */
-  opacity: 1; /* Firefox baisse l'opacité par défaut, on la force à 1 */
+  color: #808080;
+  opacity: 1;
 }
 
 /* ########### titre principal ########### */
@@ -447,7 +447,8 @@ footer p span {
 
 /* ########### section services ########### */
 .services {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto 24vh auto;
 }
 .forfaits {
   width: 90%;
@@ -538,10 +539,6 @@ footer p span {
     #494949 0%,
     var(--bg-color-dark) 100%
   );
-}
-
-.expertise-text {
-  width: 100%;
 }
 
 /* ########### section realisations ########### */
@@ -1174,8 +1171,11 @@ footer p span {
   }
 
   /* ########### section services ########### */
+  .services {
+    width: 70%;
+  }
   .forfaits {
-    width: 90%;
+    width: 70%;
     padding-top: 2vh;
   }
   .expertise-tabs {
@@ -1187,10 +1187,6 @@ footer p span {
     width: auto;
     flex-direction: row;
     order: 0 !important;
-  }
-
-  .expertise-text {
-    width: 70%;
   }
 
   /* ########### section realisations ########### */
@@ -1379,14 +1375,11 @@ footer p span {
   }
 
   /* ########### section services ########### */
+  .services {
+    width: 70%;
+  }
   .forfaits {
-    width: 90%;
-  }
-  .border-notes {
-    width: 60%;
-  }
-  .expertise-text {
-    width: 60%;
+    width: 70%;
   }
 
   /* ########### section realisations ########### */
@@ -1428,6 +1421,9 @@ footer p span {
     width: 50%;
   }
   .forfaits {
+    width: 70%;
+  }
+  .services {
     width: 70%;
   }
 }

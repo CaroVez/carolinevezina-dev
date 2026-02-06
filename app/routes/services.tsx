@@ -52,7 +52,7 @@ export default function Services() {
       />
 
       {/* Onglets des expertises */}
-      <section className="services w-full pb-4 pt-[24vh] mb-[24vh] transition-colors duration-500">
+      <section className="services w-full pb-4 pt-[24vh] transition-colors duration-500">
         <div className="services-card mx-auto">
           {/* <h5 className="text-center mb-12 tracking-wider">
             {formatTitle("comment je vous accompagne")}
@@ -77,7 +77,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`card relative p-8 mt-2 rounded-[5px] border flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] min-w-[min(300px,100%)] max-w-[400px] ${
+                className={`card relative p-8 mt-2 rounded-[5px] border flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] min-w-[min(310px,100%)] ${
                   pack.highlight
                     ? "border-[#ba7954] shadow-[8px_8px_0px_#ba7954] z-10"
                     : "shadow-[8px_8px_0px_rgba(0,0,0,0.5)]"
@@ -116,7 +116,7 @@ export default function Services() {
           </div>
 
           {/* SECTION NOTES ET PRÉCISIONS */}
-          <div className="border-notes mt-48 space-y-6 px-2 mx-auto border-t pt-8">
+          <div className="border-notes mt-48 px-2 mx-auto border-t pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs italic leading-relaxed text-gray-600">
               {/* Colonne 1 : Technique */}
               <div className="space-y-4 text-center md:text-left">
