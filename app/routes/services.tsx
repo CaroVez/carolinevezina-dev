@@ -191,7 +191,7 @@ const PACKS = [
   {
     id: "forfait_essentiel",
     name: "L'essentiel",
-    price: "à partir de 1 500$ +tx",
+    price: "à partir de 1 250$ +tx",
     target:
       "Votre identité visuelle est prête et vous avez besoin d'une présence en ligne qui lui fait honneur.",
     features: [
@@ -207,7 +207,7 @@ const PACKS = [
   {
     id: "maquette_figma",
     name: "Le design",
-    price: "à partir de 800$ +tx",
+    price: "à partir de 700$ +tx",
     target:
       "Vous cherchez une conception visuelle unique avant de passer à l'étape du code.",
     features: [
