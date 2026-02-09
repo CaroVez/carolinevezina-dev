@@ -13,7 +13,7 @@ export default function InstagramFeed() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Verrouiller le scroll du corps de la page quand le panneau est ouvert
+    // 1. Gestion du scroll
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -21,22 +21,34 @@ export default function InstagramFeed() {
     }
 
     const handleScroll = () => {
-      // Les bulles apparaissent après 300px de scroll
       setIsVisible(window.scrollY > 300);
     };
+    window.addEventListener("scroll", handleScroll);
 
-    handleScroll();
-
+    // 2. Gestion du script Behold
     const scriptId = "behold-script";
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
+    let script = document.getElementById(scriptId) as HTMLScriptElement;
+
+    if (!script) {
+      script = document.createElement("script");
       script.id = scriptId;
       script.type = "module";
       script.src = "https://w.behold.so/widget.js";
+      // Important : On initialise une fois chargé
+      script.onload = () => {
+        // @ts-ignore
+        if (window.behold) window.behold.init();
+      };
       document.head.append(script);
+    } else if (isOpen) {
+      // Si le script existe déjà, on force le rafraîchissement quand on ouvre le panneau
+      // @ts-ignore
+      if (window.behold) {
+        // @ts-ignore
+        window.behold.init();
+      }
     }
 
-    window.addEventListener("scroll", handleScroll);
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("scroll", handleScroll);
@@ -44,9 +56,9 @@ export default function InstagramFeed() {
   }, [isOpen]);
 
   const formatTitle = (text: string) => {
-    const parts = text.split(/(m|n)/gi);
+    const parts = text.split(/(m|n|z)/gi);
     return parts.map((part, index) =>
-      /m|n/i.test(part) ? (
+      /m|n|z/i.test(part) ? (
         <span key={index} className="alt">
           {part}
         </span>
