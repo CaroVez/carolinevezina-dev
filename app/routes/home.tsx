@@ -23,7 +23,7 @@ export default function Home() {
         imageClass="image-profil-home"
         title="bienvenue"
         subtitle="Je m'appelle Caroline."
-        descriptionClass="intro"
+        descriptionClass="intro-home"
         description={
           <>
             Je suis <b>développeur web front-end</b> passionnée par la création

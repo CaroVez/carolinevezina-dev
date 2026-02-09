@@ -49,6 +49,7 @@ export default function Realisations() {
         image={photoProfil}
         imageClass="image-profil-realisations"
         title="mes réalisations"
+        descriptionClass="intro-pages"
         description={
           <>
             Découvrez quelques projets réalisés au fil de mon parcours{"\u00A0"}

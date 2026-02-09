@@ -49,6 +49,7 @@ export default function About() {
         image={photoProfil}
         imageClass="image-profil-about"
         title="qui suis-je ?"
+        descriptionClass="intro-pages"
         description={
           <>
             Je suis <b>développeur web front-end</b> passionnée par la création

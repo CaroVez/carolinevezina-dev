@@ -91,6 +91,7 @@ export default function Contact() {
         image={photoProfil}
         imageClass="image-profil-contact"
         title="me joindre"
+        descriptionClass="intro-pages"
         description={
           <>
             Vous souhaitez discuter d'un projet ou simplement en savoir plus sur

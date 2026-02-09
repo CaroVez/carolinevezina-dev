@@ -397,8 +397,8 @@ footer p span {
     sans-serif;
   font-size: 1.5rem;
 }
-.presentation .intro,
-.presentation .intro b {
+.presentation .intro-home,
+.presentation .intro-home b {
   font-size: 1.5rem;
 }
 
@@ -965,11 +965,10 @@ footer p span {
   }
 
   /* ########### section presentation ########### */
-  .presentation .intro,
-  .presentation .intro b {
+  .presentation .intro-home,
+  .presentation .intro-home b {
     font-size: 2rem;
   }
-
   .buttons .button {
     padding: 1rem 1.5rem;
     cursor: pointer;
@@ -1107,6 +1106,9 @@ footer p span {
   .politique {
     height: fit-content;
   }
+  .intro-pages {
+    width: 60%;
+  }
   .mobile-profile-wrapper,
   .mobile-only-profile-img {
     display: none;
@@ -1119,43 +1121,43 @@ footer p span {
   .image-profil-contact {
     display: block;
     position: absolute;
-    height: 12rem;
+    height: 18rem;
     z-index: 10;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
   }
   .image-profil-home,
-  .image-project-realisations,
   .image-profil-services,
+  .image-profil-realisations,
+  .image-project-realisations,
   .image-profil-about,
   .image-profil-contact {
     right: 0;
-  }
-  .image-profil-realisations {
-    left: 0;
   }
   .image-profil-home,
   .image-project-realisations {
     top: 15%;
   }
-  .image-profil-about {
-    top: 10%;
-  }
   .image-profil-services,
   .image-profil-realisations,
+  .image-profil-about,
   .image-profil-contact {
-    bottom: 0;
+    bottom: 20%;
   }
   .image-project-realisations {
     border-radius: 50%;
   }
 
-  .presentation .intro,
-  .presentation .intro b {
+  .presentation .intro-home,
+  .presentation .intro-home b {
     font-size: 1.5rem;
   }
 
   .project-subtitle {
     width: 70%;
+  }
+
+  .presentation .arrows {
+    margin-top: 1rem;
   }
 
   .buttons {
@@ -1360,15 +1362,22 @@ footer p span {
   .image-profil-contact {
     height: 20rem;
   }
-  .image-profil-about {
-    top: 5%;
-  }
   .image-project-realisations {
     height: 18rem;
   }
-  .presentation .intro,
-  .presentation .intro b {
+  .image-profil-services,
+  .image-profil-realisations,
+  .image-profil-about,
+  .image-profil-contact {
+    bottom: 35%;
+  }
+  .presentation .intro-home,
+  .presentation .intro-home b {
     font-size: 2rem;
+  }
+
+  .presentation .arrows {
+    margin-top: 2rem;
   }
 
   .buttons {
@@ -1417,7 +1426,20 @@ footer p span {
 }
 
 @media screen and (min-width: 1920px) {
-  .presentation-container,
+  /* ########### section presentation ########### */
+  .presentation-container {
+    width: 50%;
+  }
+  .presentation .arrows {
+    margin-top: 4.5rem;
+  }
+  .image-profil-services,
+  .image-profil-realisations,
+  .image-profil-about,
+  .image-profil-contact {
+    bottom: 35%;
+  }
+
   .about {
     width: 50%;
   }

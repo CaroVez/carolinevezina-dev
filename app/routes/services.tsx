@@ -39,6 +39,7 @@ export default function Services() {
         image={photoProfil}
         imageClass="image-profil-services"
         title="mes services"
+        descriptionClass="intro-pages"
         description={
           <>
             Je me spécialise dans la création de sites vitrines haute
