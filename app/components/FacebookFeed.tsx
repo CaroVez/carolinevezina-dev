@@ -82,7 +82,7 @@ export default function FacebookFeed() {
       {/* BOUTON MOBILE (visible uniquement sur petit écran) */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-40 right-6 z-30 flex items-center p-3 rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.5)] transition-all duration-500 border text-[#479796] border-[#479796] bg-[#f2f2f2]/60 backdrop-blur-md hover:border-[#ba7954] hover:bg-[#ba7954] hover:text-white hover:border-[#ba7954] cursor-pointer group 
+        className={`fixed bottom-56 right-6 z-30 flex items-center p-3 rounded-full shadow-[0px_0px_10px_rgba(0,0,0,0.5)] transition-all duration-500 border text-[#479796] border-[#479796] bg-[#f2f2f2]/60 backdrop-blur-md hover:border-[#ba7954] hover:bg-[#ba7954] hover:text-white hover:border-[#ba7954] cursor-pointer group 
         ${isVisible ? "opacity-100 " : "opacity-0 pointer-events-none"}`}
         aria-label="Voir Facebook"
       >
