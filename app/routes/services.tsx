@@ -107,7 +107,7 @@ export default function Services() {
                 <div className="mt-auto pt-8">
                   <Link
                     to={`/me-joindre?sujet=${pack.id}#contact`}
-                    className="btn-custom w-full md:w-fit block tracking-widest uppercase text-xs"
+                    className="btn-custom w-full md:w-fit block tracking-widest text-xs"
                   >
                     sélectionner ce forfait
                   </Link>

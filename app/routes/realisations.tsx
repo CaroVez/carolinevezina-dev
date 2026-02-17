@@ -3,6 +3,7 @@ import Presentation from "../components/Presentation";
 import photoProfil from "../assets/profil1.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import { useState, useMemo } from "react";
 
 interface Project {
   title: string;
@@ -11,7 +12,6 @@ interface Project {
   isExternal: boolean;
   bgImage: string; // URL de l'image
   colSpanDesktop: string;
-  rowSpanDesktop: string;
   tech: string[];
 }
 
@@ -27,6 +27,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Realisations() {
+  const [search, setSearch] = useState("");
+  const [isSorted, setIsSorted] = useState(false);
+
   const formatTitle = (title: string) => {
     // On sépare le texte à chaque 'm', 'M', 'n' ou 'N'
     const parts = title.split(/(m|n)/gi);
@@ -41,6 +44,25 @@ export default function Realisations() {
       ),
     );
   };
+
+  // Logique de filtrage et de tri
+  const filteredProjects = useMemo(() => {
+    // 1. Filtrage par titre ou technologie
+    let result = PROJECTS.filter((project) => {
+      const searchTerm = search.toLowerCase();
+      return (
+        project.title.toLowerCase().includes(searchTerm) ||
+        project.tech.some((t) => t.toLowerCase().includes(searchTerm))
+      );
+    });
+
+    // 2. Tri alphabétique si activé
+    if (isSorted) {
+      result = [...result].sort((a, b) => a.title.localeCompare(b.title));
+    }
+
+    return result;
+  }, [search, isSorted]);
 
   return (
     <main className="mx-auto">
@@ -62,27 +84,63 @@ export default function Realisations() {
         showButtons={false}
       />
 
+      {/* Barre de recherche et Tri */}
+      <div className="search-btn flex flex-col md:flex-row gap-8 mt-[26vh] mb-4 justify-center items-center mx-auto">
+        {" "}
+        <button
+          onClick={() => setIsSorted(!isSorted)}
+          className="btn-custom order-btn"
+        >
+          {isSorted ? "original" : "A-Z"}
+        </button>
+        {/* Barre de recherche pleine largeur avec Icône */}
+        <div className="w-full relative group search-container">
+          {/* Icône de loupe fixée à gauche */}
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none z-10 transition-all duration-200">
+            <svg
+              className="w-5 h-5 text-[#ba7954]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+
+          <input
+            type="text"
+            placeholder="rechercher un projet ou une techno (ex: react, wordpress, etc.)"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="search-input pl-12"
+          />
+        </div>
+      </div>
+
       {/* Grille des Projets */}
       <section
         className="realisations 
-          grid grid-cols-1 md:grid-cols-3 gap-[6vh] auto-rows-[85vw] md:auto-rows-[45vh] pt-[26vh] pb-[12vh] mx-auto"
+          grid grid-cols-1 md:grid-cols-3 gap-[6vh] grid-flow-dense pt-[10vh] pb-[12vh] mx-auto"
       >
-        {PROJECTS.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }} // État de départ
-            whileInView={{ opacity: 1, y: 0 }} // État quand l'élément entre dans l'écran
-            viewport={{ once: true, margin: "-100px" }} // S'anime une seule fois
-            transition={{ duration: 0.6, delay: index * 0.1 }} // Animation fluide
+            key={project.title}
+            layout
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.4 }}
             style={{ backgroundImage: `url(${project.bgImage})` }}
             className={`
-                relative group flex w-[90%] md:w-full mx-auto bg-cover bg-center rounded-[5px] border shadow-[8px_8px_0px_rgba(0,0,0,0.5)] 
-                
+                relative group flex w-full mx-auto bg-cover bg-center rounded-[5px] border shadow-[8px_8px_0px_rgba(0,0,0,0.5)] 
                 transition-all duration-300 ease-in-out
-                hover:translate-y-1
-                active:translate-y-0 active:shadow-none
-
-                ${project.colSpanDesktop} ${project.rowSpanDesktop}
+                hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_rgba(0,0,0,0.5)]
+                ${isSorted ? "md:col-span-1" : project.colSpanDesktop}
               `}
           >
             {/* Overlay (Hover sur Desktop, Toujours visible sur Mobile) */}
@@ -94,16 +152,20 @@ export default function Realisations() {
                 className="
                   w-full h-full p-6 rounded-[5px] bg-black/40 backdrop-blur-[2px]
                   flex flex-col items-center justify-center text-center text-white
-                  md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300
+                  md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 overflow-hidden
                 "
               >
-                <h5 className="drop-shadow-md">{formatTitle(project.title)}</h5>
-                <p className="mb-4">{project.description}</p>
+                <h5 className="drop-shadow-md text-base lg:text-xl">
+                  {formatTitle(project.title)}
+                </h5>
+                <p className="mb-2 md:mb-4 text-base lg:text-sm leading-tight">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 justify-center whitespace-nowrap">
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="text-xs bg-white/20 px-2 py-1 rounded"
+                      className="text-[12px] lg:text-xs bg-white/20 px-2 py-1 rounded"
                     >
                       #{t}
                     </span>
@@ -116,16 +178,20 @@ export default function Realisations() {
                 className="
                   w-full h-full p-6 rounded-[5px] bg-black/40 backdrop-blur-[2px]
                   flex flex-col items-center justify-center text-center text-white
-                  md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300
+                  md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 overflow-hidden
                 "
               >
-                <h5 className="drop-shadow-md">{formatTitle(project.title)}</h5>
-                <p className="mb-4">{project.description}</p>
+                <h5 className="drop-shadow-md text-base lg:text-xl">
+                  {formatTitle(project.title)}
+                </h5>
+                <p className="mb-2 md:mb-4 text-base lg:text-sm leading-tight">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 justify-center whitespace-nowrap">
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="text-xs bg-white/20 px-2 py-1 rounded"
+                      className="text-[12px] lg:text-xs bg-white/20 px-2 py-1 rounded"
                     >
                       #{t}
                     </span>
@@ -150,7 +216,6 @@ const PROJECTS: Project[] = [
     isExternal: true,
     bgImage: "./images/carolinevezina/vignette.png",
     colSpanDesktop: "md:col-span-2",
-    rowSpanDesktop: "md:row-start-1",
     tech: [
       "react",
       "typescript",
@@ -171,7 +236,6 @@ const PROJECTS: Project[] = [
     isExternal: false,
     bgImage: "./images/thanksboss/vignette.png",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-1",
     tech: ["vue-js", "html", "css", "javascript", "gitlab"],
   },
 
@@ -182,7 +246,6 @@ const PROJECTS: Project[] = [
     isExternal: true,
     bgImage: "./images/mireillecliche/vignette.jpeg",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-2",
     tech: ["figma", "wordpress"],
   },
   {
@@ -192,7 +255,6 @@ const PROJECTS: Project[] = [
     isExternal: false,
     bgImage: "./images/terredethes/vignette.png",
     colSpanDesktop: "md:col-span-2",
-    rowSpanDesktop: "md:row-start-2",
     tech: [
       "figma",
       "adobe indesign",
@@ -210,7 +272,6 @@ const PROJECTS: Project[] = [
     isExternal: true,
     bgImage: "./images/mtavie/vignette.png",
     colSpanDesktop: "md:col-span-2",
-    rowSpanDesktop: "md:row-start-3",
     tech: ["figma", "wordpress"],
   },
   {
@@ -221,7 +282,6 @@ const PROJECTS: Project[] = [
     isExternal: true,
     bgImage: "./images/carolinealetranger/vignette.jpg",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-3",
     tech: [
       "adobe xd",
       "html",
@@ -236,28 +296,6 @@ const PROJECTS: Project[] = [
   },
 
   {
-    title: "Charles Cantin Photographe",
-    description:
-      "conception d'un site vitrine avec générateur de site statique et CMS pour un photographe amateur.",
-    link: "https://c-cantin-photographe.netlify.app/",
-    isExternal: true,
-    bgImage: "./images/charlescantin/vignette.jpg",
-    colSpanDesktop: "md:col-span-2",
-    rowSpanDesktop: "md:row-start-4",
-    tech: [
-      "adobe xd",
-      "nunjucks",
-      "html",
-      "css",
-      "bootstrap",
-      "javascript",
-      "11ty",
-      "github",
-      "forestry",
-      "netlify",
-    ],
-  },
-  {
     title: "l'agrume indigo",
     description:
       "conception d'un site web de gestion des droits d'accès pour une marque de salles de sport, avec rôles et interfaces personnalisées selon les utilisateurs.",
@@ -265,7 +303,6 @@ const PROJECTS: Project[] = [
     isExternal: false,
     bgImage: "./images/lagrumeindigo/vignette.jpg",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-4",
     tech: [
       "drawio",
       "adobe xd",
@@ -284,6 +321,27 @@ const PROJECTS: Project[] = [
       "heroku",
     ],
   },
+  {
+    title: "Charles Cantin Photographe",
+    description:
+      "conception d'un site vitrine avec générateur de site statique et CMS pour un photographe amateur.",
+    link: "https://c-cantin-photographe.netlify.app/",
+    isExternal: true,
+    bgImage: "./images/charlescantin/vignette.jpg",
+    colSpanDesktop: "md:col-span-2",
+    tech: [
+      "adobe xd",
+      "nunjucks",
+      "html",
+      "css",
+      "bootstrap",
+      "javascript",
+      "11ty",
+      "github",
+      "forestry",
+      "netlify",
+    ],
+  },
 
   {
     title: "AV",
@@ -293,7 +351,6 @@ const PROJECTS: Project[] = [
     isExternal: true,
     bgImage: "./images/av/vignette.jpg",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-5",
     tech: ["adobe xd", "wordpress", "xampp", "mysql", "planethoster"],
   },
   {
@@ -303,7 +360,6 @@ const PROJECTS: Project[] = [
     isExternal: true,
     bgImage: "./images/lajungleverte/vignette.png",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-5",
     tech: ["react", "html", "css", "javascript", "github", "netlify"],
   },
   {
@@ -314,7 +370,6 @@ const PROJECTS: Project[] = [
     isExternal: true,
     bgImage: "./images/oursupermusicapp/vignette.png",
     colSpanDesktop: "md:col-span-1",
-    rowSpanDesktop: "md:row-start-5",
     tech: ["react", "html", "css", "javascript", "github", "netlify"],
   },
 ];

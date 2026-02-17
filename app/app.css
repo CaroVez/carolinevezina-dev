@@ -123,6 +123,12 @@ h5,
 }
 
 /* ########### buttons ########### */
+.search-btn {
+  width: 90%;
+}
+.order-btn {
+  width: 100%;
+}
 .btn-custom {
   display: inline-block;
   background-color: var(--turquoise);
@@ -136,7 +142,6 @@ h5,
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
   text-align: center;
   transition: all 0.2s ease;
-  text-transform: lowercase; /* Pour garder ton style */
   letter-spacing: 0.1em;
 }
 .btn-custom:hover {
@@ -149,6 +154,40 @@ h5,
   cursor: not-allowed;
   box-shadow: none; /* Optionnel : retire l'ombre pour montrer qu'il est inactif */
   opacity: 0.7;
+}
+.btn-active {
+  background-color: var(--gold) !important;
+  transform: translate(2px, 2px);
+  box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 0px !important;
+}
+
+/* ########### Search & Filter ########### */
+.search-input {
+  background-color: white;
+  color: var(--text-color);
+  border: var(--text-color-light) solid 1px;
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  font-size: 0.8rem;
+  font-family: "MuseoModerno", sans-serif;
+  transition: all 0.2s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+.search-input:focus {
+  border-color: var(--turquoise);
+  /*box-shadow: rgba(71, 151, 150, 0.25) 0 0 0 3px;*/
+}
+.search-container {
+  transition: all 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+  border-radius: 5px;
+}
+.search-container:focus-within {
+  transform: translate(2px, 2px);
+  box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 0px;
 }
 
 /* ########### form ########### */
@@ -545,6 +584,7 @@ footer p span {
 /* ########### section realisations ########### */
 .realisations {
   width: 90%;
+  grid-auto-rows: 85vw;
 }
 .project-subtitle {
   color: var(--gold);
@@ -997,8 +1037,13 @@ footer p span {
   }
 
   /* ########### section realisations ########### */
+  .order-btn {
+    width: 100px;
+  }
+
   .realisations {
     width: 90%;
+    grid-auto-rows: 55vw;
   }
   .project-subtitle {
     font-size: 1.75rem;
@@ -1193,8 +1238,12 @@ footer p span {
   }
 
   /* ########### section realisations ########### */
+  .search-btn {
+    width: 70%;
+  }
   .realisations {
     width: 70%;
+    grid-auto-rows: 35vw;
   }
   .projet {
     width: 70%;
@@ -1393,8 +1442,12 @@ footer p span {
   }
 
   /* ########### section realisations ########### */
+  .search-btn {
+    width: 70%;
+  }
   .realisations {
     width: 70%;
+    grid-auto-rows: 20vw;
   }
   .projet {
     width: 60%;
@@ -1448,5 +1501,9 @@ footer p span {
   }
   .services {
     width: 70%;
+  }
+  .realisations {
+    width: 70%;
+    grid-auto-rows: 20vw;
   }
 }
